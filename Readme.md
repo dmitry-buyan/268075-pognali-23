@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Дмитрий Буян](https://up.htmlacademy.ru/adaptive/23/user/268075).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Шевцов](https://htmlacademy.ru/profile/redx).
 
 ---
 
