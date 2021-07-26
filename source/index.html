@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Главная страница</title>
   </head>
   <body>
@@ -52,8 +53,8 @@
       </div>
     </header>
 
-    <main>
-      <h1>В путешествие<br> с крутыми<br> попутчиками!</h1>
+    <main class="main">
+      <h1 class="title">В путешествие<br> с крутыми<br> попутчиками!</h1>
 
       <div class="contact">
         <ul class="contact__list">
@@ -74,7 +75,7 @@
           <ul class="reviews__list">
             <li class="reviews__item">
               <blockquote>
-                <p class="reviews__text">«Лучшее приложение,<br> что я видел в жизни!»</p>
+                <p class="reviews__text">&laquo;Лучшее приложение,<br> что я видел в жизни!&raquo;</p>
                 <cite class="reviews__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
               </blockquote>
             </li>
@@ -123,62 +124,66 @@
         <h2 class="subtitle">Попутчики</h2>
         <p class="travelmates__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
         <p class="travelmates__text travelmates__text--special">Теперь можно легко найти единомышленников!</p>
-        <div class="traveller">
-          <img class="traveller__img" src="img/firsova_mobile.jpg" alt="Таня Фирсова плывет на спине: вид сверху" width="270" height="270">
-          <a class="traveller__link" href="#">
-            <h3 class="traveller__name">Таня Фирсова</h3>
+        <div class="user">
+          <img class="user__img" src="img/firsova_mobile.jpg" alt="Таня Фирсова плывет на спине: вид сверху" width="270" height="270">
+          <a class="user__link" href="#">
+            <h3 class="user__name">Таня Фирсова</h3>
           </a>
-          <p class="visually-hidden">Хочу посетить:</p>
-          <ul class="traveller__countries-to-visit">
+          <h4 class="visually-hidden">Хочет посетить:</h4>
+          <ul class="user__countries">
             <li><span>Шри-Ланка</span></li>
             <li><span>Тайланд</span></li>
             <li><span>Сейшелы</span></li>
           </ul>
-          <ul class="traveller__preferences">
-            <li><a href="#">#ЗОЖ</a></li>
-            <li><a href="#">#ПП</a></li>
-            <li><a href="#">#Фитнес</a></li>
-            <li><a href="#">#пляж</a></li>
-            <li><a href="#">#авокадо</a></li>
-            <li><a href="#">#смузи</a></li>
-          </ul>
-          <ul class="traveller__transport">
+          <div class="user__preferences">
+            <h4 class="visually-hidden">Предпочтения</h4>
+            <a class="user__hashtag-link" href="#">#ЗОЖ</a>
+            <a class="user__hashtag-link" href="#">#ПП</a>
+            <a class="user__hashtag-link" href="#">#Фитнес</a>
+            <a class="user__hashtag-link" href="#">#пляж</a>
+            <a class="user__hashtag-link" href="#">#авокадо</a>
+            <a class="user__hashtag-link" href="#">#смузи</a>
+          </div>
+          <h4 class="visually-hidden">Транспорт</h4>
+          <ul class="user__transport">
             <li><span class="visually-hidden">Авиаперелет</span></li>
             <li><span class="visually-hidden">Автотранспорт</span></li>
             <li><span class="visually-hidden">Велосипед</span></li>
             <li><span class="visually-hidden">Пешком</span></li>
           </ul>
-          <div class="traveller__level">
-            <span>99</span>
-            <span>level</span>
+          <div class="user__level">
+            <span class="user__level-value">99</span>
+            <span class="user__level-text">level</span>
           </div>
         </div>
-        <div class="traveller">
-          <img class="traveller__img" src="img/demin_mobile.jpg" alt="Петя Демин в солнечных очках и черной шапке" width="270" height="270">
-          <a class="traveller__link" href="#">
-            <h3 class="traveller__name">Петя Демин</h3>
+        <div class="user">
+          <img class="user__img" src="img/demin_mobile.jpg" alt="Петя Демин в солнечных очках и черной шапке" width="270" height="270">
+          <a class="user__link" href="#">
+            <h3 class="user__name">Петя Демин</h3>
           </a>
-          <p class="visually-hidden">Хочу посетить:</p>
-          <ul class="traveller__countries-to-visit">
+          <h4 class="visually-hidden">Хочу посетить:</h4>
+          <ul class="user__countries">
             <li><span>Бельгия</span></li>
             <li><span>Чехия</span></li>
           </ul>
-          <ul class="traveller__preferences">
-            <li><a href="#">#бургер</a></li>
-            <li><a href="#">#бар</a></li>
-            <li><a href="#">#футбол</a></li>
-            <li><a href="#">#концерт</a></li>
-            <li><a href="#">#крафт</a></li>
-          </ul>
-          <ul class="traveller__transport">
+          <div class="user__preferences">
+            <h4 class="visually-hidden">Предпочтения</h4>
+            <a class="user__hashtag-link" href="#">#бургер</a>
+            <a class="user__hashtag-link" href="#">#бар</a>
+            <a class="user__hashtag-link" href="#">#футбол</a>
+            <a class="user__hashtag-link" href="#">#концерт</a>
+            <a class="user__hashtag-link" href="#">#крафт</a>
+          </div>
+          <h4 class="visually-hidden">Транспорт</h4>
+          <ul class="user__transport">
             <li><span class="visually-hidden">Авиаперелет</span></li>
             <li><span class="visually-hidden">Автотранспорт</span></li>
             <li><span class="visually-hidden">Велосипед</span></li>
             <li><span class="visually-hidden">Пешком</span></li>
           </ul>
-          <div class="traveller__level">
-            <span>80</span>
-            <span>level</span>
+          <div class="user__level">
+            <span class="user__level-value">80</span>
+            <span class="user__level-text">level</span>
           </div>
         </div>
         <a class="button" href="catalog.html">Показать всеx</a>
@@ -222,7 +227,7 @@
       <section class="registration">
         <h2 class="subtitle">Заинтересовались?</h2>
         <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#authorization.html">авторизуйтесь</a>.</p>
-        <form class="signin-form">
+        <form class="signin-form" action="https://echo.htmlacademy.ru" method="GET">
           <input type="email" name="email" placeholder="E-mail">
           <button class="button" type="submit">Регистрация</button>
         </form>
