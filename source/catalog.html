@@ -7,48 +7,50 @@
   </head>
   <body>
     <header class="header">
-      <a class="logo" href="index.html">
-        <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
-      </a>
-      <div class="dropdown-menu">
-        <button class="dropdown-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">О сервисе</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="form.html">Направления</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="button" href="#">Авторизация</a>
-        <div class="contact">
-          <ul class="contact__list">
-            <li class="contact__item">
-              <a class="contact__link" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
-            </li>
-            <li class="contact__item">
-              <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social">
-          <h2 class="visually-hidden">Мы в социальных сетях</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#">Фейсбук</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">ВКонтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">Инстаграм</a>
-            </li>
-          </ul>
+      <div class="menu">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
+        </a>
+        <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="menu__inner">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="index.html">О сервисе</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="form.html">Направления</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Попутчики</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button" href="#">Авторизация</a>
+          <div class="contact">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <a class="contact__link" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+          </div>
+          <div class="social">
+            <h2 class="visually-hidden">Мы в социальных сетях</h2>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">Фейсбук</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">ВКонтакте</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">Инстаграм</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -60,7 +62,7 @@
       <a class="inner__link-home" href="index.html">На главную</a>
       <section class="filter">
         <h2 class="filter__title">Фильтрация по странам:</h2>
-        <button class="button button--toggle"><span class="button button--show-more">Показать все</span></button>
+        <button class="button button--toggle"><span class="show-more">Показать все</span></button>
         <a class="filter__continent filter__continent--current" href="#europe/">Европа</a>
         <a class="filter__continent" href="#asia/">Азия</a>
         <a class="filter__continent" href="#america/">Америка</a>
@@ -440,66 +442,96 @@
           <div class="form-inner__group category">
             <h3 class="category__title">Хобби</h3>
             <div class="category__inner">
-              <input class="visually-hidden" id="category__item-1" type="checkbox" name="gym" checked>
-              <label class="category__item" for="category__item-1">Спортзал</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="gym" checked>
+                Спортзал
+              </label>
 
-              <input class="visually-hidden" id="category__item-2" type="checkbox" name="hookah">
-              <label class="category__item" for="category__item-2">Кальян</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="hookah">
+                Кальян
+              </label>
 
-              <input class="visually-hidden" id="category__item-3" type="checkbox" name="sofa">
-              <label class="category__item" for="category__item-3">Диван</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="sofa">
+                Диван
+              </label>
             </div>
           </div>
           <div class="form-inner__group category">
             <h3 class="category__title">Музыка</h3>
             <div class="category__inner">
-              <input class="visually-hidden" id="category__item-4" type="checkbox" name="hard-roch" checked>
-              <label class="category__item" for="category__item-4">Тяжелый рок</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="hard-roch" checked>
+                Тяжелый рок
+              </label>
 
-              <input class="visually-hidden" id="category__item-5" type="checkbox" name="russina-rap" checked>
-              <label class="category__item" for="category__item-5">Русский рэп</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="russina-rap" checked>
+                Русский рэп
+              </label>
 
-              <input class="visually-hidden" id="category__item-6" type="checkbox" name="euro-dance">
-              <label class="category__item" for="category__item-6">Евроденс</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="euro-dance">
+                Евроденс
+              </label>
             </div>
           </div>
           <div class="form-inner__group category">
             <h3 class="category__title">Еда</h3>
             <div class="category__inner">
-              <input class="visually-hidden" id="category__item-7" type="checkbox" name="meat-eater" checked>
-              <label class="category__item" for="category__item-7">Мясоед</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="meat-eater" checked>
+                Мясоед
+              </label>
 
-              <input class="visually-hidden" id="category__item-8" type="checkbox" name="on-healthy-food">
-              <label class="category__item" for="category__item-8">Сидит на ПП</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="on-healthy-food">
+                Сидит на ПП
+              </label>
 
-              <input class="visually-hidden" id="category__item-9" type="checkbox" name="raw-vegan">
-              <label class="category__item" for="category__item-9">Веган-сыроед</label>
+              <label class="category__item">
+                <input class="visually-hidden" type="checkbox" name="raw-vegan">
+                Веган-сыроед
+              </label>
             </div>
           </div>
           <div class="form-inner__group transport">
             <h3 class="transport__title">Транспорт</h3>
-            <input class="visually-hidden" id="plane-field" type="checkbox" name="plane" checked>
-            <label class="transport__item  transport__item--plane" for="plane-field">Авиаперелет</label>
+            <label class="transport__item  transport__item--plane">
+              <input class="visually-hidden" type="checkbox" name="plane" checked>
+              Авиаперелет
+            </label>
 
-            <input class="visually-hidden" id="car-field"  type="checkbox" name="car" checked>
-            <label class="transport__item  transport__item--car" for="car-field">Автомобиль</label>
+            <label class="transport__item  transport__item--car">
+              <input class="visually-hidden" type="checkbox" name="car" checked>
+              Автомобиль
+            </label>
 
-            <input class="visually-hidden" id="bicycle-field" type="checkbox" name="bicycle">
-            <label class="transport__item  transport__item--bicycle" for="bicycle-field">Велосипед</label>
+            <label class="transport__item  transport__item--bicycle">
+              <input class="visually-hidden" type="checkbox" name="bicycle">
+              Велосипед
+            </label>
 
-            <input class="visually-hidden" id="onfoot-field" type="checkbox" name="on-foot" checked>
-            <label class="transport__item  transport__item--onfoot" for="onfoot-field">Пешком</label>
+            <label class="transport__item  transport__item--onfoot">
+              <input class="visually-hidden" type="checkbox" name="on-foot" checked>
+              Пешком
+            </label>
           </div>
           <div class="form-inner__group level">
             <h3 class="level__title">Левел</h3>
             <div class="level__wrapper">
               <div class="level__field">
-                <label class="visually-hidden" for="min-field">Минимум</label>
-                <input class="level__input level__input--min" id="min-field" type="number" name="min" min="0" max="100" placeholder="30">
+                <label class="visually-hidden">
+                  Минимум
+                  <input class="level__input level__input--min" type="number" name="min" min="0" max="100" placeholder="30">
+                </label>
               </div>
               <div class="level__field">
-                <label class="visually-hidden" for="max-field">Максимум</label>
-                <input class="level__input level__input--max" id="max-field" type="number" name="max" min="0" max="100" placeholder="100">
+                <label class="visually-hidden">
+                  Максимум
+                  <input class="level__input level__input--max" type="number" name="max" min="0" max="100" placeholder="100">
+                </label>
               </div>
             </div>
             <div class="level__scale">
@@ -702,4 +734,3 @@
     </footer>
   </body>
 </html>
-
