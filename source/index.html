@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Главная страница</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -61,10 +62,10 @@
       <div class="contact">
         <ul class="contact__list">
           <li class="contact__item">
-            <a class="contact__link" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
+            <a class="contact__link contact__link--main" href="tel:+78005558628"><span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span></a>
           </li>
           <li class="contact__item">
-            <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contact__link contact__link--main" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
           </li>
         </ul>
       </div>
@@ -103,21 +104,27 @@
         <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <div class="country">
           <img class="country__img" src="img/thailand-mobile.jpg" alt="Остров в виде двух гор в Тайланде" width="270" height="110">
-          <h3 class="country__name">Таиланд</h3>
-          <p class="country__slogan">Джунгли зовут!</p>
-          <span class="country__visitors">18321</span>
+          <div class="country__inner">
+            <h3 class="country__name">Таиланд</h3>
+            <p class="country__slogan">Джунгли зовут!</p>
+            <span class="country__visitors">18321</span>
+          </div>
         </div>
         <div class="country">
           <img class="country__img" src="img/france-mobile.jpg" alt="Фасад здания в одном из французских городов" width="270" height="110">
-          <h3 class="country__name">Франция</h3>
-          <p class="country__slogan">Трэ бьен, манифик!</p>
-          <span class="country__visitors">12518</span>
+          <div class="country__inner">
+            <h3 class="country__name">Франция</h3>
+            <p class="country__slogan">Трэ бьен, манифик!</p>
+            <span class="country__visitors">12518</span>
+          </div>
         </div>
         <div class="country">
           <img class="country__img" src="img/czech-mobile.jpg" alt="Баржа, плывущая по городской реке в Чехии" width="270" height="110">
-          <h3 class="country__name">Чехия</h3>
-          <p class="country__slogan">Закоулки старой Европы</p>
-          <span class="country__visitors">5326</span>
+          <div class="country__inner">
+            <h3 class="country__name">Чехия</h3>
+            <p class="country__slogan">Закоулки старой Европы</p>
+            <span class="country__visitors">5326</span>
+          </div>
         </div>
         <a class="button" href="form.html">Показать все</a>
       </section>
@@ -139,12 +146,12 @@
           </ul>
           <div class="user__preferences">
             <h4 class="visually-hidden">Предпочтения</h4>
-            <a class="user__hashtag-link" href="#">#ЗОЖ</a>
-            <a class="user__hashtag-link" href="#">#ПП</a>
-            <a class="user__hashtag-link" href="#">#Фитнес</a>
-            <a class="user__hashtag-link" href="#">#пляж</a>
-            <a class="user__hashtag-link" href="#">#авокадо</a>
-            <a class="user__hashtag-link" href="#">#смузи</a>
+            <a class="user__hashtag" href="#">#ЗОЖ</a>
+            <a class="user__hashtag" href="#">#ПП</a>
+            <a class="user__hashtag" href="#">#Фитнес</a>
+            <a class="user__hashtag" href="#">#пляж</a>
+            <a class="user__hashtag" href="#">#авокадо</a>
+            <a class="user__hashtag" href="#">#смузи</a>
           </div>
           <h4 class="visually-hidden">Транспорт</h4>
           <ul class="user__transport">
@@ -158,23 +165,23 @@
             <span class="user__level-text">level</span>
           </div>
         </div>
-        <div class="user">
+        <div class="user user--online">
           <img class="user__img" src="img/demin_mobile.jpg" alt="Петя Демин в солнечных очках и черной шапке" width="270" height="270">
           <a class="user__link" href="#">
             <h3 class="user__name">Петя Демин</h3>
           </a>
-          <h4 class="visually-hidden">Хочу посетить:</h4>
+          <h4 class="visually-hidden">Хочет посетить:</h4>
           <ul class="user__countries">
             <li><span>Бельгия</span></li>
             <li><span>Чехия</span></li>
           </ul>
           <div class="user__preferences">
             <h4 class="visually-hidden">Предпочтения</h4>
-            <a class="user__hashtag-link" href="#">#бургер</a>
-            <a class="user__hashtag-link" href="#">#бар</a>
-            <a class="user__hashtag-link" href="#">#футбол</a>
-            <a class="user__hashtag-link" href="#">#концерт</a>
-            <a class="user__hashtag-link" href="#">#крафт</a>
+            <a class="user__hashtag" href="#">#бургер</a>
+            <a class="user__hashtag" href="#">#бар</a>
+            <a class="user__hashtag" href="#">#футбол</a>
+            <a class="user__hashtag" href="#">#концерт</a>
+            <a class="user__hashtag" href="#">#крафт</a>
           </div>
           <h4 class="visually-hidden">Транспорт</h4>
           <ul class="user__transport">
@@ -209,7 +216,7 @@
         <a class="rates__button" href="#rates.html">Показать тарифы для бизнеса</a>
         <div class="rates__card rates__card--business">
           <h3 class="subtitle">Бизнес-тарифы</h3>
-          <dl class="rates__list">
+          <dl class="rates__list rates__list--business">
             <dt>Реклама у блоггера</dt>
             <dd>300 000 руб./пост</dd>
 
@@ -228,7 +235,7 @@
 
       <section class="registration">
         <h2 class="subtitle">Заинтересовались?</h2>
-        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#authorization.html">авторизуйтесь</a>.</p>
+        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="registration__link" href="#authorization.html">авторизуйтесь</a>.</p>
         <form class="signin-form" action="https://echo.htmlacademy.ru" method="GET">
           <input type="email" name="email" placeholder="E-mail">
           <button class="button" type="submit">Регистрация</button>
@@ -237,10 +244,10 @@
         <div class="contact">
           <ul class="contact__list">
             <li class="contact__item">
-              <a class="contact__link" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
+              <a class="contact__link contact__link--main" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
             </li>
             <li class="contact__item">
-              <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contact__link contact__link--main" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
         </div>

@@ -1,0 +1,16 @@
+.subtitle {
+  font-weight: $font-bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: $special-orange;
+
+  &--form {
+    color: $basic-blue-light;
+  }
+
+  &--step {
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-blue-light;
+  }
+}

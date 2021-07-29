@@ -1,0 +1,12 @@
+.contact__link {
+  font-weight: $font-bold;
+  font-size: $font-size;
+  line-height: 18px;
+  color: $basic-blue-dark;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--main {
+    color: $basic-yellow;
+  }
+}

@@ -1,0 +1,17 @@
+.user-form__plan-editor {
+  background: $special-grey-periwinkle;
+}
+
+.user-form__plan-item {
+  font-weight: $font-normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: $basic-black;
+  text-transform: uppercase;
+  opacity: 0.6;
+
+  &--current {
+    opacity: 1;
+  }
+}

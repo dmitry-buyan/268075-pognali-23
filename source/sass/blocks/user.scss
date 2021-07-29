@@ -1,0 +1,18 @@
+.user {
+  color: $special-grey;
+  background: $basic-white;
+}
+
+.user__link {
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic-blue-light;
+  text-decoration: none;
+}
+
+.user__hashtag {
+  font-weight: $font-normal;
+  line-height: 18px;
+  color: $special-grey;
+  text-decoration: none;
+}
