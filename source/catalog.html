@@ -59,8 +59,8 @@
     <main class="inner">
       <header class="inner__header">
         <h1 class="title">Попутчики</h1>
+        <a class="inner__link-home" href="index.html">На главную</a>
       </header>
-      <a class="inner__link-home" href="index.html">На главную</a>
       <section class="filter">
         <h2 class="filter__title">Фильтрация по странам:</h2>
         <button class="button button--toggle"><span class="show-more">Показать все</span></button>
@@ -523,14 +523,14 @@
             <h3 class="level__title">Левел</h3>
             <div class="level__wrapper">
               <div class="level__field">
-                <label class="visually-hidden">
-                  Минимум
+                <label>
+                  <span class="visually-hidden">Минимум</span>
                   <input class="level__input level__input--min" type="number" name="min" min="0" max="100" placeholder="30">
                 </label>
               </div>
               <div class="level__field">
-                <label class="visually-hidden">
-                  Максимум
+                <label>
+                  <span class="visually-hidden">Максимум</span>
                   <input class="level__input level__input--max" type="number" name="max" min="0" max="100" placeholder="100">
                 </label>
               </div>
@@ -696,7 +696,7 @@
           </div>
           <a class="button" href="#response.html">Позвать!</a>
         </div>
-        <a class="button" href="#travellers.html">Показать еще</a>
+        <a class="button button--expand" href="#travellers.html">Показать еще</a>
         <div class="pagination">
           <a class="pagination__button pagination__button--back" href="#"><span class="visually-hidden">Назад</span></a>
           <div class="pagination__wrapper">

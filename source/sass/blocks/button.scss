@@ -21,4 +21,14 @@
     letter-spacing: 0.01em;
     background: transparent;
   }
+
+  &--catalog {
+    line-height: 17px;
+    background: $basic-white;
+  }
+
+  &--expand {
+    line-height: 30px;
+    background: transparent;
+  }
 }

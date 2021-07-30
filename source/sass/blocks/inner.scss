@@ -1,3 +1,13 @@
 .inner__header {
+  color: $basic-white;
   background: $basic-blue-dark;
+}
+
+.inner__link-home {
+  font-weight: $font-bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: $basic-white;
+  text-transform: uppercase;
+  text-decoration: none;
 }

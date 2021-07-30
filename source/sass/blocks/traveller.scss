@@ -1,0 +1,43 @@
+.traveller {
+  background: $basic-white;
+}
+
+.traveller__link {
+  text-decoration: none;
+  color: $basic-blue-light;
+}
+
+.traveller__name {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.traveller__hashtag {
+  font-weight: $font-normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: $special-grey;
+  text-decoration: none;
+}
+
+.traveller__subtitle {
+  font-weight: $font-normal;
+  font-size: 15px;
+  line-height: 16px;
+  color: $special-grey;
+  text-transform: lowercase;
+}
+
+.traveller__country {
+  font-weight: $font-medium;
+  font-size: 15px;
+  line-height: 16px;
+  color: $basic-blue-light;
+  text-transform: uppercase;
+}
+
+.traveller__level-value {
+  font-weight: $font-bold;
+  font-size: 24px;
+  line-height: 24px;
+}
