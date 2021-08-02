@@ -1,0 +1,42 @@
+.filter {
+  background: $special-grey-snuff;
+}
+
+.filter__title {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic-blue-dark;
+}
+
+.filter__continent {
+  font-weight: $font-bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-blue-dark;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.filter__link {
+  font-weight: $font-medium;
+  font-size: 14px;
+  line-height: 14px;
+  color: $basic-blue-light;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--current {
+    color: $basic-white;
+  }
+}
+
+.filter__country {
+  color: $special-grey;
+  text-decoration: none;
+}

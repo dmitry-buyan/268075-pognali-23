@@ -1,0 +1,19 @@
+.modal__header {
+  color: $basic-white;
+  background: $basic-blue-light;
+}
+
+.modal__title {
+  font-weight: $font-medium;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.modal__letter {
+  font-weight: $font-medium;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-blue-light;
+}

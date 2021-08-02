@@ -1,0 +1,34 @@
+.button {
+  font-weight: $font-bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: $basic-blue;
+  background-color: $basic-yellow;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--add {
+    font-weight: $font-medium;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: $basic-blue-light;
+    background: $basic-light;
+  }
+
+  &--back {
+    letter-spacing: 0.01em;
+    background: transparent;
+  }
+
+  &--catalog {
+    line-height: 17px;
+    background: $basic-white;
+  }
+
+  &--expand {
+    line-height: 30px;
+    background: transparent;
+  }
+}

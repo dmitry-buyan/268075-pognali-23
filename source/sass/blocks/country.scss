@@ -1,0 +1,22 @@
+.country__inner {
+  background: $basic-white;
+}
+
+.country__name {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.country__slogan {
+  font-weight: $font-medium;
+  line-height: 18px;
+  color: $special-grey;
+  opacity: 0.3;
+}
+
+.country__visitors {
+  font-weight: $font-medium;
+  line-height: 20px;
+  color: $basic-blue;
+  opacity: 0.3;
+}

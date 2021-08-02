@@ -1,0 +1,31 @@
+.rates {
+  background: $special-grey-light;
+}
+
+.rates__card {
+  &--business {
+    background: $basic-white;
+  }
+}
+
+.rates__list {
+  line-height: 16px;
+
+  &--business {
+    line-height: 22px;
+  }
+}
+
+.rates__button {
+  font-weight: $font-bold;
+  line-height: 16px;
+  color: $special-blue;
+  text-decoration: none;
+
+  &--close {
+    line-height: 24px;
+    text-transform: uppercase;
+    background: $basic-grey;
+    border: none;
+  }
+}

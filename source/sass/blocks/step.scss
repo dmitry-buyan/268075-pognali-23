@@ -1,0 +1,31 @@
+.step {
+  background: $basic-white;
+}
+
+.step__label {
+  font-weight: $font-medium;
+  line-height: 16px;
+  color: $basic-blue-light;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  &--option {
+    font-weight: $font-normal;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: normal;
+    text-transform: initial;
+  }
+}
+
+.step__index {
+  letter-spacing: 0.07em;
+  opacity: 0.3;
+}
+
+.step__country-name {
+  font-weight: $font-medium;
+  font-size: 18px;
+  line-height: 18px;
+  color: $basic-blue-light;
+}

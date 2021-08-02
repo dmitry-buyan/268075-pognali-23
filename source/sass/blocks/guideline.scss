@@ -1,0 +1,22 @@
+.guideline {
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $basic-blue;
+}
+
+.guideline__item {
+  background: $special-orange;
+}
+
+.guideline__item:nth-child(2) {
+  background: $special-orange-light;
+}
+
+.guideline__item:nth-child(3) {
+  background: $basic-yellow-dark;
+}
+
+.guideline__item:nth-child(4) {
+  background: $basic-yellow;
+}
