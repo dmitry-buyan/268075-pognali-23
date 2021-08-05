@@ -3,11 +3,36 @@
   background: $basic-white;
 }
 
+.user__inner {
+  padding: 27px 25px 20px 25px;
+}
+
+.user__img {
+  display: block;
+  margin-bottom: 27px;
+}
+
 .user__link {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.user__name {
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   line-height: 21px;
   color: $basic-blue-light;
-  text-decoration: none;
+}
+
+.user__countries,
+.user__transport {
+  @include reset-list;
+}
+
+.user__preferences {
+  margin-bottom: 14px;
 }
 
 .user__hashtag {

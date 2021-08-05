@@ -1,3 +1,14 @@
 .footer {
+  padding: 37px 0 19px;
   background: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
 }

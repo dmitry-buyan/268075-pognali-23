@@ -1,3 +1,94 @@
 .routes {
+  padding-top: 101px;
+  padding-bottom: 34px;
   background: $basic-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 149px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 176px;
+    padding-bottom: 87px;
+  }
+}
+
+.routes__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    padding-top: 71px;
+  }
+}
+
+.routes__header {
+  margin-bottom: 60px;
+  padding-right: 30px;
+  padding-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    margin-bottom: 104px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    margin-bottom: 0;
+  }
+}
+
+.routes__header p {
+  margin: 0;
+}
+
+
+.routes__subtitle {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.routes__inner {
+  @media (min-width: $tablet-width) {
+    padding: 0 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row-start: span 2;
+    padding: 0;
+    padding-left: 70px;
+  }
+}
+
+.routes__text {
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.routes__country {
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 46px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.routes__button {
+  order: 3;
+  height: min-content;
+  margin-top: auto;
 }

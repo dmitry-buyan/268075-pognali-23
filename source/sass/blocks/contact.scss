@@ -1,3 +1,8 @@
+.contact__list {
+  @include reset-list;
+  text-align: left;
+}
+
 .contact__link {
   font-weight: $font-bold;
   font-size: $font-size;
@@ -8,5 +13,10 @@
 
   &--main {
     color: $basic-yellow;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
   }
 }

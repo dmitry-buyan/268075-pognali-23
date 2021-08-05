@@ -1,3 +1,42 @@
-.description__text--special {
-  font-weight: $font-bold;
+.description {
+  padding: 33px 35px 82px 25px;
+  background: url("../img/about-mobile.png") no-repeat;
+
+  @media (min-width: $tablet-width) {
+    padding: 41px 34px 89px 34px;
+  }
+}
+
+.description__subtitle {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.description__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    font-weight: $font-bold;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.description__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

@@ -3,6 +3,7 @@
 @import "variables.scss";
 @import "scaffolding.scss";
 @import "mixins.scss";
+@import "blocks/container.scss";
 @import "blocks/button.scss";
 @import "blocks/title.scss";
 @import "blocks/subtitle.scss";
@@ -23,7 +24,7 @@
 @import "blocks/user.scss";
 @import "blocks/rates.scss";
 @import "blocks/registration.scss";
-@import "blocks/signin-form.scss";
+@import "blocks/signup-form.scss";
 @import "blocks/address.scss";
 @import "blocks/map.scss";
 @import "blocks/inner.scss";

@@ -2,6 +2,10 @@
   background: $special-grey-periwinkle;
 }
 
+.user-form__plan-list {
+  @include reset-list;
+}
+
 .user-form__plan-item {
   font-weight: $font-normal;
   font-size: 20px;

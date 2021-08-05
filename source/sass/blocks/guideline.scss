@@ -3,20 +3,38 @@
   font-size: 18px;
   line-height: 18px;
   color: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.guideline__list {
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .guideline__item {
   background: $special-orange;
-}
 
-.guideline__item:nth-child(2) {
-  background: $special-orange-light;
-}
+  &--2 {
+    background: $special-orange-light;
+  }
 
-.guideline__item:nth-child(3) {
-  background: $basic-yellow-dark;
-}
+  &--3 {
+    background: $basic-yellow-dark;
+  }
 
-.guideline__item:nth-child(4) {
-  background: $basic-yellow;
+  &--4 {
+    background: $basic-yellow;
+  }
 }

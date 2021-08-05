@@ -1,17 +1,56 @@
+.country {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
 .country__inner {
+  padding: 26px 24px 24px 24px;
   background: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 25px 20px 25px;
+  }
+}
+
+.country__img {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
 }
 
 .country__name {
+  margin: 0;
+  margin-bottom: 2px;
+  padding: 0;
   font-size: 21px;
   line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .country__slogan {
+  margin: 0;
   font-weight: $font-medium;
   line-height: 18px;
   color: $special-grey;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .country__visitors {
@@ -19,4 +58,8 @@
   line-height: 20px;
   color: $basic-blue;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
