@@ -1,3 +1,64 @@
 .main {
-  background: $basic-blue url("../../img/globe-back-desktop.jpg") no-repeat;
+  background: $basic-blue url("../img/globe-back-desktop.jpg") no-repeat;
+}
+
+.main__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.main__title {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
+    margin-bottom: 101px;
+  }
+}
+
+.main__contact {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main__button {
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main__reviews {
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+
+.main__guideline {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    grid-column: 1 / -1;
+  }
 }

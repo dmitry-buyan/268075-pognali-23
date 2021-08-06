@@ -1,4 +1,6 @@
 .subtitle {
+  margin: 0;
+  padding: 0;
   font-weight: $font-bold;
   font-size: 24px;
   line-height: 24px;
@@ -12,5 +14,10 @@
     font-size: 20px;
     line-height: 20px;
     color: $basic-blue-light;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
   }
 }

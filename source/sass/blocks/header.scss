@@ -1,3 +1,69 @@
 .header {
   background-color: $basic-blue;
 }
+
+.header__logo {
+  display: block;
+  margin-bottom: 76px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 98px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.header__nav {
+  margin-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 144px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin: 0;
+    padding-right: 30px;
+  }
+}
+
+.header__button {
+  margin-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: auto;
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 13px;
+    min-width: 188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    order: 4;
+  }
+}
+
+.header__contact {
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 129px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+.header__social {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

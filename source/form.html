@@ -9,48 +9,50 @@
   <body>
     <header class="header">
       <div class="menu">
-        <a class="logo" href="index.html">
-          <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
-        </a>
-        <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="menu__inner">
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="index.html">О сервисе</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Направления</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="catalog.html">Попутчики</a>
-              </li>
-            </ul>
-          </nav>
-          <a class="button" href="#">Авторизация</a>
-          <div class="contact">
-            <ul class="contact__list">
-              <li class="contact__item">
-                <a class="contact__link" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
-              </li>
-              <li class="contact__item">
-                <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </li>
-            </ul>
-          </div>
-          <div class="social">
-            <h2 class="visually-hidden">Мы в социальных сетях</h2>
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link" href="#">Фейсбук</a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#">ВКонтакте</a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#">Инстаграм</a>
-              </li>
-            </ul>
+        <div class="menu__container container">
+          <a class="header__logo logo" href="index.html">
+            <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
+          </a>
+          <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="menu__inner">
+            <nav class="header__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="index.html">О сервисе</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Направления</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="catalog.html">Попутчики</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="header__button button" href="#">Авторизация</a>
+            <div class="header__contact contact">
+              <ul class="contact__list">
+                <li class="contact__item">
+                  <a class="contact__link" href="tel:+78005558628">8&nbsp;800&nbsp;555-86-28</a>
+                </li>
+                <li class="contact__item">
+                  <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__social social">
+              <h2 class="visually-hidden">Мы в социальных сетях</h2>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">Фейсбук</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">ВКонтакте</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">Инстаграм</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -58,10 +60,12 @@
 
     <main class="inner">
       <header class="inner__header">
-        <h1 class="title">Направления</h1>
+        <div class="container">
+          <h1 class="title">Направления</h1>
+        </div>
       </header>
       <form class="user-form" action="https://echo.htmlacademy.ru" method="GET">
-        <div class="user-form__info user-edit">
+        <div class="user-form__info user-edit container">
           <div class="user-edit__wrapper">
             <h2 class="visually-hidden">Петя Демин</h2>
             <div class="user-edit__level">
@@ -102,657 +106,663 @@
         </div>
 
         <div class="plan">
-          <h2 class="subtitle subtitle--form">Мои планы:</h2>
-          <ol class="plan__list">
-            <li class="plan__item">
-              <div class="plan__wrapper">
-                <h3 class="plan__title">Франция, Италия</h3>
-                <div class="plan__inner">
-                  <p class="plan__people">3 попутчика</p>
-                  <p class="plan__date">26 мар — 29 мар</p>
+          <div class="container">
+            <h2 class="subtitle subtitle--form">Мои планы:</h2>
+            <ol class="plan__list">
+              <li class="plan__item">
+                <div class="plan__wrapper">
+                  <h3 class="plan__title">Франция, Италия</h3>
+                  <div class="plan__inner">
+                    <p class="plan__people">3 попутчика</p>
+                    <p class="plan__date">26 мар — 29 мар</p>
+                  </div>
+                  <a class="plan__edit-button" href="#">Изменить</a>
                 </div>
-                <a class="plan__edit-button" href="#">Изменить</a>
-              </div>
-            </li>
-            <li class="plan__item">
-              <div class="plan__wrapper">
-                <h3 class="plan__title">Таиланд, Индонезия</h3>
-                <div class="plan__inner">
-                  <p class="plan__people">1 попутчик</p>
-                  <p class="plan__date">1 июл — 15 июл</p>
+              </li>
+              <li class="plan__item">
+                <div class="plan__wrapper">
+                  <h3 class="plan__title">Таиланд, Индонезия</h3>
+                  <div class="plan__inner">
+                    <p class="plan__people">1 попутчик</p>
+                    <p class="plan__date">1 июл — 15 июл</p>
+                  </div>
+                  <a class="plan__edit-button" href="#">Изменить</a>
                 </div>
-                <a class="plan__edit-button" href="#">Изменить</a>
-              </div>
-            </li>
-          </ol>
+              </li>
+            </ol>
+          </div>
         </div>
 
         <div class="user-form__plan-editor">
-          <h2 class="subtitle subtitle--form">Добавить план:</h2>
+          <div class="container">
+            <h2 class="subtitle subtitle--form">Добавить план:</h2>
 
-          <div class="user-form__plan-menu">
-            <ul class="user-form__plan-list">
-              <li class="user-form__plan-item user-form__plan-item--current">Даты</li>
-              <li class="user-form__plan-item">Маршрут</li>
-              <li class="user-form__plan-item">Развлечения</li>
-            </ul>
-          </div>
-
-          <div class="step" id="step-1">
-            <h3 class="subtitle subtitle--step">
-              <span class="step__inline">Шаг 1. </span>Даты пребывания
-            </h3>
-            <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-            <div class="step__inner">
-              <label class="step__label">
-                Ищу попутчиков: <span class="step__index">чел.</span>
-                <input type="number" name="amount" placeholder="2">
-              </label>
-              <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <button class="step__button step__button--max" type="button" aria-label="Увеличить количество попутчиков">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
-            </div>
-            <div class="step__inner">
-              <label class="step__label">
-                Длительность: <span class="step__index">дн.</span>
-                <input type="number" name="amount" placeholder="3">
-              </label>
-              <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <button class="step__button step__button--max" type="button" aria-label="Увеличить количество дней">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
-            </div>
-            <div class="step__option">
-              <label class="step__label step__label--option">
-                <input type="checkbox" name="kids" checked>
-                Можно с детьми
-              </label>
-            </div>
-            <div class="calendar">
-              <div class="calendar__header">
-                <button class="calendar__button calendar__button--back" type="button"><span class="visually-hidden">Предыдущий</span></button>
-                <h4 class="calendar__month">Март 2019</h4>
-                <button class="calendar__btn calendar__btn--forward" type="button"><span class="visually-hidden">Следующий</span></button>
-              </div>
-              <table class="calendar__table">
-                <tr class="calendar__row">
-                  <th class="calendar__day">Пн</th>
-                  <th class="calendar__day">Вт</th>
-                  <th class="calendar__day">Ср</th>
-                  <th class="calendar__day">Чт</th>
-                  <th class="calendar__day">Пт</th>
-                  <th class="calendar__day calendar__day--weekend">Сб</th>
-                  <th class="calendar__day calendar__day--weekend">Вс</th>
-                </tr>
-
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="feb24" disabled>
-                      24
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="feb25" disabled>
-                      25
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="feb26" disabled>
-                      26
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="feb27" disabled>
-                      27
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="feb28" disabled>
-                      28
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar1" disabled>
-                      1<span class="calendar__month-name"> мар</span></label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar2" disabled>
-                      2
-                    </label>
-                  </td>
-                </tr>
-
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar3" disabled>
-                      3
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar4" disabled>
-                      4
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar5" disabled>
-                      5
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar6" disabled>
-                      6
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar7" disabled>
-                      7
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar8" disabled>
-                      8
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar9" disabled>
-                      9
-                    </label>
-                  </td>
-                </tr>
-
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar10" disabled>
-                      10
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar11" disabled>
-                      11
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar12" disabled>
-                      12
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar13" disabled>
-                      13
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar14" disabled>
-                      14
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar15" disabled>
-                      15
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar16" disabled>
-                      16
-                    </label>
-                  </td>
-                </tr>
-
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar17" disabled>
-                      17
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar18" disabled>
-                      18
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar19" disabled>
-                      19
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar20" disabled>
-                      20
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar21" disabled>
-                      21
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar22" disabled>
-                      22
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar23" disabled>
-                      23
-                    </label>
-                  </td>
-                </tr>
-
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar24" disabled>
-                      24
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar25" disabled>
-                      25
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar26" disabled>
-                      26
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date calendar__date--arrival">
-                      <input class="calendar__input" type="checkbox" name="mar27" checked="">
-                      27<span class="calendar__arrival"> Заезд</span></label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar28" checked="">
-                      28
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date calendar__date--departure">
-                      <input class="calendar__input" type="checkbox" name="mar29" checked="">
-                      29<span class="calendar__departure"> Выезд</span></label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar30">
-                      30
-                    </label>
-                  </td>
-                </tr>
-
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="mar31">
-                      31
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="apr1">
-                      1<span class="calendar__month-name"> апр</span></label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="apr2">
-                      2
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="apr3">
-                      3
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="apr4">
-                      4
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="apr5">
-                      5
-                    </label>
-                  </td>
-                  <td class="calendar__cell">
-                    <label class="calendar__date">
-                      <input class="calendar__input" type="checkbox" name="apr6">
-                      6
-                    </label>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <a class="button" href="#step-2">Следующий шаг</a>
-          </div>
-
-          <div class="step" id="step-2">
-            <h3 class="subtitle subtitle--step">
-              <span class="step__inline">Шаг 2. </span>Маршрут
-            </h3>
-            <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-            <div class="step__country">
-              <label class="step__country-name">
-                <input type="text" name="country" placeholder="Босния и Герцеговина">
-                Босния и Герцеговина
-              </label>
-              <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
-            </div>
-            <div class="step__country">
-              <label class="step__country-name">
-                <input type="text" name="country" placeholder="Чехия">
-                Чехия
-              </label>
-              <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
-            </div>
-            <div class="step__country">
-              <label class="step__country-name step__country-name--select">
-                <input type="text" name="country" placeholder="Выберите страну">
-                Выберите страну
-              </label>
-              <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
-            </div>
-
-            <div class="modal">
-              <header class="modal__header">
-                <h4 class="modal__title">Выберите страну</h4>
-                <button class="button button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
-              </header>
-              <table class="modal__table">
-                <tr class="modal__row">
-                  <td class="modal__cell modal__cell--current">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter" checked>А
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Б
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">В
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Г
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Д
-                    </label>
-                  </td>
-                </tr>
-                <tr class="modal__row">
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">E
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ё
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ж
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">З
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">И
-                    </label>
-                  </td>
-                </tr>
-                <tr class="modal__row">
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Й
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">К
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Л
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">М
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Н
-                    </label>
-                  </td>
-                </tr>
-                <tr class="modal__row">
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">О
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">П
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Р
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">С
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Т
-                    </label>
-                  </td>
-                </tr>
-                <tr class="modal__row">
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">У
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ф
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Х
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ц
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ч
-                    </label>
-                  </td>
-                </tr>
-                <tr class="modal__row">
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ш
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Щ
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Э
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Ю
-                    </label>
-                  </td>
-                  <td class="modal__cell">
-                    <label class="modal__letter">
-                      <input class="visually-hidden" type="radio" name="country-first-letter">Я
-                    </label>
-                  </td>
-                </tr>
-              </table>
-              <ul class="modal__list">
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Afganistan">Афганистан
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Albania">Албания
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Algenia">Алгерия
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Andorra">Андорра
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Argentina">Аргентина
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Armenia">Армения
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Australia">Австралия
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__country-name">
-                    <input class="visually-hidden" type="checkbox" name="Austria">Австрия
-                  </label>
-                </li>
-                <li>
-                  <label class="modal__link">
-                    <input class="visually-hidden" type="checkbox" name="Azerbaijan">Азербайджан
-                  </label>
-                </li>
+            <div class="user-form__plan-menu">
+              <ul class="user-form__plan-list">
+                <li class="user-form__plan-item user-form__plan-item--current">Даты</li>
+                <li class="user-form__plan-item">Маршрут</li>
+                <li class="user-form__plan-item">Развлечения</li>
               </ul>
             </div>
 
-            <button class="button button--add" type="button">Добавить страну</button>
+            <div class="step" id="step-1">
+              <h3 class="subtitle subtitle--step">
+                <span class="step__inline">Шаг 1. </span>Даты пребывания
+              </h3>
+              <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="step__inner">
+                <label class="step__label">
+                  Ищу попутчиков: <span class="step__index">чел.</span>
+                  <input type="number" name="amount" placeholder="2">
+                </label>
+                <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <button class="step__button step__button--max" type="button" aria-label="Увеличить количество попутчиков">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+              <div class="step__inner">
+                <label class="step__label">
+                  Длительность: <span class="step__index">дн.</span>
+                  <input type="number" name="amount" placeholder="3">
+                </label>
+                <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <button class="step__button step__button--max" type="button" aria-label="Увеличить количество дней">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+              <div class="step__option">
+                <label class="step__label step__label--option">
+                  <input type="checkbox" name="kids" checked>
+                  Можно с детьми
+                </label>
+              </div>
+              <div class="calendar">
+                <div class="calendar__header">
+                  <button class="calendar__button calendar__button--back" type="button"><span class="visually-hidden">Предыдущий</span></button>
+                  <h4 class="calendar__month">Март 2019</h4>
+                  <button class="calendar__btn calendar__btn--forward" type="button"><span class="visually-hidden">Следующий</span></button>
+                </div>
+                <table class="calendar__table">
+                  <tr class="calendar__row">
+                    <th class="calendar__day">Пн</th>
+                    <th class="calendar__day">Вт</th>
+                    <th class="calendar__day">Ср</th>
+                    <th class="calendar__day">Чт</th>
+                    <th class="calendar__day">Пт</th>
+                    <th class="calendar__day calendar__day--weekend">Сб</th>
+                    <th class="calendar__day calendar__day--weekend">Вс</th>
+                  </tr>
 
-            <a class="button" href="#step-3">Следующий шаг</a>
-            <a class="button button--back" href="#step-1">На шаг назад</a>
-          </div>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="feb24" disabled>
+                        24
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="feb25" disabled>
+                        25
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="feb26" disabled>
+                        26
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="feb27" disabled>
+                        27
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="feb28" disabled>
+                        28
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar1" disabled>
+                        1<span class="calendar__month-name"> мар</span></label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar2" disabled>
+                        2
+                      </label>
+                    </td>
+                  </tr>
 
-          <div class="step" id="step-3">
-            <h3 class="subtitle subtitle--step">
-              <span class="step__inline">Шаг 3. </span>Развлечения
-            </h3>
-            <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar3" disabled>
+                        3
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar4" disabled>
+                        4
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar5" disabled>
+                        5
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar6" disabled>
+                        6
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar7" disabled>
+                        7
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar8" disabled>
+                        8
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar9" disabled>
+                        9
+                      </label>
+                    </td>
+                  </tr>
 
-            <label class="step__country-name">Босния и Герцеговина
-              <textarea name="country-description-1" cols="30" rows="10" placeholder="План действий"></textarea>
-            </label>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar10" disabled>
+                        10
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar11" disabled>
+                        11
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar12" disabled>
+                        12
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar13" disabled>
+                        13
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar14" disabled>
+                        14
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar15" disabled>
+                        15
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar16" disabled>
+                        16
+                      </label>
+                    </td>
+                  </tr>
 
-            <label class="step__country-name">Чехия
-              <textarea name="country-description-2" cols="30" rows="10" placeholder="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все."></textarea>
-            </label>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar17" disabled>
+                        17
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar18" disabled>
+                        18
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar19" disabled>
+                        19
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar20" disabled>
+                        20
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar21" disabled>
+                        21
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar22" disabled>
+                        22
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar23" disabled>
+                        23
+                      </label>
+                    </td>
+                  </tr>
 
-            <button class="button" type="submit">Отправить</button>
-            <a class="button button--back" href="#step-2">На шаг назад</a>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar24" disabled>
+                        24
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar25" disabled>
+                        25
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar26" disabled>
+                        26
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date calendar__date--arrival">
+                        <input class="calendar__input" type="checkbox" name="mar27" checked="">
+                        27<span class="calendar__arrival"> Заезд</span></label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar28" checked="">
+                        28
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date calendar__date--departure">
+                        <input class="calendar__input" type="checkbox" name="mar29" checked="">
+                        29<span class="calendar__departure"> Выезд</span></label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar30">
+                        30
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="mar31">
+                        31
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="apr1">
+                        1<span class="calendar__month-name"> апр</span></label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="apr2">
+                        2
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="apr3">
+                        3
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="apr4">
+                        4
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="apr5">
+                        5
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__date">
+                        <input class="calendar__input" type="checkbox" name="apr6">
+                        6
+                      </label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <a class="button" href="#step-2">Следующий шаг</a>
+            </div>
+
+            <div class="step" id="step-2">
+              <h3 class="subtitle subtitle--step">
+                <span class="step__inline">Шаг 2. </span>Маршрут
+              </h3>
+              <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <div class="step__country">
+                <label class="step__country-name">
+                  <input type="text" name="country" placeholder="Босния и Герцеговина">
+                  Босния и Герцеговина
+                </label>
+                <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
+              </div>
+              <div class="step__country">
+                <label class="step__country-name">
+                  <input type="text" name="country" placeholder="Чехия">
+                  Чехия
+                </label>
+                <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
+              </div>
+              <div class="step__country">
+                <label class="step__country-name step__country-name--select">
+                  <input type="text" name="country" placeholder="Выберите страну">
+                  Выберите страну
+                </label>
+                <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
+              </div>
+
+              <div class="modal">
+                <header class="modal__header">
+                  <h4 class="modal__title">Выберите страну</h4>
+                  <button class="button button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                </header>
+                <table class="modal__table">
+                  <tr class="modal__row">
+                    <td class="modal__cell modal__cell--current">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter" checked>А
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Б
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">В
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Г
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Д
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="modal__row">
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">E
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ё
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ж
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">З
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">И
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="modal__row">
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Й
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">К
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Л
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">М
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Н
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="modal__row">
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">О
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">П
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Р
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">С
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Т
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="modal__row">
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">У
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ф
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Х
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ц
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ч
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="modal__row">
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ш
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Щ
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Э
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Ю
+                      </label>
+                    </td>
+                    <td class="modal__cell">
+                      <label class="modal__letter">
+                        <input class="visually-hidden" type="radio" name="country-first-letter">Я
+                      </label>
+                    </td>
+                  </tr>
+                </table>
+                <ul class="modal__list">
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Afganistan">Афганистан
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Albania">Албания
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Algenia">Алгерия
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Andorra">Андорра
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Argentina">Аргентина
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Armenia">Армения
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Australia">Австралия
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__country-name">
+                      <input class="visually-hidden" type="checkbox" name="Austria">Австрия
+                    </label>
+                  </li>
+                  <li>
+                    <label class="modal__link">
+                      <input class="visually-hidden" type="checkbox" name="Azerbaijan">Азербайджан
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <button class="button button--add" type="button">Добавить страну</button>
+
+              <a class="button" href="#step-3">Следующий шаг</a>
+              <a class="button button--back" href="#step-1">На шаг назад</a>
+            </div>
+
+            <div class="step" id="step-3">
+              <h3 class="subtitle subtitle--step">
+                <span class="step__inline">Шаг 3. </span>Развлечения
+              </h3>
+              <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+
+              <label class="step__country-name">Босния и Герцеговина
+                <textarea name="country-description-1" cols="30" rows="10" placeholder="План действий"></textarea>
+              </label>
+
+              <label class="step__country-name">Чехия
+                <textarea name="country-description-2" cols="30" rows="10" placeholder="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все."></textarea>
+              </label>
+
+              <button class="button" type="submit">Отправить</button>
+              <a class="button button--back" href="#step-2">На шаг назад</a>
+            </div>
           </div>
         </div>
       </form>
     </main>
 
     <footer class="footer">
-      <a class="logo logo--footer" href="index.html">
-        <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
-      </a>
-      <div class="social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">ВКонтакте</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Инстаграм</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      <div class="container">
+        <a class="logo logo--footer" href="index.html">
+          <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
+        </a>
+        <div class="social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">ВКонтакте</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Инстаграм</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
       </div>
     </footer>
   </body>

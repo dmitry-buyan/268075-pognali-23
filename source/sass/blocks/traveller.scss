@@ -8,6 +8,8 @@
 }
 
 .traveller__name {
+  margin: 0;
+  padding: 0;
   font-size: 20px;
   line-height: 20px;
 }
@@ -21,11 +23,18 @@
 }
 
 .traveller__subtitle {
+  margin: 0;
+  padding: 0;
   font-weight: $font-normal;
   font-size: 15px;
   line-height: 16px;
   color: $special-grey;
   text-transform: lowercase;
+}
+
+.traveller__country-list,
+.traveller__transport-list {
+  @include reset-list;
 }
 
 .traveller__country {

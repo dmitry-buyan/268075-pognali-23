@@ -1,3 +1,56 @@
 .menu {
+  padding-top: 27px;
+  padding-bottom: 41px;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 46px;
+    padding-bottom: 0;
+    background: $basic-blue;
+  }
+}
+
+.menu__container {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu__toggle {
+  position: absolute;
+  top: 0;
+  right: 25px;
+
+  @media (min-width: $tablet-width) {
+    right: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }

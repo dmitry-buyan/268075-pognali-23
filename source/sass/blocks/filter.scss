@@ -3,6 +3,8 @@
 }
 
 .filter__title {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -21,6 +23,12 @@
   &--current {
     opacity: 1;
   }
+}
+
+.filter__list,
+.filter__alphabet,
+.filter__sublist {
+  @include reset-list;
 }
 
 .filter__link {

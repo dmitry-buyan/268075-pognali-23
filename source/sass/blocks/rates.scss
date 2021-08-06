@@ -1,18 +1,88 @@
 .rates {
+  padding-top: 106px;
+  padding-bottom: 38px;
   background: $special-grey-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 135px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 175px;
+    padding-bottom: 165px;
+  }
+}
+
+.rates__subtitle {
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 73px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 134px;
+  }
+}
+
+.rates__subtitle-business {
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
 }
 
 .rates__card {
   &--business {
+    padding-top: 34px;
     background: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 750px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.rates__inner {
+  padding-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 35px 0 90px;
   }
 }
 
 .rates__list {
+  @include reset-list;
+  width: 200px;
+  margin-bottom: 31px;
   line-height: 16px;
 
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: 33px;
+    line-height: 28px;
+  }
+
   &--business {
+    width: 219px;
+    margin-bottom: 34px;
     line-height: 22px;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
   }
 }
 
@@ -27,5 +97,15 @@
     text-transform: uppercase;
     background: $basic-grey;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
