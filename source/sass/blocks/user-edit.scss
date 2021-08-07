@@ -5,16 +5,39 @@
   row-gap: 18px;
   padding-top: 20px;
   padding-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "level transport transport avatar"
+      "button button button button"
+      "tags tags tags tags";
+    column-gap: 60px;
+    row-gap: 51px;
+    padding-top: 62px;
+    padding-bottom: 52px;
+  }
 }
 
 .user-edit__level {
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
   margin-left: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: level;
+    margin: 0;
+  }
 }
 
 .user-edit__avatar {
   grid-column: 2 / -1;
   margin-right: 19px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: avatar;
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .user-edit__avatar-add {
@@ -28,12 +51,25 @@
   color: $basic-blue;
   background: $special-blue-light;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    grid-area: button;
+  }
 }
 
 .user-edit__tags {
   grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-area: tags;
+  }
 }
 
 .user-edit__transport {
   grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-area: transport;
+    width: 308px;
+  }
 }

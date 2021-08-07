@@ -6,10 +6,11 @@
   line-height: 20px;
   color: $basic-blue-light;
   text-align: center;
-}
 
-.calendar__table {
-  margin-bottom: 22px;
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__day {
@@ -19,5 +20,18 @@
 
   &--weekend {
     color: $special-orange-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.calendar__date {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
   }
 }

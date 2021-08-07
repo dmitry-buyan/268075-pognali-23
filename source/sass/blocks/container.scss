@@ -1,16 +1,18 @@
-
 .container {
   width: 270px;
   margin: 0 auto;
-  padding: $mobile-padding;
 
   @media (min-width: $tablet-width) {
     width: 688px;
-    padding: $tablet-padding;
   }
 
   @media (min-width: $desktop-width) {
     width: 1324px;
-    padding: $desktop-padding;
+  }
+
+  &--w618 {
+    @media (min-width: $tablet-width) {
+      width: 618px;
+    }
   }
 }

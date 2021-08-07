@@ -2,19 +2,35 @@
   padding: 28px 0 30px;
   color: $basic-blue-light;
   background: $special-blue-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 76px;
+  }
+}
+
+.plan__title {
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+  }
 }
 
 .plan__list {
   @include reset-list;
 }
 
-.plan__item {
+.plan__item:not(:last-of-type) {
   margin-bottom: 10px;
+}
+
+.plan__wrapper {
   padding: 24px;
   background: $basic-white;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 14px;
   }
 }
 
@@ -23,26 +39,54 @@
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 34px;
+    padding: 0 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .plan__inner {
-  margin-bottom: 24px;
   font-weight: $font-medium;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 0;
+    font-size: 20px;
+    line-height: 20px;
+    border-top: 1px solid rgba(203, 206, 217, 0.3);
+  }
 }
 
 .plan__people {
   margin: 0;
   margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .plan__date {
   margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
-.plan__edit-button {
+.plan__button-edit {
   font-weight: $font-medium;
   font-size: 14px;
   line-height: 14px;
@@ -50,4 +94,9 @@
   text-transform: uppercase;
   text-decoration: none;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -1,6 +1,19 @@
+.modal__button {
+  @media (min-width: $tablet-width) {
+    width: 369px;
+  }
+}
+
 .modal__header {
+  box-sizing: border-box;
+  padding: 14px 17px;
   color: $basic-white;
   background: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding: 27px 24px 23px 24px;
+  }
 }
 
 .modal__title {
@@ -11,11 +24,37 @@
   line-height: 18px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.modal__inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.modal__table {
+  display: block;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding: 35px 80px 33px 27px;
+  }
 }
 
 .modal__table tbody {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 262px;
+  }
 }
 
 .modal__row {
@@ -38,9 +77,21 @@
   font-size: 14px;
   line-height: 18px;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .modal__list {
   @include reset-list;
   padding: 20px;
+}
+
+.modal__country-name {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
