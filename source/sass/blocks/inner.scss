@@ -1,6 +1,19 @@
 .inner__header {
+  padding-top: 42px;
   color: $basic-white;
-  background: $basic-blue-dark;
+  background: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 134px;
+  }
+}
+
+.inner__title {
+  padding-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 62px;
+  }
 }
 
 .inner__link-home {

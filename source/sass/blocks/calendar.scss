@@ -1,9 +1,15 @@
 .calendar__month {
   margin: 0;
+  margin-bottom: 22px;
   padding: 0;
   font-size: 20px;
   line-height: 20px;
   color: $basic-blue-light;
+  text-align: center;
+}
+
+.calendar__table {
+  margin-bottom: 22px;
 }
 
 .calendar__day {

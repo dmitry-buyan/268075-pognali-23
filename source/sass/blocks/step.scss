@@ -1,8 +1,32 @@
 .step {
+  margin-bottom: 10px;
+  padding: 24px 25px 23px 25px;
   background: $basic-white;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.step__title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.step__text {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.step__inner {
+  margin-bottom: 20px;
 }
 
 .step__label {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
   font-weight: $font-medium;
   line-height: 16px;
   color: $basic-blue-light;
@@ -18,14 +42,52 @@
   }
 }
 
+.step__field {
+  width: 100%;
+}
+
 .step__index {
+  margin-left: auto;
   letter-spacing: 0.07em;
   opacity: 0.3;
 }
 
-.step__country-name {
+.step__option {
+  margin-bottom: 25px;
+}
+
+.step__country {
+  margin-bottom: 22px;
+}
+
+.step__country-field {
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: $font-medium;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  color: $basic-blue-light;
+  text-transform: uppercase;
+}
+
+.step__button-add {
+  margin-bottom: 25px;
+}
+
+.step__subtitle {
+  display: block;
+  margin-bottom: 18px;
   font-weight: $font-medium;
   font-size: 18px;
   line-height: 18px;
   color: $basic-blue-light;
+}
+
+.step__wrapper {
+  margin-bottom: 27px;
+
+  &:last-of-type {
+    margin-bottom: 22px;
+  }
 }

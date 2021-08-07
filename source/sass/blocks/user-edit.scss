@@ -1,9 +1,39 @@
+.user-edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  row-gap: 18px;
+  padding-top: 20px;
+  padding-bottom: 34px;
+}
+
+.user-edit__level {
+  grid-column: 1 / -1;
+  margin-left: 16px;
+}
+
+.user-edit__avatar {
+  grid-column: 2 / -1;
+  margin-right: 19px;
+}
+
 .user-edit__avatar-add {
+  grid-column: 1 / -1;
+  margin-bottom: 7px;
   font-weight: $font-medium;
   font-size: 20px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   color: $basic-blue;
   background: $special-blue-light;
   text-decoration: none;
+}
+
+.user-edit__tags {
+  grid-column: 1 / -1;
+}
+
+.user-edit__transport {
+  grid-column: 1 / -1;
 }

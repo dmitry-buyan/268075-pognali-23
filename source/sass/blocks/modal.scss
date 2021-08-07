@@ -13,6 +13,26 @@
   text-transform: uppercase;
 }
 
+.modal__table tbody {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal__cell {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 41px;
+}
+
 .modal__letter {
   font-weight: $font-medium;
   font-size: 14px;
@@ -22,4 +42,5 @@
 
 .modal__list {
   @include reset-list;
+  padding: 20px;
 }

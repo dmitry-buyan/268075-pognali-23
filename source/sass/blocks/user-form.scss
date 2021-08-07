@@ -1,4 +1,10 @@
+.user-form__title {
+  margin-bottom: 29px;
+}
+
 .user-form__plan-editor {
+  padding-top: 30px;
+  padding-bottom: 43px;
   background: $special-grey-periwinkle;
 }
 
@@ -18,4 +24,8 @@
   &--current {
     opacity: 1;
   }
+}
+
+.user-form__marker {
+  display: none;
 }

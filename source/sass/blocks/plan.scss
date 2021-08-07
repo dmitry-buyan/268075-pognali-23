@@ -1,4 +1,5 @@
 .plan {
+  padding: 28px 0 30px;
   color: $basic-blue-light;
   background: $special-blue-light;
 }
@@ -7,22 +8,38 @@
   @include reset-list;
 }
 
-.plan__wrapper {
+.plan__item {
+  margin-bottom: 10px;
+  padding: 24px;
   background: $basic-white;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
-.plan__title {
+.plan__country {
   margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 16px;
 }
 
 .plan__inner {
+  margin-bottom: 24px;
   font-weight: $font-medium;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
+}
+
+.plan__people {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.plan__date {
+  margin: 0;
 }
 
 .plan__edit-button {

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Направления</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/index.js" async></script>
   </head>
   <body>
     <header class="header">
-      <div class="menu">
+      <div class="menu menu--closed menu--no-js">
         <div class="menu__container container">
           <a class="header__logo logo" href="index.html">
             <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
@@ -61,27 +62,25 @@
     <main class="inner">
       <header class="inner__header">
         <div class="container">
-          <h1 class="title">Направления</h1>
+          <h1 class="inner__title title">Направления</h1>
         </div>
       </header>
       <form class="user-form" action="https://echo.htmlacademy.ru" method="GET">
-        <div class="user-form__info user-edit container">
-          <div class="user-edit__wrapper">
-            <h2 class="visually-hidden">Петя Демин</h2>
-            <div class="user-edit__level">
-              <span class="user-edit__level-value">80</span>
-              <span class="user-edit__level-text">level</span>
-            </div>
-            <img class="user-edit__avatar" src="img/demin_avatar.jpg" alt="Аватар попутчика Пети Демина" width="100" height="100">
-            <a class="user-edit__avatar-add" href="#"><span>Сменить </span> фото</a>
+        <div class="user-edit container">
+          <h2 class="visually-hidden">Петя Демин</h2>
+          <div class="user-edit__level">
+            <span class="user-edit__level-value">80</span>
+            <span class="user-edit__level-text">level</span>
           </div>
-          <div class="tags">
+          <img class="user-edit__avatar" src="img/demin_avatar.jpg" alt="Аватар попутчика Пети Демина" width="100" height="100">
+          <a class="user-edit__avatar-add" href="#"><span>Сменить </span> фото</a>
+          <div class="user-edit__tags tags">
             <label class="tags__title">Тэги
               <textarea name="tags" cols="30" rows="10" placeholder="#бургер #бар #футбол #концерт
             #крафт"></textarea>
             </label>
           </div>
-          <div class="transport">
+          <div class="user-edit__transport transport">
             <h3 class="transport__title">Транспорт</h3>
             <label class="transport__item  transport__item--plane">
               <input class="visually-hidden" type="checkbox" name="plane">
@@ -107,11 +106,11 @@
 
         <div class="plan">
           <div class="container">
-            <h2 class="subtitle subtitle--form">Мои планы:</h2>
+            <h2 class="user-form__title subtitle subtitle--form">Мои планы:</h2>
             <ol class="plan__list">
               <li class="plan__item">
                 <div class="plan__wrapper">
-                  <h3 class="plan__title">Франция, Италия</h3>
+                  <h3 class="plan__country">Франция, Италия</h3>
                   <div class="plan__inner">
                     <p class="plan__people">3 попутчика</p>
                     <p class="plan__date">26 мар — 29 мар</p>
@@ -121,7 +120,7 @@
               </li>
               <li class="plan__item">
                 <div class="plan__wrapper">
-                  <h3 class="plan__title">Таиланд, Индонезия</h3>
+                  <h3 class="plan__country">Таиланд, Индонезия</h3>
                   <div class="plan__inner">
                     <p class="plan__people">1 попутчик</p>
                     <p class="plan__date">1 июл — 15 июл</p>
@@ -135,25 +134,25 @@
 
         <div class="user-form__plan-editor">
           <div class="container">
-            <h2 class="subtitle subtitle--form">Добавить план:</h2>
+            <h2 class="user-form__title subtitle subtitle--form">Добавить план:</h2>
 
             <div class="user-form__plan-menu">
               <ul class="user-form__plan-list">
-                <li class="user-form__plan-item user-form__plan-item--current">Даты</li>
-                <li class="user-form__plan-item">Маршрут</li>
-                <li class="user-form__plan-item">Развлечения</li>
+                <li class="user-form__plan-item user-form__plan-item--current"><span class="user-form__marker">Даты</span></li>
+                <li class="user-form__plan-item"><span class="user-form__marker">Маршрут</span></li>
+                <li class="user-form__plan-item"><span class="user-form__marker">Развлечения</span></li>
               </ul>
             </div>
 
             <div class="step" id="step-1">
-              <h3 class="subtitle subtitle--step">
+              <h3 class="step__title subtitle subtitle--step">
                 <span class="step__inline">Шаг 1. </span>Даты пребывания
               </h3>
               <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
               <div class="step__inner">
                 <label class="step__label">
                   Ищу попутчиков: <span class="step__index">чел.</span>
-                  <input type="number" name="amount" placeholder="2">
+                  <input class="step__field" type="number" name="amount" placeholder="2">
                 </label>
                 <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
                   <span class="visually-hidden">Уменьшить</span>
@@ -165,7 +164,7 @@
               <div class="step__inner">
                 <label class="step__label">
                   Длительность: <span class="step__index">дн.</span>
-                  <input type="number" name="amount" placeholder="3">
+                  <input class="step__field" type="number" name="amount" placeholder="3">
                 </label>
                 <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
                   <span class="visually-hidden">Уменьшить</span>
@@ -468,33 +467,35 @@
             </div>
 
             <div class="step" id="step-2">
-              <h3 class="subtitle subtitle--step">
+              <h3 class="step__title subtitle subtitle--step">
                 <span class="step__inline">Шаг 2. </span>Маршрут
               </h3>
               <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
               <div class="step__country">
                 <label class="step__country-name">
-                  <input type="text" name="country" placeholder="Босния и Герцеговина">
-                  Босния и Герцеговина
+                  <input class="step__country-field" type="text" name="country" value="Босния и Герцеговина">
+                  <span class="visually-hidden">Босния и Герцеговина</span>
                 </label>
                 <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
               </div>
               <div class="step__country">
                 <label class="step__country-name">
-                  <input type="text" name="country" placeholder="Чехия">
-                  Чехия
+                  <input class="step__country-field" type="text" name="country" value="Чехия">
+                  <span class="visually-hidden">Чехия</span>
                 </label>
                 <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
               </div>
               <div class="step__country">
                 <label class="step__country-name step__country-name--select">
-                  <input type="text" name="country" placeholder="Выберите страну">
-                  Выберите страну
+                  <input class="step__country-field" type="text" name="country" value="Выберите страну">
+                  <span class="visually-hidden">Выберите страну</span>
                 </label>
                 <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
               </div>
 
+
               <div class="modal">
+                <button class="modal__button button button--add" type="button">Добавить страну</button>
                 <header class="modal__header">
                   <h4 class="modal__title">Выберите страну</h4>
                   <button class="button button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -712,25 +713,27 @@
                 </ul>
               </div>
 
-              <button class="button button--add" type="button">Добавить страну</button>
-
               <a class="button" href="#step-3">Следующий шаг</a>
               <a class="button button--back" href="#step-1">На шаг назад</a>
             </div>
 
             <div class="step" id="step-3">
-              <h3 class="subtitle subtitle--step">
+              <h3 class="step__title subtitle subtitle--step">
                 <span class="step__inline">Шаг 3. </span>Развлечения
               </h3>
               <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
-              <label class="step__country-name">Босния и Герцеговина
-                <textarea name="country-description-1" cols="30" rows="10" placeholder="План действий"></textarea>
-              </label>
+              <div class="step__wrapper">
+                <label class="step__wrapper"><span class="step__subtitle">Босния и Герцеговина</span>
+                  <textarea name="country-description-1" cols="30" rows="10" placeholder="План действий"></textarea>
+                </label>
+              </div>
 
-              <label class="step__country-name">Чехия
-                <textarea name="country-description-2" cols="30" rows="10" placeholder="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все."></textarea>
-              </label>
+              <div class="step__wrapper">
+                <label class="step__wrapper"><span class="step__subtitle">Чехия</span>
+                  <textarea name="country-description-2" cols="30" rows="10" placeholder="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все."></textarea>
+                </label>
+              </div>
 
               <button class="button" type="submit">Отправить</button>
               <a class="button button--back" href="#step-2">На шаг назад</a>
