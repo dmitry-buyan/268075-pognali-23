@@ -6,6 +6,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 134px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 124px;
+  }
 }
 
 .inner__title {
@@ -13,6 +17,10 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 500px 65px 65px;
   }
 }
 

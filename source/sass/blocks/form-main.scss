@@ -1,12 +1,10 @@
-.container {
-  width: 270px;
-  margin: 0 auto;
-
+.form-main .container {
   @media (min-width: $tablet-width) {
-    width: 688px;
+    width: 618px;
   }
 
   @media (min-width: $desktop-width) {
+    box-sizing: border-box;
     width: 1320px;
   }
 }

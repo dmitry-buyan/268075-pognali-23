@@ -1,6 +1,22 @@
+.modal {
+  width: 220px;
+
+  @media (min-width: $tablet-width) {
+    width: 575px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+}
+
 .modal__button {
   @media (min-width: $tablet-width) {
     width: 369px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
@@ -13,6 +29,10 @@
   @media (min-width: $tablet-width) {
     width: 369px;
     padding: 27px 24px 23px 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
@@ -45,6 +65,11 @@
   @media (min-width: $tablet-width) {
     width: 369px;
     padding: 35px 80px 33px 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 102px;
+    padding-bottom: 36px;
   }
 }
 
@@ -87,6 +112,11 @@
 .modal__list {
   @include reset-list;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 37px;
+    padding-left: 25px;
+  }
 }
 
 .modal__country-name {

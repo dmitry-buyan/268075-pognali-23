@@ -1,6 +1,22 @@
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding: 11px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 39px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
+}
+
 .calendar__month {
   margin: 0;
-  margin-bottom: 22px;
   padding: 0;
   font-size: 20px;
   line-height: 20px;
@@ -11,6 +27,11 @@
     font-size: 36px;
     line-height: 36px;
   }
+}
+
+.calendar__table {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .calendar__day {

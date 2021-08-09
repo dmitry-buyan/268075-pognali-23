@@ -7,6 +7,17 @@
     padding-top: 57px;
     padding-bottom: 76px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 54px;
+    padding-bottom: 64px;
+  }
+}
+
+.plan__container {
+  @media (min-width: $desktop-width) {
+    padding-left: 64px;
+  }
 }
 
 .plan__title {
@@ -23,6 +34,10 @@
 
 .plan__item:not(:last-of-type) {
   margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .plan__wrapper {
@@ -31,6 +46,12 @@
 
   @media (min-width: $tablet-width) {
     padding: 40px 0 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    padding: 40px 42px 38px 43px;
   }
 }
 
@@ -49,6 +70,19 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.plan__number {
+  @media (min-width: $desktop-width) {
+    margin-right: 36px;
+  }
 }
 
 .plan__inner {
@@ -65,6 +99,15 @@
     font-size: 20px;
     line-height: 20px;
     border-top: 1px solid rgba(203, 206, 217, 0.3);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 629px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
   }
 }
 
@@ -98,5 +141,9 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
   }
 }

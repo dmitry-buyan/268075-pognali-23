@@ -11,6 +11,10 @@
     margin-bottom: 39px;
     padding: 48px 40px 56px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 160px 104px;
+  }
 }
 
 .step__title {
@@ -20,6 +24,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 
@@ -32,6 +40,10 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .step__container {
@@ -41,11 +53,22 @@
     margin-top: 38px;
     margin-bottom: 60px;
     padding-top: 26px;
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid $special-grey-border;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 0;
+    margin-bottom: 33px;
+    padding-top: 30px;
   }
 }
 
 .step__inner {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
   margin-bottom: 20px;
 
   &:first-child {
@@ -58,12 +81,15 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 220px 180px min-content;
+    align-items: center;
+  }
 }
 
 .step__label {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 8px;
   font-weight: $font-medium;
   line-height: 16px;
   color: $basic-blue-light;
@@ -71,7 +97,6 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    row-gap: 24px;
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.1em;
@@ -94,17 +119,54 @@
   }
 }
 
-.step__field {
-  width: 100%;
-}
-
 .step__index {
   margin-left: auto;
+  font-weight: $font-medium;
+  line-height: 16px;
   letter-spacing: 0.07em;
+  text-transform: uppercase;
   opacity: 0.3;
 
   @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
     letter-spacing: 0.08em;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    margin: 0;
+  }
+}
+
+.step__input-wrapper {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+  }
+}
+
+.step__input {
+  box-sizing: border-box;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+  }
+}
+
+.step__button {
+  position: absolute;
+  top: 0;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: 0;
   }
 }
 
@@ -146,6 +208,10 @@
     line-height: 20px;
     letter-spacing: 0.1em;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
 }
 
 .step__button-add {
@@ -157,13 +223,25 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
+    padding-top: 27px;
+    border-top: 1px solid $special-grey-border;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 80px;
   }
 
   &--last {
     margin-bottom: 22px;
+    border: none;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 49px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 58px;
+      padding-top: 0;
     }
   }
 }
@@ -193,6 +271,12 @@
     width: 500px;
     padding: 19px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    padding: 25px 20px 25px 25px;
+  }
+
 }
 
 .step__calendar {
@@ -200,6 +284,25 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.step__countries-wrapper {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+    padding-top: 42px;
+    border-top: 1px solid $special-grey-border;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+    padding-top: 62px;
   }
 }
 

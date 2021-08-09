@@ -59,21 +59,21 @@
       </div>
     </header>
 
-    <main class="inner">
+    <main class="inner form-main">
       <header class="inner__header">
-        <div class="container container--w618">
+        <div class="container">
           <h1 class="inner__title title">Направления</h1>
         </div>
       </header>
       <form action="https://echo.htmlacademy.ru" method="GET">
-        <div class="user-edit container container--w618">
+        <div class="user-edit container">
           <h2 class="visually-hidden">Петя Демин</h2>
           <div class="user-edit__level">
             <span class="user-edit__level-value">80</span>
             <span class="user-edit__level-text">level</span>
           </div>
           <img class="user-edit__avatar" src="img/demin_avatar.jpg" alt="Аватар попутчика Пети Демина" width="100" height="100">
-          <a class="user-edit__avatar-add" href="#"><span>Сменить </span> фото</a>
+          <a class="user-edit__avatar-add" href="#"><span class="user-edit__text">Сменить </span> фото</a>
           <div class="user-edit__tags tags">
             <label class="tags__title">Тэги
               <textarea name="tags" cols="30" rows="10" placeholder="#бургер #бар #футбол #концерт
@@ -105,13 +105,13 @@
         </div>
 
         <div class="plan">
-          <div class="container container--w618">
+          <div class="plan__container container">
             <h2 class="plan__title subtitle subtitle--form">Мои планы:</h2>
             <ol class="plan__list">
               <li class="plan__item">
                 <div class="plan__wrapper">
                   <h3 class="plan__country">
-                    <span class="plan__counter">1. </span>Франция, Италия
+                    <span class="plan__number">1. </span>Франция, Италия
                   </h3>
                   <div class="plan__inner">
                     <p class="plan__people">3 попутчика</p>
@@ -123,7 +123,7 @@
               <li class="plan__item">
                 <div class="plan__wrapper">
                   <h3 class="plan__country">
-                    <span class="plan__counter">2. </span>Таиланд, Индонезия
+                    <span class="plan__number">2. </span>Таиланд, Индонезия
                   </h3>
                   <div class="plan__inner">
                     <p class="plan__people">1 попутчик</p>
@@ -137,44 +137,45 @@
         </div>
 
         <div class="plan-editor">
-          <div class="container container--w618">
+          <div class="container">
             <h2 class="plan-editor__title subtitle subtitle--form">Добавить план:</h2>
 
-            <ul class="plan-editor__list">
-              <li class="plan-editor__item plan-editor__item--current"><span class="plan-editor__marker">Даты</span></li>
-              <li class="plan-editor__tem"><span class="plan-editor__marker">Маршрут</span></li>
-              <li class="plan-editor__item"><span class="plan-editor__marker">Развлечения</span></li>
-            </ul>
-
             <div class="step" id="step-1">
+              <ul class="plan-editor__list">
+                <li class="plan-editor__item plan-editor__item--current"><span class="plan-editor__marker">Даты</span></li>
+                <li class="plan-editor__item"><span class="plan-editor__marker">Маршрут</span></li>
+                <li class="plan-editor__item"><span class="plan-editor__marker">Развлечения</span></li>
+              </ul>
               <h3 class="step__title subtitle subtitle--step">
                 <span class="step__inline">Шаг 1. </span>Даты пребывания
               </h3>
               <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
               <div class="step__container">
                 <div class="step__inner">
-                  <label class="step__label">
-                    Ищу попутчиков: <span class="step__index">чел.</span>
-                    <input class="step__field" type="number" name="amount" placeholder="2">
-                  </label>
-                  <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
-                    <span class="visually-hidden">Уменьшить</span>
-                  </button>
-                  <button class="step__button step__button--max" type="button" aria-label="Увеличить количество попутчиков">
-                    <span class="visually-hidden">Увеличить</span>
-                  </button>
+                  <label class="step__label" for="people-input">Ищу попутчиков:</label>
+                  <span class="step__index">чел.</span>
+                  <div class="step__input-wrapper">
+                    <input class="step__input" id="people-input" type="number" name="amount" placeholder="2">
+                    <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
+                      <span class="visually-hidden">Уменьшить</span>
+                    </button>
+                    <button class="step__button step__button--max" type="button" aria-label="Увеличить количество попутчиков">
+                      <span class="visually-hidden">Увеличить</span>
+                    </button>
+                  </div>
                 </div>
                 <div class="step__inner">
-                  <label class="step__label">
-                    Длительность: <span class="step__index">дн.</span>
-                    <input class="step__field" type="number" name="amount" placeholder="3">
-                  </label>
-                  <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
-                    <span class="visually-hidden">Уменьшить</span>
-                  </button>
-                  <button class="step__button step__button--max" type="button" aria-label="Увеличить количество дней">
-                    <span class="visually-hidden">Увеличить</span>
-                  </button>
+                  <label class="step__label" for="days-input">Длительность:</label>
+                  <span class="step__index">дн.</span>
+                  <div class="step__input-wrapper">
+                    <input class="step__input" id="days-input" type="number" name="amount" placeholder="3">
+                    <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
+                      <span class="visually-hidden">Уменьшить</span>
+                    </button>
+                    <button class="step__button step__button--max" type="button" aria-label="Увеличить количество дней">
+                      <span class="visually-hidden">Увеличить</span>
+                    </button>
+                  </div>
                 </div>
                 <div class="step__option">
                   <label class="step__label step__label--option">
@@ -471,261 +472,266 @@
             </div>
 
             <div class="step" id="step-2">
+              <ul class="plan-editor__list">
+                <li class="plan-editor__item"><span class="plan-editor__marker">Даты</span></li>
+                <li class="plan-editor__item plan-editor__item--current"><span class="plan-editor__marker">Маршрут</span></li>
+                <li class="plan-editor__item"><span class="plan-editor__marker">Развлечения</span></li>
+              </ul>
               <h3 class="step__title subtitle subtitle--step">
                 <span class="step__inline">Шаг 2. </span>Маршрут
               </h3>
               <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-              <div class="step__country">
-                <label class="step__country-name">
-                  <input class="step__country-field" type="text" name="country" placeholder="Босния и Герцеговина">
-                  <span class="visually-hidden">Босния и Герцеговина</span>
-                </label>
-                <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
-              </div>
-              <div class="step__country">
-                <label class="step__country-name">
-                  <input class="step__country-field" type="text" name="country" placeholder="Чехия">
-                  <span class="visually-hidden">Чехия</span>
-                </label>
-                <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
-              </div>
-              <div class="step__country">
-                <label class="step__country-name step__country-name--select">
-                  <input class="step__country-field" type="text" name="country" placeholder="Выберите страну">
-                  <span class="visually-hidden">Выберите страну</span>
-                </label>
-                <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
-              </div>
-
-
-              <div class="modal modal--closed modal--no-js">
-                <button class="modal__button button button--add" type="button">Добавить страну</button>
-                <header class="modal__header">
-                  <h4 class="modal__title">Выберите страну</h4>
-                  <button class="button button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
-                </header>
-                <div class="modal__inner">
-                  <table class="modal__table">
-                    <tr class="modal__row">
-                      <td class="modal__cell modal__cell--current">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter" checked>А
+              <div class="step__countries-wrapper">
+                <div class="step__country">
+                  <label class="step__country-name">
+                    <input class="step__country-field" type="text" name="country" placeholder="Босния и Герцеговина">
+                    <span class="visually-hidden">Босния и Герцеговина</span>
+                  </label>
+                  <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
+                </div>
+                <div class="step__country">
+                  <label class="step__country-name">
+                    <input class="step__country-field" type="text" name="country" placeholder="Чехия">
+                    <span class="visually-hidden">Чехия</span>
+                  </label>
+                  <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
+                </div>
+                <div class="step__country">
+                  <label class="step__country-name step__country-name--select">
+                    <input class="step__country-field" type="text" name="country" placeholder="Выберите страну">
+                    <span class="visually-hidden">Выберите страну</span>
+                  </label>
+                  <button class="button button--remove" type="button" aria-label="Удалить выбранную страну"><span class="visually-hidden">Удалить</span></button>
+                </div>
+                <div class="modal modal--closed modal--no-js">
+                  <button class="modal__button button button--add" type="button">Добавить страну</button>
+                  <header class="modal__header">
+                    <h4 class="modal__title">Выберите страну</h4>
+                    <button class="button button--close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                  </header>
+                  <div class="modal__inner">
+                    <table class="modal__table">
+                      <tr class="modal__row">
+                        <td class="modal__cell modal__cell--current">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter" checked>А
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Б
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">В
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Г
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Д
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">E
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ё
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ж
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">З
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">И
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Й
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">К
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Л
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">М
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Н
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">О
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">П
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Р
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">С
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Т
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">У
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ф
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Х
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ц
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ч
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ш
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Щ
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Э
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Ю
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">Я
+                          </label>
+                        </td>
+                      </tr>
+                    </table>
+                    <ul class="modal__list">
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Australia">Австралия
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Б
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Austria">Австрия
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">В
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Azerbaijan">Азербайджан
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Г
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Albania">Албания
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Д
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Aljir">Алжир
                         </label>
-                      </td>
-                    </tr>
-                    <tr class="modal__row">
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">E
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Angola">Ангола
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ё
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Andorra">Андорра
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ж
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Antigua and Barbuda">Антигуа и Барбуда
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">З
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Argentina">Аргентина
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">И
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Armenia">Армения
                         </label>
-                      </td>
-                    </tr>
-                    <tr class="modal__row">
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Й
+                      </li>
+                      <li>
+                        <label class="modal__country-name">
+                          <input class="visually-hidden" type="checkbox" name="Afganistan">Афганистан
                         </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">К
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Л
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">М
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Н
-                        </label>
-                      </td>
-                    </tr>
-                    <tr class="modal__row">
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">О
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">П
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Р
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">С
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Т
-                        </label>
-                      </td>
-                    </tr>
-                    <tr class="modal__row">
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">У
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ф
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Х
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ц
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ч
-                        </label>
-                      </td>
-                    </tr>
-                    <tr class="modal__row">
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ш
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Щ
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Э
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Ю
-                        </label>
-                      </td>
-                      <td class="modal__cell">
-                        <label class="modal__letter">
-                          <input class="visually-hidden" type="radio" name="country-first-letter">Я
-                        </label>
-                      </td>
-                    </tr>
-                  </table>
-                  <ul class="modal__list">
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Australia">Австралия
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Austria">Австрия
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Azerbaijan">Азербайджан
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Albania">Албания
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Aljir">Алжир
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Angola">Ангола
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Andorra">Андорра
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Antigua and Barbuda">Антигуа и Барбуда
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Argentina">Аргентина
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Armenia">Армения
-                      </label>
-                    </li>
-                    <li>
-                      <label class="modal__country-name">
-                        <input class="visually-hidden" type="checkbox" name="Afganistan">Афганистан
-                      </label>
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -736,6 +742,11 @@
             </div>
 
             <div class="step" id="step-3">
+              <ul class="plan-editor__list">
+                <li class="plan-editor__item"><span class="plan-editor__marker">Даты</span></li>
+                <li class="plan-editor__item"><span class="plan-editor__marker">Маршрут</span></li>
+                <li class="plan-editor__item plan-editor__item--current"><span class="plan-editor__marker">Развлечения</span></li>
+              </ul>
               <h3 class="step__title subtitle subtitle--step">
                 <span class="step__inline">Шаг 3. </span>Развлечения
               </h3>

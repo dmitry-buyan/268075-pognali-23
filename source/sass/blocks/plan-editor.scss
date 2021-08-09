@@ -7,6 +7,11 @@
     padding-top: 53px;
     padding-bottom: 63px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 72px;
+  }
 }
 
 .plan-editor__title {
@@ -14,6 +19,11 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+    padding-left: 64px;
   }
 }
 
@@ -37,4 +47,8 @@
 
 .plan-editor__marker {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
 }
