@@ -1,4 +1,14 @@
-.level__title {
-  margin: 0;
-  padding: 0;
+.level__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.level__field {
+  width: 50%;
+}
+
+.level__input {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
 }

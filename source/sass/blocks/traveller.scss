@@ -1,8 +1,26 @@
 .traveller {
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-areas:
+    "user-avatar user-name user-name"
+    "user-avatar user-likes ."
+    "user-tags user-tags user-tags"
+    "user-countries user-countries user-countries"
+    "user-transport user-transport user-level"
+    "user-button user-button user-button";
+  padding: 15px 0 23px;
   background: $basic-white;
 }
 
+.traveller__avatar {
+  grid-area: user-avatar;
+  margin-left: 18px;
+  width: 70px;
+  height: 70px;
+}
+
 .traveller__link {
+  grid-area: user-name;
   text-decoration: none;
   color: $basic-blue-light;
 }
@@ -14,12 +32,23 @@
   line-height: 20px;
 }
 
-.traveller__hashtag {
+.traveller__tags-wrapper {
+  grid-area: user-tags;
+  width: 176px;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+.traveller__tag {
   font-weight: $font-normal;
   font-size: 15px;
   line-height: 18px;
   color: $special-grey;
   text-decoration: none;
+}
+
+.traveller__countries-wrapper {
+  grid-area: user-countries;
 }
 
 .traveller__subtitle {
@@ -32,8 +61,7 @@
   text-transform: lowercase;
 }
 
-.traveller__country-list,
-.traveller__transport-list {
+.traveller__country-list {
   @include reset-list;
 }
 
@@ -45,8 +73,33 @@
   text-transform: uppercase;
 }
 
+.traveller__transport-wrapper {
+  grid-area: user-transport;
+}
+
+.traveller__transport-list {
+  @include reset-list;
+}
+
+.traveller__level-wrapper {
+  grid-area: user-level;
+}
+
 .traveller__level-value {
   font-weight: $font-bold;
   font-size: 24px;
   line-height: 24px;
+}
+
+.traveller__level-text {
+  display: none;
+}
+
+.traveller__likes-wrapper {
+  grid-area: user-likes;
+}
+
+.traveller__button {
+  grid-area: user-button;
+  margin-top: 13px;
 }

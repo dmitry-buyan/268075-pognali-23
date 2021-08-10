@@ -1,14 +1,40 @@
 .filter {
+  padding-top: 40px;
+  padding-bottom: 28px;
   background: $special-grey-snuff;
+}
+
+.filter__container {
+  position: relative;
+}
+
+.filter__wrapper {
+  padding: 0 25px;
 }
 
 .filter__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 38px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $basic-blue-dark;
+}
+
+.filter__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.filter__continents-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 9px;
+  margin-bottom: 21px;
 }
 
 .filter__continent {
@@ -31,6 +57,21 @@
   @include reset-list;
 }
 
+.filter__anchors {
+  margin-bottom: 14px;
+}
+
+.filter__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.filter__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .filter__link {
   font-weight: $font-medium;
   font-size: 14px;
@@ -42,6 +83,22 @@
   &--current {
     color: $basic-white;
   }
+}
+
+.filter__alphabet {
+  margin-bottom: 26px;
+}
+
+.filter__letter {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.filter__subtitle {
+  display: none;
 }
 
 .filter__country {

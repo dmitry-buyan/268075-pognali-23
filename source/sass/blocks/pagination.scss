@@ -1,4 +1,17 @@
 .pagination {
+  display: flex;
+  background: $basic-white;
+}
+
+.pagination__wrapper {
+  display: none;
+}
+
+.pagination__button {
+  width: 135px;
+  height: 51px;
+  // временно //
+  border: 1px dotted;
   background: $basic-white;
 }
 

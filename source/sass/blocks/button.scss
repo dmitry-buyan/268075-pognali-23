@@ -1,5 +1,6 @@
 .button {
   display: inline-block;
+  box-sizing: border-box;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 8px;
@@ -73,12 +74,19 @@
   }
 
   &--catalog {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
     line-height: 17px;
+    text-transform: uppercase;
     background: $basic-white;
   }
 
   &--expand {
+    padding-left: 28px;
     line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
     background: transparent;
   }
 
@@ -91,4 +99,34 @@
       border-radius: 20px;
     }
   }
+
+  &--toggle {
+    padding: 0;
+    font-weight: $font-bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $basic-blue-dark;
+    background-color: transparent;
+    border-radius: 0;
+    // Временно //
+    border: 1px dotted;
+  }
+
+  &--close {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #d6daed;
+  }
+
+  &--invite {
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.button__show-more {
+  display: none;
 }

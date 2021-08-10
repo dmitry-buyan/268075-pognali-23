@@ -7,9 +7,15 @@
 
 .category__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 18px;
   color: $basic-blue-light;
   text-transform: uppercase;
+}
+
+.category__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
 }
