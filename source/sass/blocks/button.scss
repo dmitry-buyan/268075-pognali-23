@@ -80,6 +80,12 @@
     line-height: 17px;
     text-transform: uppercase;
     background: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--expand {
@@ -101,16 +107,9 @@
   }
 
   &--toggle {
-    padding: 0;
-    font-weight: $font-bold;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: $basic-blue-dark;
-    background-color: transparent;
-    border-radius: 0;
-    // Временно //
-    border: 1px dotted;
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &--close {
@@ -118,12 +117,22 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     background: #d6daed;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--invite {
     line-height: 17px;
     text-align: center;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 

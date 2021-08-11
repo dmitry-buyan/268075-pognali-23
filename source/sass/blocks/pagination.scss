@@ -1,10 +1,20 @@
 .pagination {
   display: flex;
   background: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
 }
 
 .pagination__wrapper {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    order: -1;
+    margin-right: auto;
+  }
 }
 
 .pagination__button {
