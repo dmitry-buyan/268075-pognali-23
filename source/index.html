@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Главная страница</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/index.js" async></script>
   </head>
   <body>
     <header class="header">
-      <div class="menu">
+      <div class="menu menu--closed menu--no-js">
         <div class="menu__container container">
           <a class="header__logo logo">
             <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
@@ -28,7 +29,7 @@
                 </li>
               </ul>
             </nav>
-            <a class="header__button button" href="#">Авторизация</a>
+            <a class="header__button button button--login" href="#">Авторизация</a>
             <div class="header__contact contact">
               <ul class="contact__list">
                 <li class="contact__item">
@@ -60,7 +61,8 @@
 
     <main class="main">
       <div class="main__container container">
-        <h1 class="main__title title">В путешествие<br> с крутыми<br> попутчиками!</h1>
+        <h1 class="main__title title">В путешествие<br> с крутыми<br> попутчиками!
+        </h1>
 
         <div class="main__contact contact">
           <ul class="contact__list">
@@ -73,7 +75,7 @@
           </ul>
         </div>
 
-        <a class="main__button button" href="#">Авторизация</a>
+        <a class="main__button button button--login" href="#">Авторизация</a>
 
         <div class="main__reviews reviews">
           <h2 class="visually-hidden">Отзывы о нас</h2>

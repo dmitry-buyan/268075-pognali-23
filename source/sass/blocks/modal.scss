@@ -1,6 +1,39 @@
+.modal {
+  width: 220px;
+
+  @media (min-width: $tablet-width) {
+    width: 575px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+}
+
+.modal__button {
+  @media (min-width: $tablet-width) {
+    width: 369px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
 .modal__header {
+  box-sizing: border-box;
+  padding: 14px 17px;
   color: $basic-white;
   background: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding: 27px 24px 23px 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .modal__title {
@@ -11,6 +44,57 @@
   line-height: 18px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.modal__inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.modal__table {
+  display: block;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding: 35px 80px 33px 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 102px;
+    padding-bottom: 36px;
+  }
+}
+
+.modal__table tbody {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 262px;
+  }
+}
+
+.modal__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal__cell {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 41px;
 }
 
 .modal__letter {
@@ -18,8 +102,26 @@
   font-size: 14px;
   line-height: 18px;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .modal__list {
   @include reset-list;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 37px;
+    padding-left: 25px;
+  }
+}
+
+.modal__country-name {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

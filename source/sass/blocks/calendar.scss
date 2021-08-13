@@ -1,9 +1,37 @@
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding: 11px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 39px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
+}
+
 .calendar__month {
   margin: 0;
   padding: 0;
   font-size: 20px;
   line-height: 20px;
   color: $basic-blue-light;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.calendar__table {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .calendar__day {
@@ -13,5 +41,18 @@
 
   &--weekend {
     color: $special-orange-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.calendar__date {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
   }
 }

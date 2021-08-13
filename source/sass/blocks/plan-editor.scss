@@ -1,0 +1,54 @@
+.plan-editor {
+  padding-top: 30px;
+  padding-bottom: 43px;
+  background: $special-grey-periwinkle;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 53px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 72px;
+  }
+}
+
+.plan-editor__title {
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+    padding-left: 64px;
+  }
+}
+
+.plan-editor__list {
+  @include reset-list;
+}
+
+.plan-editor__item {
+  font-weight: $font-normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: $basic-black;
+  text-transform: uppercase;
+  opacity: 0.6;
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.plan-editor__marker {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}

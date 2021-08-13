@@ -1,8 +1,58 @@
 .traveller {
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-areas:
+    "user-avatar user-name user-name"
+    "user-avatar user-likes ."
+    "user-tags user-tags user-tags"
+    "user-countries user-countries user-countries"
+    "user-transport user-transport user-level"
+    "user-button user-button user-button";
+  padding: 15px 0 23px;
   background: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "user-avatar user-name user-name user-transport"
+      "user-avatar user-tags user-tags user-transport"
+      "user-avatar user-button user-likes user-level"
+      "user-countries user-countries user-countries user-countries";
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      "user-avatar user-name user-name user-countries user-countries"
+      "user-avatar user-tags user-tags user-countries user-countries"
+      "user-avatar user-button user-likes user-transport user-level";
+    padding: 0;
+    padding-right: 43px;
+  }
+}
+
+.traveller__avatar {
+  grid-area: user-avatar;
+  margin-left: 18px;
+  width: 70px;
+  height: 70px;
+
+  @media (min-width: $tablet-width) {
+    width: 190px;
+    height: 190px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    height: 258px;
+    margin-right: 54px;
+    margin-left: 0;
+  }
 }
 
 .traveller__link {
+  grid-area: user-name;
   text-decoration: none;
   color: $basic-blue-light;
 }
@@ -12,14 +62,39 @@
   padding: 0;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
-.traveller__hashtag {
+.traveller__tags-wrapper {
+  grid-area: user-tags;
+  width: 176px;
+  margin-top: 13px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.traveller__tag {
   font-weight: $font-normal;
   font-size: 15px;
   line-height: 18px;
   color: $special-grey;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.traveller__countries-wrapper {
+  grid-area: user-countries;
 }
 
 .traveller__subtitle {
@@ -30,10 +105,25 @@
   line-height: 16px;
   color: $special-grey;
   text-transform: lowercase;
+
+  &--transport {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--level {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
-.traveller__country-list,
-.traveller__transport-list {
+.traveller__country-list {
   @include reset-list;
 }
 
@@ -43,10 +133,65 @@
   line-height: 16px;
   color: $basic-blue-light;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.traveller__transport-wrapper {
+  grid-area: user-transport;
+}
+
+.traveller__transport-list {
+  @include reset-list;
+}
+
+.traveller__level-wrapper {
+  grid-area: user-level;
 }
 
 .traveller__level-value {
   font-weight: $font-bold;
   font-size: 24px;
   line-height: 24px;
+  color: $basic-blue-light;
+}
+
+.traveller__level-text {
+  display: none;
+  color: $basic-black;
+  opacity: 0.4;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.traveller__likes-wrapper {
+  grid-area: user-likes;
+}
+
+.traveller__likes-amount {
+  font-weight: $font-bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.traveller__button {
+  grid-area: user-button;
+  margin-top: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

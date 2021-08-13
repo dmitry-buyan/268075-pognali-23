@@ -1,9 +1,120 @@
+.user-edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  row-gap: 18px;
+  padding-top: 20px;
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "level transport transport avatar"
+      "button button button button"
+      "tags tags tags tags";
+    column-gap: 60px;
+    row-gap: 51px;
+    padding-top: 62px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      ". . level avatar"
+      ". . . button"
+      "tags tags transport transport";
+    column-gap: 0;
+    row-gap: 0;
+    margin-top: -194px;
+    padding-top: 0;
+    padding-bottom: 54px;
+    padding-left: 65px;
+  }
+}
+
+.user-edit__level {
+  grid-column: 1 / 2;
+  margin-left: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: level;
+    margin: 0;
+  }
+}
+
+.user-edit__avatar {
+  grid-column: 2 / -1;
+  margin-right: 19px;
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: avatar;
+    margin: 0;
+    margin-left: auto;
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 194px;
+    height: 194px;
+    margin-right: 95px;
+  }
+}
+
 .user-edit__avatar-add {
+  grid-column: 1 / -1;
+  margin-bottom: 7px;
   font-weight: $font-medium;
   font-size: 20px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   color: $basic-blue;
   background: $special-blue-light;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    grid-area: button;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 194px;
+    margin-right: 95px;
+    margin-bottom: 27px;
+    margin-left: auto;
+  }
+}
+
+.user-edit__text {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.user-edit__tags {
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-area: tags;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 732px;
+  }
+}
+
+.user-edit__transport {
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-area: transport;
+    width: 308px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 384px;
+    margin-left: auto;
+  }
 }

@@ -3,4 +3,15 @@
   line-height: 18px;
   color: $basic-blue-light;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-weight: $font-medium;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.07em;
+  }
 }

@@ -1,4 +1,57 @@
+.level {
+  padding: 12px 0 14px;
+  border-top: 1px solid #f3c72b;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .level__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-blue-light;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-weight: $font-medium;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 22px;
+  }
+}
+
+.level__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+}
+
+.level__field {
+  width: 50%;
+}
+
+.level__input {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
 }

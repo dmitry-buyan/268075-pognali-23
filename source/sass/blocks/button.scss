@@ -1,44 +1,103 @@
 .button {
   display: inline-block;
+  box-sizing: border-box;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 8px;
   font-weight: $font-bold;
   font-size: 17px;
   line-height: 20px;
-  text-align: center;
   border-radius: 25px;
   color: $basic-blue;
   background-color: $basic-yellow;
   border: none;
-  text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--login {
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
 
   &--add {
     font-weight: $font-medium;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
     color: $basic-blue-light;
     background: $basic-light;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.09em;
+    }
+  }
+
+  &--next {
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      line-height: 24px;
+      text-transform: initial;
+    }
   }
 
   &--back {
+    line-height: 30px;
     letter-spacing: 0.01em;
+    text-transform: uppercase;
     background: transparent;
+
+    @media (min-width: $tablet-width) {
+      line-height: 22px;
+      text-align: right;
+      text-transform: initial;
+    }
+  }
+
+  &--send {
+    line-height: 30px;
+    text-transform: uppercase;
   }
 
   &--catalog {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
     line-height: 17px;
+    text-transform: uppercase;
     background: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--expand {
+    padding-left: 28px;
     line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
     background: transparent;
   }
 
   &--address {
+    text-transform: initial;
     border: 3px solid $basic-blue-dark;
     border-radius: 10px;
 
@@ -46,4 +105,37 @@
       border-radius: 20px;
     }
   }
+
+  &--toggle {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--close {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #d6daed;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &--invite {
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.button__show-more {
+  display: none;
 }
