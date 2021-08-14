@@ -1,9 +1,8 @@
-.main {
-  padding-top: 42px;
-  background: $basic-blue url("../img/globe-back-desktop.jpg") no-repeat;
+.intro {
+  background-color: $basic-blue;
 }
 
-.main__container {
+.intro__container {
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -11,7 +10,8 @@
   }
 }
 
-.main__title {
+.intro__title {
+  margin-bottom: 245px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -24,13 +24,13 @@
   }
 }
 
-.main__contact {
+.intro__contact {
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-.main__button {
+.intro__button {
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
@@ -38,10 +38,11 @@
   }
 }
 
-.main__reviews {
+.intro__reviews {
   margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
+    width: 270px;
     margin-bottom: 211px;
   }
 
@@ -51,7 +52,7 @@
   }
 }
 
-.main__guideline {
+.intro__guideline {
   margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {

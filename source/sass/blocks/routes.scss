@@ -29,6 +29,7 @@
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {
+    width: 340px;
     padding-left: 35px;
     margin-bottom: 104px;
   }
@@ -88,7 +89,15 @@
 }
 
 .routes__button {
-  order: 3;
-  height: min-content;
-  margin-top: auto;
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 618px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    height: min-content;
+    margin-top: auto;
+  }
 }

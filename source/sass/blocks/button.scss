@@ -28,6 +28,32 @@
     }
   }
 
+  &--more {
+    position: relative;
+    padding: 21px;
+    border-radius: 10px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      content: "";
+      width: 11px;
+      height: 14px;
+      background: url("../../img/button_triangle_icon.svg") no-repeat;
+      transform: translateY(-50%);
+
+      @media (min-width: $tablet-width) {
+        right: 30px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 29px 30px 27px 33px;
+      border-radius: 20px;
+    }
+  }
+
   &--add {
     font-weight: $font-medium;
     font-size: 14px;

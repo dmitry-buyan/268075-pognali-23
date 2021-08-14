@@ -19,11 +19,13 @@
   margin: 0;
   margin-bottom: 20px;
 
-  &:last-of-type {
+  &--last {
     margin-bottom: 0;
     font-weight: $font-bold;
 
     @media (min-width: $tablet-width) {
+      font-size: 21px;
+      line-height: 25px;
       margin-bottom: 52px;
     }
   }
@@ -38,5 +40,6 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    width: 256px;
   }
 }

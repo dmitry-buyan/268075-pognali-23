@@ -1,38 +1,93 @@
 .user {
+  position: relative;
   color: $special-grey;
   background: $basic-white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+  }
 }
 
 .user__inner {
-  padding: 27px 25px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  padding: 0 25px 20px 25px;
 }
 
 .user__img {
   display: block;
+  width: 270px;
+  height: 270px;
   margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .user__link {
   display: inline-block;
-  margin-bottom: 15px;
   text-decoration: none;
 }
 
 .user__name {
+  position: relative;
   margin: 0;
   padding: 0;
   font-size: 21px;
   line-height: 21px;
   color: $basic-blue-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: #f97676;
+
+    @media (min-width: $tablet-width) {
+      width: 8px;
+      height: 8px;
+      left: -22px;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+  }
 }
 
-.user__countries,
+.user__countries {
+  @include reset-list;
+  order: -1;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
 .user__transport {
   @include reset-list;
 }
 
 .user__preferences {
   margin-bottom: 14px;
+  text-align: center;
 }
 
 .user__hashtag {
@@ -40,4 +95,56 @@
   line-height: 18px;
   color: $special-grey;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.user__level {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 60px;
+  height: 60px;
+  color: $basic-white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    top: 20px;
+    left: 22px;
+  }
+}
+
+.user__level-value {
+  position: relative;
+  font-weight: $font-bold;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 30px;
+    height: 1px;
+    background-color: $basic-white;
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+}
+
+.user__level-text {
+  font-weight: $font-normal;
+  font-size: 14px;
+  line-height: 14px;
 }

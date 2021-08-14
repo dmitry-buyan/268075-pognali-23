@@ -12,6 +12,7 @@
 
 .guideline__list {
   @include reset-list;
+  counter-reset: myCounter;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -24,17 +25,70 @@
 }
 
 .guideline__item {
+  margin-bottom: -16px;
+  position: relative;
+  padding: 22px 21px 38px 24px;
   background: $special-orange;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 22px;
+    border-radius: 0;
+  }
+
+  &--1 {
+    @media (min-width: $tablet-width) {
+      margin-right: -20px;
+      border-top-left-radius: 20px;
+    }
+  }
 
   &--2 {
     background: $special-orange-light;
+
+    @media (min-width: $tablet-width) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
   }
 
   &--3 {
     background: $basic-yellow-dark;
+
+    @media (min-width: $tablet-width) {
+      margin-right: -20px;
+      border-bottom-left-radius: 20px;
+    }
   }
 
   &--4 {
+    padding-bottom: 24px;
     background: $basic-yellow;
+
+    @media (min-width: $tablet-width) {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    font: inherit;
+    color: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      position: static;
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 }

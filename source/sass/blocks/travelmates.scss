@@ -28,6 +28,7 @@
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {
+    width: 430px;
     padding-right: 34px;
     padding-left: 34px;
   }
@@ -41,9 +42,11 @@
   margin: 0;
   margin-bottom: 25px;
 
-  &:last-of-type {
+  &--last {
     margin-bottom: 54px;
     font-weight: $font-bold;
+    font-size: 21px;
+    line-height: 25px;
   }
 }
 
@@ -88,8 +91,9 @@
 
 .travelmates__button {
   @media (min-width: $tablet-width) {
-    grid-column: 1 / -1;
-    margin-top: 31px;
+    display: block;
+    width: 618px;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
