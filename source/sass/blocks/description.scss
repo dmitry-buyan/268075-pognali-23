@@ -1,9 +1,8 @@
 .description {
-  padding: 33px 35px 82px 25px;
-  background: url("../img/about-mobile.png") no-repeat;
+  padding: 33px 35px 0 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 41px 34px 89px 34px;
+    padding: 41px 34px 0 34px;
   }
 }
 
@@ -13,11 +12,23 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .description__text {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
+  }
 
   &--last {
     margin-bottom: 0;
@@ -28,10 +39,11 @@
       line-height: 25px;
       margin-bottom: 52px;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 31px;
+    @media (min-width: $desktop-width) {
+      width: 450px;
+      margin-bottom: 85px;
+    }
   }
 }
 
@@ -41,5 +53,9 @@
   @media (min-width: $tablet-width) {
     display: block;
     width: 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
   }
 }

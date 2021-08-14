@@ -1,5 +1,6 @@
-.signup-form {
-  display: flex;
+.signup-form__container {
+  display: grid;
+  grid-template-columns: 1fr min-content;
 }
 
 .signup-form__label {
@@ -36,8 +37,18 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 324px;
+    padding-left: 36px;
+    text-align: left;
+  }
 }
 
 .signup-form__button-text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
 }

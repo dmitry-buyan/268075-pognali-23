@@ -11,6 +11,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    line-height: 32px;
+  }
 }
 
 .reviews__author {

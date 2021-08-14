@@ -2,11 +2,20 @@
   background-color: $basic-blue;
 }
 
-.intro__container {
+.intro__top {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 96px;
+  }
+
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 101px;
+    margin-bottom: 0;
+    padding-bottom: 123px;
   }
 }
 
@@ -20,7 +29,9 @@
 
   @media (min-width: $desktop-width) {
     margin-right: auto;
-    margin-bottom: 101px;
+    margin-bottom: 0;
+    margin-left: 67px;
+    text-align: left;
   }
 }
 
@@ -47,20 +58,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-right: 25px;
     margin-bottom: 0;
-    margin-left: auto;
   }
 }
 
 .intro__guideline {
-  margin-bottom: 39px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 96px;
-  }
-
   @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-    grid-column: 1 / -1;
+    width: 100%;
   }
 }

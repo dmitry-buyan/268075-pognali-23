@@ -20,6 +20,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
+    padding-left: 70px;
   }
 }
 
@@ -32,21 +33,45 @@
     padding-right: 34px;
     padding-left: 34px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .travelmates__subtitle {
   margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .travelmates__text {
   margin: 0;
   margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+
   &--last {
     margin-bottom: 54px;
     font-weight: $font-bold;
     font-size: 21px;
     line-height: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 59px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
   }
 }
 
@@ -62,7 +87,7 @@
   @media (min-width: $desktop-width) {
     grid-row-start: span 2;
     gap: 60px;
-    margin-left: auto;
+    margin: 0;
     padding: 0;
   }
 }
@@ -98,7 +123,9 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    width: 280px;
     height: min-content;
     margin-top: auto;
+    margin-left: 0;
   }
 }
