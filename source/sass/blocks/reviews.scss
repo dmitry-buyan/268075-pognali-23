@@ -11,9 +11,18 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    line-height: 32px;
+  }
 }
 
 .reviews__author {
   font-weight: $font-bold;
   font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

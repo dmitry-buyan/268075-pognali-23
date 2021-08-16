@@ -3,3 +3,17 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin block ($index, $direction: bottom) {
+  position: relative;
+  z-index: $index;
+  margin-#{$direction}: -$mobile-radius;
+  border-#{$direction}-left-radius: $mobile-radius;
+  border-#{$direction}-right-radius: $mobile-radius;
+
+  @media (min-width: $tablet-width) {
+    margin-#{$direction}: -$tablet-radius;
+    border-#{$direction}-left-radius: $tablet-radius;
+    border-#{$direction}-right-radius: $tablet-radius;
+  }
+}

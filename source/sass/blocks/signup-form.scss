@@ -1,0 +1,54 @@
+.signup-form__container {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+
+.signup-form__label {
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.signup-form__input {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 22px 40px 22px 25px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: inherit;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.signup-form__button {
+  width: 60px;
+  margin-left: -15px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 324px;
+    padding-left: 36px;
+    text-align: left;
+  }
+}
+
+.signup-form__button-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}

@@ -5,6 +5,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 135px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,7 +28,8 @@
 }
 
 .rates__subtitle-business {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
@@ -35,9 +37,16 @@
 }
 
 .rates__card {
+  @media (min-width: $desktop-width) {
+    width: 1177px;
+    margin: 0 auto;
+  }
+
   &--business {
     padding-top: 34px;
     background: $basic-white;
+    border-radius: 20px;
+    overflow: hidden;
 
     @media (min-width: $tablet-width) {
       padding-top: 54px;
@@ -46,6 +55,29 @@
     @media (min-width: $desktop-width) {
       width: 750px;
       margin: 0 auto;
+    }
+
+    .rates__inner {
+      padding-right: 25px;
+
+      @media (min-width: $tablet-width) {
+        padding-right: 90px;
+        padding-left: 90px;
+      }
+    }
+
+    .rates__option {
+      padding: 11px 0 10px;
+
+      @media (min-width: $tablet-width) {
+        padding: 14px 0 12px;
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+
+    .rates__option::after {
+      display: none;
     }
   }
 }
@@ -63,11 +95,17 @@
   width: 200px;
   margin-bottom: 31px;
   line-height: 16px;
+  counter-reset: myCounter;
 
   @media (min-width: $tablet-width) {
     width: auto;
     margin-bottom: 33px;
     line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 813px;
+    margin-bottom: 33px;
   }
 
   &--business {
@@ -80,9 +118,61 @@
       margin-bottom: 52px;
     }
   }
+}
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 33px;
+.rates__option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  padding: 15px 0;
+  border-top: 1px solid #e1e3e9;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0 18px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    right: -44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    font-weight: $font-normal;
+    font-size: 16px;
+    line-height: 16px;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+    background-color: $special-orange;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      left: -90px;
+      width: 68px;
+      height: 68px;
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  &--second {
+    &::after {
+      background-color: $basic-yellow-dark;
+    }
+  }
+
+  &--last {
+    border-bottom: 1px solid #e1e3e9;
+
+    &::after {
+      background-color: $basic-yellow;
+    }
   }
 }
 
@@ -92,7 +182,14 @@
   color: $special-blue;
   text-decoration: none;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &--close {
+    width: 100%;
+    padding: 21px;
     line-height: 24px;
     text-transform: uppercase;
     background: $basic-grey;
@@ -101,11 +198,14 @@
     @media (min-width: $tablet-width) {
       display: block;
       width: 100%;
+      padding: 41px;
+      text-transform: initial;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
+    @media (min-width: $desktop-width) {
+      padding-bottom: 45px;
+      font-size: 24px;
+      line-height: 26px;
+    }
   }
 }
