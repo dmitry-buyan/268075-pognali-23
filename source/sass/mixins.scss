@@ -4,7 +4,7 @@
   list-style: none;
 }
 
-@mixin block ($index, $direction: bottom) {
+@mixin block ($index: 0, $direction: bottom) {
   position: relative;
   z-index: $index;
   margin-#{$direction}: -$mobile-radius;

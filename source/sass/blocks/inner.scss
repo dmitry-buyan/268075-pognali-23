@@ -2,6 +2,8 @@
   padding-top: 42px;
   color: $basic-white;
   background: $basic-blue;
+  border-bottom-right-radius: $mobile-radius;
+  border-bottom-left-radius: $mobile-radius;
 
   @media (min-width: $tablet-width) {
     padding-top: 134px;
@@ -12,10 +14,14 @@
   }
 }
 
-.inner__container {
+.inner__header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 618px;
+  }
 }
 
 .inner__title {

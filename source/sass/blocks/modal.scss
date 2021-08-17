@@ -1,8 +1,12 @@
 .modal {
   width: 220px;
+  margin-bottom: 22px;
+  box-shadow: 0 16px 16px rgba(54, 80, 148, 0.18);
 
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 575px;
+    border-radius: 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,14 +25,19 @@
 }
 
 .modal__header {
+  position: relative;
   box-sizing: border-box;
   padding: 14px 17px;
   color: $basic-white;
   background: $basic-blue-light;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 
   @media (min-width: $tablet-width) {
     width: 369px;
     padding: 27px 24px 23px 24px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -53,18 +62,28 @@
 }
 
 .modal__inner {
+  border: 1px solid $basic-grey-border;
+  border-top: none;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     display: flex;
+    border: none;
   }
 }
 
 .modal__table {
   display: block;
   box-sizing: border-box;
+  border-bottom: 1px solid $basic-grey-border;
 
   @media (min-width: $tablet-width) {
     width: 369px;
     padding: 35px 80px 33px 27px;
+    border: none;
+    border-right: 1px solid $basic-grey-border;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,6 +95,7 @@
 .modal__table tbody {
   display: flex;
   flex-wrap: wrap;
+  border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
     width: 262px;
@@ -112,6 +132,7 @@
 .modal__list {
   @include reset-list;
   padding: 20px;
+  background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     padding-top: 37px;
@@ -124,4 +145,13 @@
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  width: 9px;
+  height: 9px;
+  transform: translateY(-50%);
 }

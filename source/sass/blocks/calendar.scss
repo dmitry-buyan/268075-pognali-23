@@ -1,8 +1,9 @@
 .calendar__header {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   margin-bottom: 22px;
   padding: 11px 0;
+  border-top: 1px solid $basic-grey-border;
+  border-bottom: 1px solid $basic-grey-border;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 39px;
@@ -12,6 +13,22 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 18px;
+  }
+}
+
+.calendar__button {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  border: none;
+  background: transparent url("../img/arrow.svg") no-repeat 0 center;
+  opacity: 0.3;
+
+  &--next {
+    right: 0;
+    transform: rotate(180deg);
   }
 }
 
@@ -34,18 +51,35 @@
   width: 100%;
 }
 
+.calendar tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar__row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
 .calendar__day {
+  position: relative;
   font-weight: $font-normal;
   font-size: 14px;
   line-height: 18px;
+  overflow: hidden;
 
   &--weekend {
     color: $special-orange-dark;
   }
 
   @media (min-width: $tablet-width) {
+    width: auto;
     font-size: 18px;
   }
+}
+
+.calendar__cell {
+  text-align: center;
 }
 
 .calendar__date {
@@ -54,5 +88,22 @@
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+  }
+}
+
+.calendar__arrival,
+.calendar__departure {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.calendar__month-name {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
   }
 }

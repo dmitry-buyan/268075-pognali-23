@@ -1,16 +1,28 @@
 .plan-editor {
+  position: relative;
+  z-index: 200;
+  margin-top: -30px;
   padding-top: 30px;
-  padding-bottom: 43px;
+  padding-bottom: 73px;
   background: $special-grey-periwinkle;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 
   @media (min-width: $tablet-width) {
     padding-top: 53px;
-    padding-bottom: 63px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 55px;
     padding-bottom: 72px;
+  }
+}
+
+.plan-editor__container {
+  @media (min-width: $tablet-width) {
+    width: 618px;
+    margin-bottom: 62px;
   }
 }
 

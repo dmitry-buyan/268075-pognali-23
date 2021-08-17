@@ -7,6 +7,7 @@
   padding-bottom: 34px;
 
   @media (min-width: $tablet-width) {
+    width: 618px;
     grid-template-columns: auto;
     grid-template-areas:
       "level transport transport avatar"
@@ -33,13 +34,51 @@
 }
 
 .user-edit__level {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-column: 1 / 2;
+  width: 100px;
+  height: 100px;
   margin-left: 16px;
+  color: #ffffff;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     grid-area: level;
+    width: 94px;
+    height: 94px;
     margin: 0;
   }
+}
+
+.user-edit__level-value {
+  position: relative;
+  margin-bottom: 6px;
+  font-weight: $font-bold;
+  font-size: 38px;
+  line-height: 38px;
+  color: $basic-blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 51px;
+    height: 1px;
+    background-color: $special-grey;
+    transform: translateX(-50%);
+    opacity: 0.3;
+  }
+}
+
+.user-edit__level-text {
+  font-size: 18px;
+  line-height: 18px;
+  color: $special-grey;
 }
 
 .user-edit__avatar {
@@ -47,6 +86,7 @@
   margin-right: 19px;
   width: 100px;
   height: 100px;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     grid-area: avatar;
@@ -54,6 +94,7 @@
     margin-left: auto;
     width: 94px;
     height: 94px;
+    border-radius: 8px;
   }
 
   @media (min-width: $desktop-width) {
@@ -66,6 +107,7 @@
 .user-edit__avatar-add {
   grid-column: 1 / -1;
   margin-bottom: 7px;
+  padding: 11px 13px 11px;
   font-weight: $font-medium;
   font-size: 20px;
   line-height: 18px;
@@ -73,10 +115,13 @@
   text-transform: uppercase;
   color: $basic-blue;
   background: $special-blue-light;
+  border-radius: 20px;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
     grid-area: button;
+    padding: 22px 20px 20px;
+    border-radius: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,10 +139,14 @@
 }
 
 .user-edit__tags {
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
     grid-area: tags;
+    flex-direction: column-reverse;
+    height: 95px;
   }
 
   @media (min-width: $desktop-width) {
@@ -106,10 +155,13 @@
 }
 
 .user-edit__transport {
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
     grid-area: transport;
+    flex-direction: column-reverse;
     width: 308px;
   }
 
