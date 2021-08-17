@@ -1,6 +1,4 @@
 .plan-editor {
-  position: relative;
-  z-index: 200;
   margin-top: -30px;
   padding-top: 30px;
   padding-bottom: 73px;
@@ -16,12 +14,15 @@
   @media (min-width: $desktop-width) {
     padding-top: 55px;
     padding-bottom: 72px;
+    border-top-right-radius: $tablet-radius;
+    border-top-left-radius: $tablet-radius;
   }
 }
 
 .plan-editor__container {
+  position: relative;
+
   @media (min-width: $tablet-width) {
-    width: 618px;
     margin-bottom: 62px;
   }
 }
@@ -41,24 +42,74 @@
 
 .plan-editor__list {
   @include reset-list;
+  display: none;
+  position: absolute;
+
+  &--1 {
+    top: 10px;
+    right: 10px;
+    width: 47px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 76px;
+      column-gap: 29px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 100px;
+    right: 205px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    width: auto;
+  }
 }
 
 .plan-editor__item {
+  position: relative;
   font-weight: $font-normal;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.1em;
   color: $basic-black;
   text-transform: uppercase;
-  opacity: 0.6;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: $basic-blue-light;
+    border-radius: 50%;
+    opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      top: 50%;
+      left: -42px;
+      width: 6px;
+      height: 6px;
+      transform: translateY(-50%);
+    }
+  }
 
   &--current {
-    opacity: 1;
+    .plan-editor__marker {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 1;
+    }
   }
 }
 
 .plan-editor__marker {
   display: none;
+  opacity: 0.6;
 
   @media (min-width: $desktop-width) {
     display: inline;

@@ -12,15 +12,13 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 54px;
-    padding-bottom: 64px;
+    padding-bottom: 94px;
+    border-top-right-radius: $tablet-radius;
+    border-top-left-radius: $tablet-radius;
   }
 }
 
 .plan__container {
-  @media (min-width: $tablet-width) {
-    width: 618px;
-  }
-
   @media (min-width: $desktop-width) {
     padding-left: 64px;
   }

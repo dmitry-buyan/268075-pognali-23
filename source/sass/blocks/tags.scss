@@ -20,6 +20,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    align-self: flex-start;
+    margin-left: 25px;
     letter-spacing: 0.07em;
   }
 }

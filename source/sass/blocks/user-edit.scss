@@ -7,7 +7,6 @@
   padding-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    width: 618px;
     grid-template-columns: auto;
     grid-template-areas:
       "level transport transport avatar"
@@ -26,7 +25,7 @@
       "tags tags transport transport";
     column-gap: 0;
     row-gap: 0;
-    margin-top: -194px;
+    margin-top: -190px;
     padding-top: 0;
     padding-bottom: 54px;
     padding-left: 65px;
@@ -43,7 +42,7 @@
   width: 100px;
   height: 100px;
   margin-left: 16px;
-  color: #ffffff;
+  color: $basic-white;
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
@@ -72,6 +71,14 @@
     background-color: $special-grey;
     transform: translateX(-50%);
     opacity: 0.3;
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-white;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
   }
 }
 
@@ -79,6 +86,10 @@
   font-size: 18px;
   line-height: 18px;
   color: $special-grey;
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }
 
 .user-edit__avatar {
@@ -98,9 +109,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 194px;
-    height: 194px;
+    width: 190px;
+    height: 190px;
     margin-right: 95px;
+    border-radius: 0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
   }
 }
 
@@ -125,10 +139,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 194px;
+    width: 190px;
     margin-right: 95px;
     margin-bottom: 27px;
     margin-left: auto;
+    border-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 }
 
