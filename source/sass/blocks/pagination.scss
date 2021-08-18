@@ -1,6 +1,6 @@
 .pagination {
   display: flex;
-  background: $basic-white;
+  column-gap: 1px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -18,11 +18,25 @@
 }
 
 .pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 135px;
   height: 51px;
-  // временно //
-  border: 1px dotted;
   background: $basic-white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 11px;
+    background: url("../../img/button_triangle_icon.svg") no-repeat center;
+  }
+
+  &--back {
+    transform: rotate(180deg);
+  }
 }
 
 .pagination__link {

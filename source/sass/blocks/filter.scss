@@ -1,7 +1,25 @@
 .filter {
-  padding-top: 40px;
+  padding-top: 52px;
   padding-bottom: 28px;
   background: $special-grey-snuff;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  &--closed {
+    .filter__continents-list,
+    .filter__anchors,
+    .filter__alphabet,
+    .filter__button {
+      display: none;
+    }
+
+    .filter__inner,
+    .filter__title {
+      margin-bottom: 0;
+    }
+
+    padding-bottom: 17px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 79px;
@@ -18,10 +36,14 @@
 }
 
 .filter__wrapper {
+  width: 220px;
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 615px;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,6 +52,7 @@
 }
 
 .filter__inner {
+  position: relative;
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
@@ -66,7 +89,11 @@
 
 .filter__button {
   @media (min-width: $tablet-width) {
+    display: block;
+    width: 615px;
     margin-top: 78px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -130,21 +157,31 @@
 .filter__list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid $basic-grey-border;
+  border-left: 1px solid $basic-grey-border;
 }
 
 .filter__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 41px;
 }
 
 .filter__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   font-weight: $font-medium;
   font-size: 14px;
   line-height: 14px;
   color: $basic-blue-light;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: $basic-white;
+  border-bottom: 1px solid $basic-grey-border;
+  border-right: 1px solid $basic-grey-border;
 
   @media (min-width: $tablet-width) {
     font-weight: $font-bold;
@@ -154,7 +191,13 @@
   }
 
   &--current {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 46px;
+    height: 43px;
     color: $basic-white;
+    background-color: $basic-blue-light;
 
     @media (min-width: $tablet-width) {
       color: $basic-blue-light;

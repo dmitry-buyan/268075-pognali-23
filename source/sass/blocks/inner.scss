@@ -1,4 +1,6 @@
 .inner__header {
+  position: relative;
+  z-index: 900;
   padding-top: 42px;
   color: $basic-white;
   background: $basic-blue;

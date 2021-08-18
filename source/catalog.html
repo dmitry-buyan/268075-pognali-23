@@ -71,7 +71,7 @@
           <div class="filter__wrapper">
             <div class="filter__inner">
               <h2 class="filter__title">Фильтрация по странам:</h2>
-              <button class="button button--toggle">
+              <button class="filter__toggle button button--toggle">
                 <span class="button__show-more">Показать все</span>
               </button>
               <div class="filter__continents-list">
@@ -457,7 +457,7 @@
               <h2 class="sorting__title">Подберите идеального попутчика</h2>
               <div class="sorting__inner">
                 <div class="category">
-                  <h3 class="category__title">Хобби</h3>
+                  <button class="category__title" type="button">Хобби</button>
                   <div class="category__inner">
                     <label class="category__item">
                       <input class="visually-hidden" type="checkbox" name="gym" checked>
@@ -476,7 +476,7 @@
                   </div>
                 </div>
                 <div class="category">
-                  <h3 class="category__title">Музыка</h3>
+                  <button class="category__title" type="button">Музыка</button>
                   <div class="category__inner">
                     <label class="category__item">
                       <input class="visually-hidden" type="checkbox" name="hard-roch" checked>
@@ -495,7 +495,7 @@
                   </div>
                 </div>
                 <div class="category">
-                  <h3 class="category__title">Еда</h3>
+                  <button class="category__title" type="button">Еда</button>
                   <div class="category__inner">
                     <label class="category__item">
                       <input class="visually-hidden" type="checkbox" name="meat-eater" checked>
@@ -514,8 +514,8 @@
                   </div>
                 </div>
               </div>
-              <div class="transport">
-                <h3 class="transport__title">Транспорт</h3>
+              <div class="transport category">
+                <button class="category__title" type="button">Транспорт</button>
                 <label class="transport__item  transport__item--plane">
                   <input class="visually-hidden" type="checkbox" name="plane" checked>
                   Авиаперелет
@@ -536,8 +536,8 @@
                   Пешком
                 </label>
               </div>
-              <div class="level">
-                <h3 class="level__title">Левел</h3>
+              <div class="level category">
+                <button class="category__title" type="button">Левел</button>
                 <div class="level__wrapper">
                   <div class="level__field">
                     <label>
@@ -641,7 +641,7 @@
                 </ul>
               </div>
               <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle">Левел:</h4>
+                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
                 <span class="traveller__level-value">80</span>
                 <span class="traveller__level-text">level</span>
               </div>
@@ -682,7 +682,7 @@
                 </ul>
               </div>
               <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle">Левел:</h4>
+                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
                 <span class="traveller__level-value">25</span>
                 <span class="traveller__level-text">level</span>
               </div>
@@ -721,7 +721,7 @@
                 </ul>
               </div>
               <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle">Левел:</h4>
+                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
                 <span class="traveller__level-value">50</span>
                 <span class="traveller__level-text">level</span>
               </div>

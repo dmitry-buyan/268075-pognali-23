@@ -109,7 +109,7 @@
         content: "";
         width: 11px;
         height: 14px;
-        background: url(../img/button_triangle_icon.svg) no-repeat;
+        background: url("../img/button_triangle_icon.svg") no-repeat;
         transform: translateY(-50%);
       }
     }
@@ -135,7 +135,7 @@
         content: "";
         width: 11px;
         height: 14px;
-        background: url(../img/button_triangle_icon.svg) no-repeat;
+        background: url("../img/button_triangle_icon.svg") no-repeat;
         transform: translateY(-50%) rotate(180deg);
       }
     }
@@ -162,7 +162,7 @@
         content: "";
         width: 11px;
         height: 14px;
-        background: url(../img/button_triangle_icon.svg) no-repeat;
+        background: url("../img/button_triangle_icon.svg") no-repeat;
         transform: translateY(-50%);
       }
     }
@@ -202,6 +202,14 @@
   }
 
   &--toggle {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    width: 25px;
+    height: 15px;
+    padding: 0;
+    background: url("../img/filter-expand.svg") no-repeat center;
+
     @media (min-width: $desktop-width) {
       display: none;
     }

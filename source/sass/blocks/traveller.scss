@@ -10,6 +10,7 @@
     "user-button user-button user-button";
   padding: 15px 0 23px;
   background: $basic-white;
+  border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     grid-template-areas:
@@ -36,6 +37,7 @@
   margin-left: 18px;
   width: 70px;
   height: 70px;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     width: 190px;
@@ -58,7 +60,9 @@
 }
 
 .traveller__name {
+  width: 100px;
   margin: 0;
+  margin-left: 15px;
   padding: 0;
   font-size: 20px;
   line-height: 20px;
@@ -72,8 +76,9 @@
 .traveller__tags-wrapper {
   grid-area: user-tags;
   width: 176px;
-  margin-top: 13px;
-  margin-left: 20px;
+  margin: 13px 0 26px 20px;
+  font-size: 15px;
+  line-height: 18px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -95,15 +100,24 @@
 
 .traveller__countries-wrapper {
   grid-area: user-countries;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 18px;
+  margin-bottom: 23px;
+  border-top: 1px solid $basic-light;
 }
 
 .traveller__subtitle {
   margin: 0;
-  padding: 0;
+  margin-top: -8px;
+  margin-left: 15px;
+  padding: 0 10px;
   font-weight: $font-normal;
   font-size: 15px;
   line-height: 16px;
   color: $special-grey;
+  background-color: $basic-white;
   text-transform: lowercase;
 
   &--transport {
@@ -113,6 +127,8 @@
   }
 
   &--level {
+    margin-left: 0;
+
     @media (min-width: $tablet-width) {
       display: none;
     }
@@ -125,6 +141,7 @@
 
 .traveller__country-list {
   @include reset-list;
+  margin-left: 25px;
 }
 
 .traveller__country {
@@ -142,6 +159,10 @@
 
 .traveller__transport-wrapper {
   grid-area: user-transport;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid $basic-light;
 }
 
 .traveller__transport-list {
@@ -150,6 +171,10 @@
 
 .traveller__level-wrapper {
   grid-area: user-level;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid $basic-light;
 }
 
 .traveller__level-value {
@@ -173,6 +198,18 @@
 
 .traveller__likes-wrapper {
   grid-area: user-likes;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  margin-left: -20px;
+}
+
+.traveller__likes-button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
 }
 
 .traveller__likes-amount {
@@ -189,7 +226,8 @@
 
 .traveller__button {
   grid-area: user-button;
-  margin-top: 13px;
+  width: 230px;
+  margin: 13px auto 0 auto;
 
   @media (min-width: $tablet-width) {
     margin: 0;
