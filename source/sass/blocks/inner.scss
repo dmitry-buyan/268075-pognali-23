@@ -1,6 +1,4 @@
 .inner__header {
-  position: relative;
-  z-index: 900;
   padding-top: 42px;
   color: $basic-white;
   background: $basic-blue;
@@ -63,15 +61,18 @@
 
 .inner__link-home {
   display: none;
-  font-weight: $font-bold;
-  font-size: 20px;
-  line-height: 20px;
-  color: $basic-white;
-  text-transform: uppercase;
-  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     display: block;
+    align-self: flex-start;
+    margin-top: 30px;
+    padding-right: 40px;
+    font-weight: $font-bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-white;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 }
 

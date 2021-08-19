@@ -57,6 +57,9 @@
 
   @media (min-width: $tablet-width) {
     order: 3;
+    justify-self: flex-start;
+    width: 148px;
+    margin: 0;
   }
 }
 
@@ -88,6 +91,12 @@
   &::placeholder {
     color: $basic-blue-light;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 11px 15px;
+  }
 }
 
 .level__scale {
@@ -103,6 +112,10 @@
     background-color: $basic-blue-light;
     opacity: 0.2;
     transform: translateY(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 241px;
   }
 }
 

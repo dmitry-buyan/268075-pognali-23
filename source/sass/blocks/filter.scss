@@ -23,6 +23,8 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 79px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,6 +96,7 @@
     margin-top: 78px;
     margin-right: auto;
     margin-left: auto;
+    padding: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -159,12 +162,22 @@
   grid-template-columns: repeat(5, 1fr);
   border-top: 1px solid $basic-grey-border;
   border-left: 1px solid $basic-grey-border;
+
+  @media (min-width: $tablet-width) {
+    width: 346px;
+    row-gap: 20px;
+    border: none;
+  }
 }
 
 .filter__item {
   position: relative;
   width: 100%;
   height: 41px;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+  }
 }
 
 .filter__link {
@@ -187,6 +200,8 @@
     font-weight: $font-bold;
     font-size: 60px;
     line-height: 60px;
+    background-color: transparent;
+    border: none;
     opacity: 0.3;
   }
 
@@ -200,7 +215,13 @@
     background-color: $basic-blue-light;
 
     @media (min-width: $tablet-width) {
+      position: static;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
       color: $basic-blue-light;
+      background-color: transparent;
       opacity: 1;
     }
   }

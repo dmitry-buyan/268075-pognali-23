@@ -169,15 +169,12 @@
   }
 
   &--catalog {
-    display: block;
-    width: 230px;
-    margin: 0 auto;
     line-height: 17px;
     text-transform: uppercase;
     background: $basic-white;
 
     @media (min-width: $tablet-width) {
-      width: 100%;
+      padding: 12px 10px 8px;
       font-size: 20px;
       line-height: 20px;
     }

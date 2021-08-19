@@ -69,3 +69,13 @@
     border: none;
   }
 }
+
+.sorting__button {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}

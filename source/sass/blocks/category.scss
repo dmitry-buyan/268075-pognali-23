@@ -40,6 +40,10 @@
     height: 6px;
     background: url("../../img/filter-arrow-up.svg") no-repeat center;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -47,6 +51,10 @@
     font-weight: $font-medium;
     font-size: 20px;
     line-height: 20px;
+
+    &::after {
+      content: ":";
+    }
   }
 
   @media (min-width: $desktop-width) {

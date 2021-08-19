@@ -61,7 +61,7 @@
 
     <main class="inner catalog-main">
       <header class="inner__header">
-        <div class="inner__header-wrapper container">
+        <div class="inner__header-wrapper inner__container container">
           <h1 class="inner__title title">Попутчики</h1>
           <a class="inner__link-home" href="index.html">На главную</a>
         </div>
@@ -516,25 +516,27 @@
               </div>
               <div class="transport category">
                 <button class="category__title" type="button">Транспорт</button>
-                <label class="transport__item  transport__item--plane">
-                  <input class="visually-hidden" type="checkbox" name="plane" checked>
-                  Авиаперелет
-                </label>
+                <div class="transport__inner">
+                  <label class="transport__item  transport__item--plane">
+                    <input class="visually-hidden" type="checkbox" name="plane" checked>
+                    Авиаперелет
+                  </label>
 
-                <label class="transport__item  transport__item--car">
-                  <input class="visually-hidden" type="checkbox" name="car" checked>
-                  Автомобиль
-                </label>
+                  <label class="transport__item  transport__item--car">
+                    <input class="visually-hidden" type="checkbox" name="car" checked>
+                    Автомобиль
+                  </label>
 
-                <label class="transport__item  transport__item--bicycle">
-                  <input class="visually-hidden" type="checkbox" name="bicycle">
-                  Велосипед
-                </label>
+                  <label class="transport__item  transport__item--bicycle">
+                    <input class="visually-hidden" type="checkbox" name="bicycle">
+                    Велосипед
+                  </label>
 
-                <label class="transport__item  transport__item--onfoot">
-                  <input class="visually-hidden" type="checkbox" name="on-foot" checked>
-                  Пешком
-                </label>
+                  <label class="transport__item  transport__item--onfoot">
+                    <input class="visually-hidden" type="checkbox" name="on-foot" checked>
+                    Пешком
+                  </label>
+                </div>
               </div>
               <div class="level category">
                 <button class="category__title" type="button">Левел</button>
@@ -564,7 +566,7 @@
                 </div>
               </div>
             </div>
-            <button class="button button--catalog" type="submit">Показать</button>
+            <button class="sorting__button button button--catalog" type="submit">Показать</button>
           </form>
         </section>
         <section class="inner__catalog catalog">
@@ -591,19 +593,21 @@
                   <li class="traveller__country traveller__country--seychelles">Сейшелы</li>
                 </ul>
               </div>
-              <div class="traveller__transport-wrapper">
-                <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
-                <ul class="traveller__transport-list">
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Автотранспорт</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Пешком</span></li>
-                </ul>
-              </div>
-              <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
-                <span class="traveller__level-value">99</span>
-                <span class="traveller__level-text">level</span>
+              <div class="traveller__inner">
+                <div class="traveller__transport-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
+                  <ul class="traveller__transport-list">
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Автотранспорт</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Велосипед</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Пешком</span></li>
+                  </ul>
+                </div>
+                <div class="traveller__level-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
+                  <span class="traveller__level-value">99</span>
+                  <span class="traveller__level-text">level</span>
+                </div>
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button traveller__likes-button--active" aria-label="Количество лайков"></button>
@@ -631,19 +635,21 @@
                   <li class="traveller__country traveller__country--czech-republic">Чехия</li>
                 </ul>
               </div>
-              <div class="traveller__transport-wrapper">
-                <h4 class="traveller__subtitle">Транспорт:</h4>
-                <ul class="traveller__transport-list">
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Автотранспорт</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Пешком</span></li>
-                </ul>
-              </div>
-              <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
-                <span class="traveller__level-value">80</span>
-                <span class="traveller__level-text">level</span>
+              <div class="traveller__inner">
+                <div class="traveller__transport-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
+                  <ul class="traveller__transport-list">
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Автотранспорт</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Велосипед</span></li>
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Пешком</span></li>
+                  </ul>
+                </div>
+                <div class="traveller__level-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
+                  <span class="traveller__level-value">80</span>
+                  <span class="traveller__level-text">level</span>
+                </div>
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button" aria-label="Количество лайков"></button>
@@ -672,19 +678,21 @@
                   <li class="traveller__country traveller__country--dominican-rebuplic">Доминика</li>
                 </ul>
               </div>
-              <div class="traveller__transport-wrapper">
-                <h4 class="traveller__subtitle">Транспорт:</h4>
-                <ul class="traveller__transport-list">
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Автотранспорт</span></li>
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Пешком</span></li>
-                </ul>
-              </div>
-              <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
-                <span class="traveller__level-value">25</span>
-                <span class="traveller__level-text">level</span>
+              <div class="traveller__inner">
+                <div class="traveller__transport-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
+                  <ul class="traveller__transport-list">
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Автотранспорт</span></li>
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Велосипед</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Пешком</span></li>
+                  </ul>
+                </div>
+                <div class="traveller__level-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
+                  <span class="traveller__level-value">25</span>
+                  <span class="traveller__level-text">level</span>
+                </div>
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button" aria-label="Количество лайков"></button>
@@ -692,9 +700,9 @@
               </div>
               <a class="traveller__button button button--invite" href="#response.html">Позвать!</a>
             </div>
-            <div class="catalog__traveller traveller traveller--online">
+            <div class="catalog__traveller traveller">
               <img class="traveller__avatar" src="img/rogovaya_avatar.jpg" alt="Лариса Роговая" width="70" height="70">
-              <a class="traveller__link" href="#traveller-4.html">
+              <a class="traveller__link traveller__link--online" href="#traveller-4.html">
                 <h3 class="traveller__name">Лариса Роговая</h3>
               </a>
               <div class="traveller__tags-wrapper">
@@ -711,19 +719,21 @@
                   <li class="traveller__country traveller__country--germany">Германия</li>
                 </ul>
               </div>
-              <div class="traveller__transport-wrapper">
-                <h4 class="traveller__subtitle">Транспорт:</h4>
-                <ul class="traveller__transport-list">
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
-                  <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Автотранспорт</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="traveller__transport"><span class="visually-hidden">Пешком</span></li>
-                </ul>
-              </div>
-              <div class="traveller__level-wrapper">
-                <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
-                <span class="traveller__level-value">50</span>
-                <span class="traveller__level-text">level</span>
+              <div class="traveller__inner">
+                <div class="traveller__transport-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
+                  <ul class="traveller__transport-list">
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Авиаперелет</span></li>
+                    <li class="traveller__transport traveller__transport--active"><span class="visually-hidden">Автотранспорт</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Велосипед</span></li>
+                    <li class="traveller__transport"><span class="visually-hidden">Пешком</span></li>
+                  </ul>
+                </div>
+                <div class="traveller__level-wrapper">
+                  <h4 class="traveller__subtitle traveller__subtitle--level">Левел:</h4>
+                  <span class="traveller__level-value">50</span>
+                  <span class="traveller__level-text">level</span>
+                </div>
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button" aria-label="Количество лайков"></button>
