@@ -222,6 +222,10 @@
       font-size: 20px;
       line-height: 20px;
     }
+
+    @media (min-width: $desktop-width) {
+      border-radius: 20px;
+    }
   }
 
   &--invite {

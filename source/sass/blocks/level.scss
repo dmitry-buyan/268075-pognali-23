@@ -61,6 +61,10 @@
     width: 148px;
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .level__field {
@@ -117,6 +121,10 @@
   @media (min-width: $tablet-width) {
     width: 241px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .level__bar {
@@ -127,6 +135,10 @@
   height: 2px;
   background-color: $basic-blue-light;
   transform: translateY(-50%);
+
+  @media (min-width: $desktop-width) {
+    width: 133px;
+  }
 }
 
 .level__toggle {
