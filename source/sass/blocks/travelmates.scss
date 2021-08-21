@@ -2,11 +2,20 @@
   padding-top: 102px;
   padding-bottom: 31px;
   color: $basic-white;
-  background: $basic-blue-dark url("../img/smolov-back-desktop.png") no-repeat;
+  background-color: $basic-blue-dark;
+  background-image: url("../img/rogovaya-back-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 410px;
+  background-size: 64px 71px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/rogovaya-back-desktop@2x.png");
+  }
 
   @media (min-width: $tablet-width) {
-    padding-top: 208px;
+    padding-top: 126px;
     padding-bottom: 87px;
+    background-image: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,11 +25,63 @@
 }
 
 .travelmates__container {
+  padding-top: 34px;
+  background-image: url("../img/smolov-back-desktop@1x.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 143px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -100;
+    top: 100px;
+    left: 0;
+    width: 113px;
+    height: 132px;
+    background-color: #141b3b;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-top: 70px;
+    background-image:
+      url("../img/rogovaya-back-tablet@1x.png"),
+      url("../img/smolov-back-desktop@1x.png");
+    background-position:
+      right 0 top 9px,
+      left 0 top 355px;
+    background-size: 285px, 143px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/rogovaya-back-tablet@2x.png"),
+        url("../img/smolov-back-desktop@2x.png");
+    }
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
+    padding-top: 60px;
     padding-left: 70px;
+    background-position:
+      left 132px bottom,
+      top 60px left 489px;
   }
 }
 
@@ -29,13 +90,13 @@
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {
-    width: 430px;
-    padding-right: 34px;
+    padding-right: 200px;
     padding-left: 34px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    padding-right: 170px;
   }
 }
 

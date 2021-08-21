@@ -10,18 +10,42 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 176px;
-    padding-bottom: 87px;
+    padding-bottom: 0;
   }
 }
 
 .routes__container {
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/flags-back-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back-tablet@2x.png");
+      background-size: 288px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
+    position: relative;
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content;
     column-gap: 173px;
     padding-top: 71px;
     padding-left: 70px;
+    padding-bottom: 87px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 140px;
+      background-color: $special-grey-snuff;
+      border-radius: 20px;
+    }
   }
 }
 
@@ -33,7 +57,7 @@
   @media (min-width: $tablet-width) {
     width: 340px;
     padding-left: 35px;
-    margin-bottom: 104px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
@@ -57,12 +81,28 @@
 
 .routes__inner {
   @media (min-width: $tablet-width) {
-    padding: 0 36px;
+    position: relative;
+    padding: 38px 36px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 141px;
+      height: 141px;
+      background-color: $special-grey-snuff;
+      border-radius: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     grid-row-start: span 2;
     padding: 0;
+
+    &::before {
+      display: none;
+    }
   }
 }
 

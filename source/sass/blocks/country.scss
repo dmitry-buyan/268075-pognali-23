@@ -18,7 +18,84 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    width: 35px;
+    height: 24px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: 35px;
+
+    @media (min-width: $tablet-width) {
+      top: 50%;
+      left: auto;
+      right: -35px;
+      width: 70px;
+      height: 47px;
+      background-size: 70px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../img/flag-thailand-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-thailand-mobile@2x.png");
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/flag-thailand-tablet@1x.png");
+
+        @media (min-resolution: $retina-dppx) {
+          background-image: url("../img/flag-thailand-tablet@2x.png");
+        }
+      }
+    }
+  }
+
+  &--france {
+    &::before {
+      background-image: url("../img/flag-france-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-france-mobile@2x.png");
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/flag-france-tablet@1x.png");
+
+        @media (min-resolution: $retina-dppx) {
+          background-image: url("../img/flag-france-tablet@2x.png");
+        }
+      }
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/flag-czech-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-czech-mobile@2x.png");
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/flag-czech-tablet@1x.png");
+
+        @media (min-resolution: $retina-dppx) {
+          background-image: url("../img/flag-czech-tablet@2x.png");
+        }
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    order: -1;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,7 +109,6 @@
   margin-bottom: -10px;
 
   @media (min-width: $tablet-width) {
-    order: 2;
     width: 186px;
     height: 140px;
   }
@@ -87,7 +163,7 @@
     content: "";
     width: 14px;
     height: 14px;
-    background: url("../../img/icon_user.svg") no-repeat;
+    background: url("../img/icon_user.svg") no-repeat;
     background-size: 100%;
 
     @media (min-width: $tablet-width) {
