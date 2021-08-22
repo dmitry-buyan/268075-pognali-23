@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 26px 0 22px;
   background: $basic-yellow;
+  border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     padding: 37px 35px;
@@ -66,5 +67,15 @@
     row-gap: 32px;
     padding: 0;
     border: none;
+  }
+}
+
+.sorting__button {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
   }
 }

@@ -17,18 +17,48 @@
 }
 
 .category__title {
+  position: relative;
+  width: 100%;
   margin: 0;
   margin-bottom: 16px;
+  padding: 0;
+  font-weight: $font-bold;
   font-size: 16px;
   line-height: 18px;
+  text-align: left;
   color: $basic-blue-light;
   text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 6px;
+    background: url("../img/filter-arrow-up.svg") no-repeat center;
+    transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     font-weight: $font-medium;
     font-size: 20px;
     line-height: 20px;
+
+    &::after {
+      content: ":";
+    }
   }
 
   @media (min-width: $desktop-width) {

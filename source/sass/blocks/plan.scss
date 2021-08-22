@@ -1,7 +1,9 @@
 .plan {
-  padding: 28px 0 30px;
+  padding: 28px 0 60px;
   color: $basic-blue-light;
   background: $special-blue-light;
+  border-top-right-radius: $mobile-radius;
+  border-top-left-radius: $mobile-radius;
 
   @media (min-width: $tablet-width) {
     padding-top: 57px;
@@ -10,7 +12,9 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 54px;
-    padding-bottom: 64px;
+    padding-bottom: 94px;
+    border-top-right-radius: $tablet-radius;
+    border-top-left-radius: $tablet-radius;
   }
 }
 
@@ -32,11 +36,17 @@
   @include reset-list;
 }
 
-.plan__item:not(:last-of-type) {
+.plan__item {
   margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 15px;
+  }
+
+  &--last {
+    margin-bottom: 0;
   }
 }
 

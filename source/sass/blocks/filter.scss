@@ -1,10 +1,30 @@
 .filter {
-  padding-top: 40px;
+  padding-top: 52px;
   padding-bottom: 28px;
   background: $special-grey-snuff;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  &--closed {
+    .filter__continents-list,
+    .filter__anchors,
+    .filter__alphabet,
+    .filter__button {
+      display: none;
+    }
+
+    .filter__inner,
+    .filter__title {
+      margin-bottom: 0;
+    }
+
+    padding-bottom: 17px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 79px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,18 +38,24 @@
 }
 
 .filter__wrapper {
+  width: 220px;
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 615px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 1320px;
     margin-bottom: 50px;
   }
 }
 
 .filter__inner {
+  position: relative;
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
@@ -66,10 +92,16 @@
 
 .filter__button {
   @media (min-width: $tablet-width) {
+    display: block;
+    width: 615px;
     margin-top: 78px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 100%;
     margin: 0;
   }
 }
@@ -130,34 +162,68 @@
 .filter__list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid $basic-grey-border;
+  border-left: 1px solid $basic-grey-border;
+
+  @media (min-width: $tablet-width) {
+    width: 346px;
+    row-gap: 20px;
+    border: none;
+  }
 }
 
 .filter__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 41px;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+  }
 }
 
 .filter__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   font-weight: $font-medium;
   font-size: 14px;
   line-height: 14px;
   color: $basic-blue-light;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: $basic-white;
+  border-bottom: 1px solid $basic-grey-border;
+  border-right: 1px solid $basic-grey-border;
 
   @media (min-width: $tablet-width) {
     font-weight: $font-bold;
     font-size: 60px;
     line-height: 60px;
+    background-color: transparent;
+    border: none;
     opacity: 0.3;
   }
 
   &--current {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 46px;
+    height: 43px;
     color: $basic-white;
+    background-color: $basic-blue-light;
 
     @media (min-width: $tablet-width) {
+      position: static;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
       color: $basic-blue-light;
+      background-color: transparent;
       opacity: 1;
     }
   }

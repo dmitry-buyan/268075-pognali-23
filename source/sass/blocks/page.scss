@@ -38,7 +38,3 @@
 .page__address {
   @include block(200);
 }
-
-.page__footer {
-  @include block(100, top);
-}

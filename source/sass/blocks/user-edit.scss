@@ -25,7 +25,7 @@
       "tags tags transport transport";
     column-gap: 0;
     row-gap: 0;
-    margin-top: -194px;
+    margin-top: -190px;
     padding-top: 0;
     padding-bottom: 54px;
     padding-left: 65px;
@@ -33,12 +33,62 @@
 }
 
 .user-edit__level {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-column: 1 / 2;
+  width: 100px;
+  height: 100px;
   margin-left: 16px;
+  color: $basic-white;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     grid-area: level;
+    width: 94px;
+    height: 94px;
     margin: 0;
+  }
+}
+
+.user-edit__level-value {
+  position: relative;
+  margin-bottom: 6px;
+  font-weight: $font-bold;
+  font-size: 38px;
+  line-height: 38px;
+  color: $basic-blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 51px;
+    height: 1px;
+    background-color: $special-grey;
+    transform: translateX(-50%);
+    opacity: 0.3;
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-white;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
+}
+
+.user-edit__level-text {
+  font-size: 18px;
+  line-height: 18px;
+  color: $special-grey;
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
   }
 }
 
@@ -47,6 +97,7 @@
   margin-right: 19px;
   width: 100px;
   height: 100px;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     grid-area: avatar;
@@ -54,18 +105,23 @@
     margin-left: auto;
     width: 94px;
     height: 94px;
+    border-radius: 8px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 194px;
-    height: 194px;
+    width: 190px;
+    height: 190px;
     margin-right: 95px;
+    border-radius: 0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
   }
 }
 
 .user-edit__avatar-add {
   grid-column: 1 / -1;
   margin-bottom: 7px;
+  padding: 11px 13px 11px;
   font-weight: $font-medium;
   font-size: 20px;
   line-height: 18px;
@@ -73,17 +129,23 @@
   text-transform: uppercase;
   color: $basic-blue;
   background: $special-blue-light;
+  border-radius: 20px;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
     grid-area: button;
+    padding: 22px 20px 20px;
+    border-radius: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 194px;
+    width: 190px;
     margin-right: 95px;
     margin-bottom: 27px;
     margin-left: auto;
+    border-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 }
 
@@ -94,10 +156,14 @@
 }
 
 .user-edit__tags {
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
     grid-area: tags;
+    flex-direction: column-reverse;
+    height: 95px;
   }
 
   @media (min-width: $desktop-width) {
@@ -106,10 +172,13 @@
 }
 
 .user-edit__transport {
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
     grid-area: transport;
+    flex-direction: column-reverse;
     width: 308px;
   }
 

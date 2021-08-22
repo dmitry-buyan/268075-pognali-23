@@ -1,9 +1,12 @@
 .pagination {
   display: flex;
-  background: $basic-white;
+  column-gap: 1px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
+    padding: 25px 35px 25px 28px;
+    background-color: $basic-white;
+    border-radius: 20px;
   }
 }
 
@@ -11,25 +14,54 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
     order: -1;
     margin-right: auto;
   }
 }
 
 .pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 135px;
   height: 51px;
-  // временно //
-  border: 1px dotted;
   background: $basic-white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 11px;
+    background: url("../img/button_triangle_icon.svg") no-repeat center;
+
+    @media (min-width: $tablet-width) {
+      width: 13px;
+      height: 20px;
+    }
+  }
+
+  &--back {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+  }
 }
 
 .pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   font-weight: $font-bold;
   font-size: 20px;
   line-height: 20px;
   color: $basic-blue-light;
+  border-radius: 50%;
   text-decoration: none;
 
   &--current {
