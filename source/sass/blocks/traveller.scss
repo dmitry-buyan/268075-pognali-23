@@ -21,26 +21,36 @@
   }
 }
 
-.traveller__avatar {
+.traveller__avatar-wrapper {
   grid-row: 1 / 3;
   margin-left: 18px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1 / 4;
+    margin-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 4;
+    margin-left: 0;
+  }
+}
+
+.traveller__avatar {
+  display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
-    grid-row: 1 / 4;
     width: 190px;
     height: 190px;
-    margin-left: 35px;
     border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-row: 1 / 4;
     width: 285px;
-    height: 258px;
-    margin-left: 0;
+    height: 285px;
     border-radius: 0;
   }
 }
@@ -200,11 +210,15 @@
 
 .traveller__country-list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   margin-left: 10px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    flex-direction: row;
     column-gap: 25px;
+    margin-left: -40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -214,15 +228,139 @@
 }
 
 .traveller__country {
+  position: relative;
+  padding-left: 40px;
   font-weight: $font-medium;
   font-size: 15px;
   line-height: 16px;
   color: $basic-blue-light;
   text-transform: uppercase;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 26px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: 26px 18px;
+
+    @media (min-width: $tablet-width) {
+      width: 35px;
+      height: 24px;
+      background-size: 35px 24px;
+    }
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: url("../img/flag-srilanka-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-srilanka-mobile@2x.png");
+      }
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../img/flag-thailand-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-thailand-mobile@2x.png");
+      }
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image: url("../img/flag-seychelles-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-seychelles-mobile@2x.png");
+      }
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: url("../img/flag-belgium-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-belgium-mobile@2x.png");
+      }
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/flag-czech-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-czech-mobile@2x.png");
+      }
+    }
+  }
+
+  &--usa {
+    &::before {
+      background-image: url("../img/flag-usa@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-usa@2x.png");
+      }
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-image: url("../img/flag-australia@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-australia@2x.png");
+      }
+    }
+  }
+
+  &--dominicana {
+    &::before {
+      background-image: url("../img/flag-dominicana@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-dominicana@2x.png");
+      }
+    }
+  }
+
+  &--britain {
+    &::before {
+      background-image: url("../img/flag-britain@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-britain@2x.png");
+      }
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-image: url("../img/flag-germany@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-germany@2x.png");
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    padding-left: 46px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 53px;
   }
 }
 

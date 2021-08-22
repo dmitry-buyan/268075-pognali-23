@@ -12,7 +12,7 @@
     <script src="js/index.js" async></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--inner">
       <div class="menu">
         <div class="menu__container container">
           <a class="header__logo logo" href="index.html">
@@ -576,7 +576,13 @@
         <section class="inner__catalog catalog">
           <div class="catalog__wrapper">
             <div class="catalog__traveller traveller">
-              <img class="traveller__avatar" src="img/firsova_mobile.jpg" alt="Таня Фирсова плывет на спине: вид сверху" width="70" height="70">
+              <div class="traveller__avatar-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-catalog-tablet@1x.jpg 1x, img/firsova-catalog-tablet@2x.jpg 2x">
+                  <img class="traveller__avatar" src="img/firsova-catalog-mobile@1x.jpg" srcset="img/firsova-catalog-mobile@2x.jpg 2x" alt="Таня Фирсова плывет на спине: вид сверху" width="70" height="70">
+                </picture>
+              </div>
               <a class="traveller__link" href="#traveller-1.html">
                 <h3 class="traveller__name">Таня Фирсова</h3>
               </a>
@@ -620,7 +626,13 @@
               <a class="traveller__button button button--invite" href="#response.html">Позвать!</a>
             </div>
             <div class="catalog__traveller traveller">
-              <img class="traveller__avatar" src="img/demin_avatar.jpg" alt="Петя Демин в солнечных очках и черной шапке" width="70" height="70">
+              <div class="traveller__avatar-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-catalog-tablet@1x.jpg 1x, img/demin-catalog-tablet@2x.jpg 2x">
+                  <img class="traveller__avatar" src="img/demin-catalog-mobile@1x.jpg" srcset="img/demin-catalog-mobile@2x.jpg 2x" alt="Петя Демин в солнечных очках и черной шапке" width="70" height="70">
+                </picture>
+              </div>
               <a class="traveller__link" href="#traveller-2.html">
                 <h3 class="traveller__name">Петя Демин</h3>
               </a>
@@ -636,7 +648,7 @@
                 <h4 class="traveller__subtitle">Хочет посетить:</h4>
                 <ul class="traveller__country-list">
                   <li class="traveller__country traveller__country--belgium">Бельгия</li>
-                  <li class="traveller__country traveller__country--czech-republic">Чехия</li>
+                  <li class="traveller__country traveller__country--czech">Чехия</li>
                 </ul>
               </div>
               <div class="traveller__inner">
@@ -662,7 +674,13 @@
               <a class="traveller__button button button--invite" href="#response.html">Позвать!</a>
             </div>
             <div class="catalog__traveller traveller">
-              <img class="traveller__avatar" src="img/smolov_avatar.jpg" alt="Марк Смолов сидин на скамейке" width="70" height="70">
+              <div class="traveller__avatar-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcsrogovaya-desktop@1x.jpg rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcsrogovaya-tablet@1x.jpg rogovaya-tablet@2x.jpg 2x">
+                  <img class="traveller__avatar" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов сидин на скамейке" width="70" height="70">
+                </picture>
+              </div>
               <a class="traveller__link" href="#traveller-3.html">
                 <h3 class="traveller__name">Марк Смолов</h3>
               </a>
@@ -679,7 +697,7 @@
                 <ul class="traveller__country-list">
                   <li class="traveller__country traveller__country--usa">США</li>
                   <li class="traveller__country traveller__country--australia">Австралия</li>
-                  <li class="traveller__country traveller__country--dominican-rebuplic">Доминика</li>
+                  <li class="traveller__country traveller__country--dominicana">Доминика</li>
                 </ul>
               </div>
               <div class="traveller__inner">
@@ -705,7 +723,13 @@
               <a class="traveller__button button button--invite" href="#response.html">Позвать!</a>
             </div>
             <div class="catalog__traveller traveller">
-              <img class="traveller__avatar" src="img/rogovaya_avatar.jpg" alt="Лариса Роговая" width="70" height="70">
+              <div class="traveller__avatar-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <img class="traveller__avatar" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая" width="70" height="70">
+                </picture>
+              </div>
               <a class="traveller__link traveller__link--online" href="#traveller-4.html">
                 <h3 class="traveller__name">Лариса Роговая</h3>
               </a>
@@ -719,7 +743,7 @@
               <div class="traveller__countries-wrapper">
                 <h4 class="traveller__subtitle">Хочет посетить:</h4>
                 <ul class="traveller__country-list">
-                  <li class="traveller__country traveller__country--great-britain">Великобритания</li>
+                  <li class="traveller__country traveller__country--britain">Великобритания</li>
                   <li class="traveller__country traveller__country--germany">Германия</li>
                 </ul>
               </div>
