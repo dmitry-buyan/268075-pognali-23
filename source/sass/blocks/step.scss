@@ -466,6 +466,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 730px;
     padding-top: 80px;
   }
 
@@ -491,8 +492,8 @@
       }
 
       @media (min-width: $desktop-width) {
-        top: 90px;
-        right: 222px;
+        top: 100px;
+        right: -48px;
         height: 93%;
       }
     }
