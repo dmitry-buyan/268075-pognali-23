@@ -244,11 +244,47 @@
 
 .step__country-name {
   position: relative;
+  flex-shrink: 0;
   width: 53px;
   height: 42px;
   margin-left: -1px;
   border: 1px solid $basic-grey-border;
   border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px 24px;
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../img/flag-bosnia-and-herzegovina-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flag-bosnia-and-herzegovina-mobile@2x.png");
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/flag-bosnia-and-herzegovina-tablet@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-bosnia-and-herzegovina-tablet@2x.png");
+      }
+    }
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flag-czech-mobile@2x.png");
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/flag-czech-tablet@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-czech-tablet@2x.png");
+      }
+    }
+  }
 
   &::before {
     content: "";
@@ -276,6 +312,8 @@
     width: 70px;
     height: 47px;
     margin-right: 44px;
+    border: none;
+    background-size: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -421,12 +459,14 @@
   margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
+    width: 500px;
     margin-bottom: 53px;
     padding-top: 27px;
     border-top: 1px solid $special-grey-border;
   }
 
   @media (min-width: $desktop-width) {
+    width: 730px;
     padding-top: 80px;
   }
 
@@ -436,7 +476,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 8px;
+      top: 11px;
       left: -14px;
       width: 10px;
       height: 110%;
@@ -445,15 +485,15 @@
 
       @media (min-width: $tablet-width) {
         left: auto;
-        right: 0;
-        top: 40px;
+        right: -24px;
+        top: 47px;
         width: 2px;
         height: 113%;
       }
 
       @media (min-width: $desktop-width) {
-        top: 90px;
-        right: 222px;
+        top: 100px;
+        right: -48px;
         height: 93%;
       }
     }
@@ -477,7 +517,9 @@
 
 .step__subtitle {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 18px;
   padding-left: 11px;
   font-weight: $font-medium;
@@ -498,13 +540,67 @@
 
     @media (min-width: $tablet-width) {
       left: auto;
-      right: -6px;
+      right: -30px;
       width: 14px;
       height: 14px;
     }
 
     @media (min-width: $desktop-width) {
       right: -54px;
+    }
+  }
+
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 35px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    box-shadow: -20px 0 5px $basic-white;
+
+    @media (min-width: $tablet-width) {
+      width: 70px;
+      height: 47px;
+      background-size: 70px;
+      box-shadow: none;
+    }
+  }
+
+  &--bosnia-and-herzegovina {
+    &::after {
+      background-image: url("../img/flag-bosnia-and-herzegovina-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-bosnia-and-herzegovina-mobile@2x.png");
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/flag-bosnia-and-herzegovina-tablet@1x.png");
+
+        @media (min-resolution: $retina-dppx) {
+          background-image: url("../img/flag-bosnia-and-herzegovina-tablet@2x.png");
+        }
+      }
+    }
+  }
+
+  &--czech {
+    &::after {
+      background-image: url("../img/flag-czech-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flag-czech-mobile@2x.png");
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/flag-czech-tablet@1x.png");
+
+        @media (min-resolution: $retina-dppx) {
+          background-image: url("../img/flag-czech-tablet@2x.png");
+        }
+      }
     }
   }
 

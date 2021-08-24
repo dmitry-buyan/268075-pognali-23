@@ -1,5 +1,19 @@
 .header {
   background-color: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-blue-dark-alternative;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-blue;
+  }
+
+  &--inner {
+    @media (min-width: $desktop-width) {
+      background-color: $basic-blue-dark;
+    }
+  }
 }
 
 .header__logo {

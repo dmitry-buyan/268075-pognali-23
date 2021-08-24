@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Главная страница</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/index.js" async></script>
   </head>
@@ -61,52 +65,64 @@
 
     <main class="page__content">
       <section class="page__intro intro">
-        <div class="container">
-          <div class="intro__top">
-            <div class="intro__wrapper">
-              <h1 class="intro__title title">В путешествие<br> с крутыми<br> попутчиками!
-              </h1>
-              <div class="intro__contact contact">
-                <ul class="contact__list">
-                  <li class="contact__item">
-                    <a class="contact__link contact__link--main" href="tel:+78005558628"><span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span></a>
-                  </li>
-                  <li class="contact__item">
-                    <a class="contact__link contact__link--main" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
-                  </li>
-                </ul>
+        <div class="intro__wrapper">
+          <div class="intro__inner">
+            <div class="intro__top">
+              <div class="container">
+                <h1 class="intro__title title">В путешествие<br> с крутыми<br> попутчиками!
+                </h1>
+                <div class="intro__user-info">
+                  <div class="intro__contact contact">
+                    <ul class="contact__list">
+                      <li class="contact__item">
+                        <a class="contact__link contact__link--main" href="tel:+78005558628"><span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span></a>
+                      </li>
+                      <li class="contact__item">
+                        <a class="contact__link contact__link--main" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="intro__button button button--login" href="#">Авторизация</a>
+                </div>
               </div>
-              <a class="intro__button button button--login" href="#">Авторизация</a>
             </div>
 
-            <div class="intro__reviews reviews">
-              <h2 class="visually-hidden">Отзывы о нас</h2>
-              <ul class="reviews__list">
-                <li class="reviews__item">
-                  <blockquote class="reviews__feedback">
-                    <p class="reviews__text">&laquo;Лучшее приложение,<br> что я видел в жизни!&raquo;</p>
-                    <cite class="reviews__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
-                  </blockquote>
-                </li>
-              </ul>
+            <div class="intro__middle">
+              <div class="intro__container container">
+                <div class="intro__reviews reviews">
+                  <h2 class="visually-hidden">Отзывы о нас</h2>
+                  <ul class="reviews__list">
+                    <li class="reviews__item">
+                      <blockquote class="reviews__feedback">
+                        <p class="reviews__text">&laquo;Лучшее приложение,<br> что я видел в жизни!&raquo;</p>
+                        <cite class="reviews__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
+                      </blockquote>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div class="intro__guideline guideline">
-              <ol class="guideline__list">
-                <li class="guideline__item guideline__item--1">Выберите<br> направление</li>
-                <li class="guideline__item guideline__item--2">Изучите идеи<br> путешественников</li>
-                <li class="guideline__item guideline__item--3">Находите тех,<br> кто похож на вас</li>
-                <li class="guideline__item guideline__item--4 guideline__item--last">Путешествуйте<br> вместе!</li>
-              </ol>
+              <div class="container">
+                <ol class="guideline__list">
+                  <li class="guideline__item guideline__item--1">Выберите<br> направление</li>
+                  <li class="guideline__item guideline__item--2">Изучите идеи<br> путешественников</li>
+                  <li class="guideline__item guideline__item--3">Находите тех,<br> кто похож на вас</li>
+                  <li class="guideline__item guideline__item--4 guideline__item--last">Путешествуйте<br> вместе!</li>
+                </ol>
+              </div>
             </div>
           </div>
+        </div>
 
+        <div class="intro__bottom">
           <div class="about">
-            <div class="about__description description">
-              <h2 class="description__subtitle subtitle">О сервисе</h2>
-              <p class="description__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-              <p class="description__text description__text--last">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-              <a class="description__button button button--more" href="#" >Подробнее</a>
+            <div class="about__container container">
+              <h2 class="about__subtitle subtitle">О сервисе</h2>
+              <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+              <p class="about__text about__text--last">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+              <a class="about__button button button--more" href="#" >Подробнее</a>
             </div>
           </div>
         </div>
@@ -120,24 +136,33 @@
           </header>
           <div class="routes__inner">
             <div class="routes__country country">
-              <img class="country__img" src="img/thailand-mobile.jpg" alt="Остров в виде двух гор в Тайланде" width="270" height="110">
-              <div class="country__inner">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+                <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Остров в виде двух гор в Тайланде" width="270" height="110">
+              </picture>
+              <div class="country__inner country__inner--thailand">
                 <h3 class="country__name">Таиланд</h3>
                 <p class="country__slogan">Джунгли зовут!</p>
                 <span class="country__visitors">18321</span>
               </div>
             </div>
             <div class="routes__country country">
-              <img class="country__img" src="img/france-mobile.jpg" alt="Фасад здания в одном из французских городов" width="270" height="110">
-              <div class="country__inner">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+                <img class="country__img" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Фасад здания в одном из французских городов" width="270" height="110">
+              </picture>
+              <div class="country__inner country__inner--france">
                 <h3 class="country__name">Франция</h3>
                 <p class="country__slogan">Трэ бьен, манифик!</p>
                 <span class="country__visitors">12518</span>
               </div>
             </div>
             <div class="routes__country country">
-              <img class="country__img" src="img/czech-mobile.jpg" alt="Баржа, плывущая по городской реке в Чехии" width="270" height="110">
-              <div class="country__inner">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+                <img class="country__img" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Баржа, плывущая по городской реке в Чехии" width="270" height="110">
+              </picture>
+              <div class="country__inner country__inner--czech">
                 <h3 class="country__name">Чехия</h3>
                 <p class="country__slogan">Закоулки старой Европы</p>
                 <span class="country__visitors">5326</span>
@@ -157,16 +182,19 @@
           </header>
           <div class="travelmates__inner">
             <div class="travelmates__user user">
-              <img class="user__img" src="img/firsova_mobile.jpg" alt="Таня Фирсова плывет на спине: вид сверху" width="270" height="270">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <img class="user__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова плывет на спине: вид сверху" width="270" height="270">
+              </picture>
               <div class="user__inner">
                 <a class="user__link" href="#">
                   <h3 class="user__name">Таня Фирсова</h3>
                 </a>
                 <h4 class="visually-hidden">Хочет посетить:</h4>
                 <ul class="user__countries">
-                  <li><span>Шри-Ланка</span></li>
-                  <li><span>Тайланд</span></li>
-                  <li><span>Сейшелы</span></li>
+                  <li class="user__country user__country--srilanka"><span class="visually-hidden">Шри-Ланка</span></li>
+                  <li class="user__country user__country--thailand"><span class="visually-hidden">Тайланд</span></li>
+                  <li class="user__country user__country--seychelles"><span class="visually-hidden">Сейшелы</span></li>
                 </ul>
                 <div class="user__preferences">
                   <h4 class="visually-hidden">Предпочтения</h4>
@@ -191,15 +219,18 @@
               </div>
             </div>
             <div class="travelmates__user user">
-              <img class="user__img" src="img/demin_mobile.jpg" alt="Петя Демин в солнечных очках и черной шапке" width="270" height="270">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <img class="user__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин в солнечных очках и черной шапке" width="270" height="270">
+              </picture>
               <div class="user__inner">
                 <a class="user__link" href="#">
                   <h3 class="user__name user__name--online">Петя Демин</h3>
                 </a>
                 <h4 class="visually-hidden">Хочет посетить:</h4>
                 <ul class="user__countries">
-                  <li><span>Бельгия</span></li>
-                  <li><span>Чехия</span></li>
+                  <li class="user__country user__country--belgium"><span class="visually-hidden">Бельгия</span></li>
+                  <li class="user__country user__country--czech"><span class="visually-hidden">Чехия</span></li>
                 </ul>
                 <div class="user__preferences">
                   <h4 class="visually-hidden">Предпочтения</h4>
@@ -229,7 +260,7 @@
 
       <section class="page__rates rates">
         <div class="container">
-          <div class="rates__card">
+          <div class="rates__card rates__card--basic">
             <div class="rates__inner">
               <h2 class="rates__subtitle subtitle">Добавьте свой профиль</h2>
               <ul class="rates__list">
@@ -322,7 +353,7 @@
     <footer class="footer">
       <div class="footer__container container">
         <a class="footer__logo logo logo--footer">
-          <img class="logo__img" src="img/lobo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
+          <img class="logo__img" src="img/logo_mobile.svg" width="96" height="15" alt="Логотип приложения Погнали">
         </a>
         <div class="footer__social social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>

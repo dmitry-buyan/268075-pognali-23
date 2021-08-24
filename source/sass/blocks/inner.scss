@@ -1,7 +1,7 @@
 .inner__header {
   padding-top: 42px;
   color: $basic-white;
-  background: $basic-blue;
+  background-color: $basic-blue;
   border-bottom-right-radius: $mobile-radius;
   border-bottom-left-radius: $mobile-radius;
 
@@ -9,10 +9,12 @@
     padding-top: 134px;
     border-bottom-right-radius: $tablet-radius;
     border-bottom-left-radius: $tablet-radius;
+    background-color: $basic-blue-dark-alternative;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 124px;
+    background-color: $basic-blue-dark;
   }
 }
 

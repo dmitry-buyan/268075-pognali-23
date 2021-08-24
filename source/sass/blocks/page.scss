@@ -5,17 +5,14 @@
 
 .page__intro {
   @include block(700);
-  padding-top: 42px;
-  padding-bottom: 82px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    padding-top: 162px;
-    padding-bottom: 89px;
+    padding-top: 72px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 110px;
-    padding-bottom: 163px;
+    padding-top: 0;
   }
 }
 
@@ -25,6 +22,7 @@
 
 .page__travelmates {
   @include block(500);
+  position: relative;
 }
 
 .page__rates {

@@ -4,6 +4,16 @@
   color: $basic-white;
 }
 
+.reviews__list {
+  @media (min-width: $tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 265px;
+  }
+}
+
 .reviews__text {
   margin: 0;
   margin-bottom: 18px;
