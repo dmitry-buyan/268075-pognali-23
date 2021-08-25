@@ -1,9 +1,22 @@
 .contact__list {
   @include reset-list;
+  display: flex;
   text-align: left;
+
+  &--menu {
+    flex-direction: column;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+    }
+  }
 }
 
 .contact__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 16px;
   font-weight: $font-bold;
   font-size: $font-size;
   line-height: 18px;
@@ -11,12 +24,164 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &--main {
+  &--menu {
+    @media (min-width: $desktop-width) {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+
+      &::before {
+        content: "";
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &--phone-menu {
+    @media (min-width: $desktop-width) {
+      background-color: $special-orange;
+
+      &::before {
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/icons/icon-call.svg");
+      }
+    }
+  }
+
+  &--email-menu {
+    @media (min-width: $desktop-width) {
+      background-color: $basic-yellow-dark;
+
+      &::before {
+        width: 16px;
+        height: 14px;
+        background-image: url("../img/icons/icon-mail.svg");
+      }
+    }
+  }
+
+  &--content {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:active::before {
+      opacity: 0.2;
+    }
+  }
+
+  &--phone {
+    background-color: $special-orange;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/icons/icon-call.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #f26926;
+    }
+  }
+
+  &--email {
+    background-color: $basic-yellow-dark;
+
+    &::before {
+      width: 18px;
+      height: 16px;
+      background-image: url("../img/icons/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $special-orange;
+    }
+  }
+
+  &--bottom {
     color: $basic-yellow;
+
+    @media (min-width: $desktop-width) {
+      column-gap: 31px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 28px;
+  }
+}
+
+.contact__wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #121936;
+
+  @media (min-width: $tablet-width) {
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90px;
+    height: 90px;
+  }
+
+  &--top {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.contact__phone-icon {
+  @media (min-width: $tablet-width) {
+    width: 27px;
+    height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 36px;
+    height: 34px;
+  }
+}
+
+.contact__email-icon {
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 37px;
+    height: 25px;
+  }
+}
+
+.contact__phone,
+.contact__email {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

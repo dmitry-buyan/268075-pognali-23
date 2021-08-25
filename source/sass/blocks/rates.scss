@@ -1,7 +1,7 @@
 .rates {
   padding-top: 106px;
   padding-bottom: 38px;
-  background: $special-grey-light;
+  background: $basic-light;
 
   @media (min-width: $tablet-width) {
     padding-top: 135px;
@@ -59,7 +59,7 @@
 
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../../img/rates@2x.png");
+        background-image: url("../img/rates@2x.png");
         background-size: 100px;
       }
 
@@ -75,7 +75,7 @@
         height: 198px;
 
         @media (min-resolution: $retina-dppx) {
-          background-image: url("../../img/rates@2x.png");
+          background-image: url("../img/rates@2x.png");
           background-size: 198px;
         }
       }
@@ -86,6 +86,7 @@
     padding-top: 34px;
     background: $basic-white;
     border-radius: 20px;
+    box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
     overflow: hidden;
 
     @media (min-width: $tablet-width) {
@@ -126,7 +127,8 @@
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 35px 0 90px;
+    padding: 0;
+    padding-right: 35px;
   }
 }
 
@@ -138,6 +140,7 @@
   counter-reset: myCounter;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     width: auto;
     margin-bottom: 33px;
     line-height: 28px;
@@ -146,6 +149,32 @@
   @media (min-width: $desktop-width) {
     width: 813px;
     margin-bottom: 33px;
+  }
+
+  &--basic {
+    @media (min-width: $tablet-width) {
+      padding-left: 90px;
+    }
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        content: "";
+        position: absolute;
+        z-index: -100;
+        top: -41px;
+        right: -35px;
+        width: 198px;
+        height: 285px;
+        background-color: $special-grey-snuff;
+        border-radius: 20px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: -225px;
+        width: 446px;
+        height: 300px;
+      }
+    }
   }
 
   &--business {
@@ -223,6 +252,9 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 21px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -247,5 +279,19 @@
       font-size: 24px;
       line-height: 26px;
     }
+  }
+}
+
+.rates__icon-wrapper {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    background-color: $special-grey-snuff;
+    border-radius: 50%;
   }
 }

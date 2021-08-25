@@ -26,6 +26,7 @@
 
 .menu--closed .header__logo {
   margin: 0;
+  color: $basic-white;
 }
 
 .menu--closed .logo__img path {
@@ -125,5 +126,11 @@
 @media (min-width: $tablet-width) {
   .menu--closed .header__button {
     display: block;
+  }
+}
+
+.menu__user {
+  @media (min-width: $desktop-width) {
+    display: flex;
   }
 }

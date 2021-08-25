@@ -30,6 +30,7 @@
 
 .footer__logo {
   margin-bottom: 40px;
+  color: $basic-blue-dark;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -38,4 +39,8 @@
 
 .footer__social {
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

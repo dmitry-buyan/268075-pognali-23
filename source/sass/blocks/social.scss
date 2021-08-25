@@ -1,3 +1,50 @@
 .social__list {
   @include reset-list;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.social__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: $basic-yellow;
+  border-radius: 50%;
+
+  &--menu {
+    background-color: transparent;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.social__facebook-icon {
+  @media (min-width: $tablet-width) {
+    width: 14px;
+    height: 28px;
+  }
+}
+
+.social__vkontakte-icon {
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 18px;
+  }
+}
+
+.social__instagram-icon {
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
 }
