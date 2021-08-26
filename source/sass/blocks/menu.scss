@@ -52,6 +52,7 @@
 
 .menu__container {
   position: relative;
+  z-index: 100;
 
   @media (min-width: $desktop-width) {
     display: flex;

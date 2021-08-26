@@ -3,6 +3,7 @@
   padding: 24px 25px 23px 25px;
   background: $basic-white;
   border-radius: 10px;
+  overflow: hidden;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -63,6 +64,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr auto;
+    row-gap: 14px;
     margin-top: 0;
     margin-bottom: 33px;
     padding-top: 30px;
@@ -79,6 +81,10 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 25px;
       order: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
     }
   }
 
@@ -108,18 +114,59 @@
   }
 
   &--option {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 13px;
     font-weight: $font-normal;
     font-size: 15px;
     line-height: 15px;
     letter-spacing: normal;
     text-transform: initial;
 
+    &::before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      border: 1px solid $basic-grey-border;
+      border-radius: 4px;
+
+      @media (min-width: $tablet-width) {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
     @media (min-width: $tablet-width) {
+      column-gap: 22px;
       font-weight: $font-medium;
       font-size: 20px;
       line-height: 20px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+    }
+  }
+}
+
+.step__field:checked {
+  & + .step__label--option {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 8px;
+      height: 8px;
+      background-image: url("../img/icons/icon-checkbox-tick.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: $tablet-width) {
+        top: 12px;
+        left: 13px;
+        width: 11px;
+        height: 11px;
+        background-size: 11px 11px;
+      }
     }
   }
 }
@@ -215,6 +262,12 @@
     order: -1;
     margin-bottom: 27px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-self: center;
+    margin: 0;
+  }
 }
 
 .step__country {
@@ -223,6 +276,21 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 48px;
+    bottom: -16px;
+    width: 8px;
+    height: 10px;
+    background-image: url("../img/icons/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
@@ -337,7 +405,7 @@
     position: absolute;
     z-index: 100;
     top: 50%;
-    right: 38px;
+    right: 48px;
     width: 8px;
     height: 8px;
     border: 1px solid $basic-grey-border;

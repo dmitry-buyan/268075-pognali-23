@@ -137,48 +137,6 @@
   justify-content: center;
 }
 
-.user__transport-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-
-  .user__transport-icon {
-    opacity: 0.15;
-  }
-
-  &--current {
-    .user__transport-icon {
-      opacity: 1;
-    }
-  }
-}
-
-.user__transport-icon {
-  @media (min-width: $tablet-width) {
-    &--plane {
-      width: 23px;
-      height: 22px;
-    }
-
-    &--bus {
-      width: 18px;
-      height: 20px;
-    }
-
-    &--bicycle {
-      width: 25px;
-      height: 25px;
-    }
-
-    &--run {
-      width: 22px;
-      height: 24px;
-    }
-  }
-}
-
 .user__preferences {
   margin-bottom: 14px;
   text-align: center;

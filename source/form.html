@@ -119,24 +119,32 @@
           <div class="user-edit__transport transport">
             <h3 class="transport__title">Транспорт</h3>
             <div class="transport__wrapper">
-              <label class="transport__item  transport__item--plane">
-                <input class="visually-hidden" type="checkbox" name="plane">
-                Авиаперелет
+              <label class="transport__item transport__item--form">
+                <input class="visually-hidden" type="checkbox" name="plane" checked>
+                <svg class="transport__icon transport__icon--plane" width="17" height="16" viewbox="0 0 17 16" role="img" aria-label="На самолете" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon_plane"></use>
+                </svg>
               </label>
 
-              <label class="transport__item  transport__item--car">
-                <input class="visually-hidden" type="checkbox" name="car">
-                Автомобиль
+              <label class="transport__item transport__item--form">
+                <input class="visually-hidden" type="checkbox" name="car" checked>
+                <svg class="transport__icon transport__icon--bus" width="17" height="16" viewbox="0 0 17 16" role="img" aria-label="На автобусе" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon_bus"></use>
+                </svg>
               </label>
 
-              <label class="transport__item  transport__item--bicycle">
+              <label class="transport__item transport__item--form">
                 <input class="visually-hidden" type="checkbox" name="bicycle">
-                Велосипед
+                <svg class="transport__icon transport__icon--bicycle" width="17" height="16" viewbox="0 0 17 16" role="img" aria-label="На велосипеде" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon_bicycle"></use>
+                </svg>
               </label>
 
-              <label class="transport__item  transport__item--onfoot">
-                <input class="visually-hidden" type="checkbox" name="on-foot">
-                Пешком
+              <label class="transport__item transport__item--form">
+                <input class="visually-hidden" type="checkbox" name="on-foot" checked>
+                <svg class="transport__icon transport__icon--run" width="21" height="24" viewbox="0 0 17 16" role="img" aria-label="Пешком" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon_run"></use>
+                </svg>
               </label>
             </div>
           </div>
@@ -216,10 +224,8 @@
                   </div>
                 </div>
                 <div class="step__option">
-                  <label class="step__label step__label--option">
-                    <input type="checkbox" name="kids" checked>
-                    Можно с детьми
-                  </label>
+                  <input class="visually-hidden step__field" id="step__field" type="checkbox" name="kids" checked>
+                  <label class="step__label step__label--option" for="step__field">Можно с детьми</label>
                 </div>
               </div>
               <div class="step__calendar calendar">
@@ -241,266 +247,278 @@
 
                   <tr class="calendar__row">
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="feb24" disabled>
-                        24
+                        <span class="calendar__date">23</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="feb25" disabled>
-                        25
+                        <span class="calendar__date">24</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="feb26" disabled>
-                        26
+                        <span class="calendar__date">25</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="feb27" disabled>
-                        27
+                        <span class="calendar__date">26</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="feb28" disabled>
-                        28
+                        <span class="calendar__date">27</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar1" disabled>
-                        1<span class="calendar__month-name"> мар</span></label>
+                        <span class="calendar__date">28</span>
+                      </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar2" disabled>
-                        2
+                        <span class="calendar__date">1
+                          <b class="calendar__month-name">&nbsp;мар</b>
+                        </span>
                       </label>
                     </td>
                   </tr>
 
                   <tr class="calendar__row">
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar3" disabled>
-                        3
+                        <span class="calendar__date">2</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar4" disabled>
-                        4
+                        <span class="calendar__date">3</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar5" disabled>
-                        5
+                        <span class="calendar__date">4</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar6" disabled>
-                        6
+                        <span class="calendar__date">5</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar7" disabled>
-                        7
+                        <span class="calendar__date">6</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar8" disabled>
-                        8
+                        <span class="calendar__date">7</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar9" disabled>
-                        9
+                        <span class="calendar__date">8</span>
                       </label>
                     </td>
                   </tr>
 
                   <tr class="calendar__row">
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar10" disabled>
-                        10
+                        <span class="calendar__date">9</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar11" disabled>
-                        11
+                        <span class="calendar__date">10</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar12" disabled>
-                        12
+                        <span class="calendar__date">11</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar13" disabled>
-                        13
+                        <span class="calendar__date">12</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar14" disabled>
-                        14
+                        <span class="calendar__date">13</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar15" disabled>
-                        15
+                        <span class="calendar__date">14</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar16" disabled>
-                        16
+                        <span class="calendar__date">15</span>
                       </label>
                     </td>
                   </tr>
 
                   <tr class="calendar__row">
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar17" disabled>
-                        17
+                        <span class="calendar__date">16</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar18" disabled>
-                        18
+                        <span class="calendar__date">17</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar19" disabled>
-                        19
+                        <span class="calendar__date">18</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar20" disabled>
-                        20
+                        <span class="calendar__date">19</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar21" disabled>
-                        21
+                        <span class="calendar__date">20</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar22" disabled>
-                        22
+                        <span class="calendar__date">21</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar23" disabled>
-                        23
+                        <span class="calendar__date">22</span>
                       </label>
                     </td>
                   </tr>
 
                   <tr class="calendar__row">
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar24" disabled>
-                        24
+                        <span class="calendar__date">23</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar25" disabled>
-                        25
+                        <span class="calendar__date">24</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar26" disabled>
-                        26
+                        <span class="calendar__date">25</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date calendar__date--arrival">
-                        <input class="visually-hidden calendar__input" type="checkbox" name="mar27" checked="">
-                        27<span class="calendar__arrival"> Заезд</span></label>
-                    </td>
-                    <td class="calendar__cell">
-                      <label class="calendar__date">
-                        <input class="visually-hidden calendar__input" type="checkbox" name="mar28" checked="">
-                        28
+                      <label class="calendar__label calendar__label--arrival">
+                        <input class="visually-hidden calendar__input" type="checkbox" name="mar27" checked>
+                        <span class="calendar__date calendar__date--checkin">26&nbsp;
+                          <b class="calendar__checkin">Заезд</b>
+                        </span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date calendar__date--departure">
-                        <input class="visually-hidden calendar__input" type="checkbox" name="mar29" checked="">
-                        29<span class="calendar__departure"> Выезд</span></label>
+                      <label class="calendar__label">
+                        <input class="visually-hidden calendar__input" type="checkbox" name="mar28" checked>
+                        <span class="calendar__date">27</span>
+                      </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label calendar__label--departure">
+                        <input class="visually-hidden calendar__input" type="checkbox" name="mar29" checked>
+                        <span class="calendar__date calendar__date--checkout">28&nbsp;
+                          <b class="calendar__checkout">Выезд</b>
+                        </span>
+                      </label>
+                    </td>
+                    <td class="calendar__cell">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar30">
-                        30
+                        <span class="calendar__date">29</span>
                       </label>
                     </td>
                   </tr>
 
                   <tr class="calendar__row">
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="mar31">
-                        31
+                        <span class="calendar__date">30</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="apr1">
-                        1<span class="calendar__month-name"> апр</span></label>
+                        <span class="calendar__date">31</span>
+                      </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="apr2">
-                        2
+                        <span class="calendar__date">1
+                          <b class="calendar__month-name">&nbsp;апр</b>
+                        </span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="apr3">
-                        3
+                        <span class="calendar__date">2</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="apr4">
-                        4
+                        <span class="calendar__date">3</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="apr5">
-                        5
+                        <span class="calendar__date">4</span>
                       </label>
                     </td>
                     <td class="calendar__cell">
-                      <label class="calendar__date">
+                      <label class="calendar__label">
                         <input class="visually-hidden calendar__input" type="checkbox" name="apr6">
-                        6
+                        <span class="calendar__date">5</span>
                       </label>
                     </td>
                   </tr>
@@ -565,162 +583,192 @@
                       <tr class="modal__row">
                         <td class="modal__cell modal__cell--current">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter" checked>А
+                            <input class="visually-hidden" type="radio" name="country-first-letter" checked>
+                            <span class="modal__index">А</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Б
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Б</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">В
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">В</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Г
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Г</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Д
-                          </label>
-                        </td>
-                      </tr>
-                      <tr class="modal__row">
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">E
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ё
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ж
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">З
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">И
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Д</span>
                           </label>
                         </td>
                       </tr>
                       <tr class="modal__row">
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Й
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Е</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">К
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ё</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Л
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ж</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">М
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">З</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Н
-                          </label>
-                        </td>
-                      </tr>
-                      <tr class="modal__row">
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">О
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">П
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Р
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">С
-                          </label>
-                        </td>
-                        <td class="modal__cell">
-                          <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Т
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">И</span>
                           </label>
                         </td>
                       </tr>
                       <tr class="modal__row">
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">У
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Й</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ф
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">К</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Х
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Л</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ц
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Л</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ч
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">М</span>
                           </label>
                         </td>
                       </tr>
                       <tr class="modal__row">
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ш
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Н</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Щ
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">О</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Э
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Р</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Ю
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">С</span>
                           </label>
                         </td>
                         <td class="modal__cell">
                           <label class="modal__letter">
-                            <input class="visually-hidden" type="radio" name="country-first-letter">Я
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Т</span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">У</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ф</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Х</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ц</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ч</span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="modal__row">
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ш</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Щ</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Э</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Ю</span>
+                          </label>
+                        </td>
+                        <td class="modal__cell">
+                          <label class="modal__letter">
+                            <input class="visually-hidden" type="radio" name="country-first-letter">
+                            <span class="modal__index">Я</span>
                           </label>
                         </td>
                       </tr>
