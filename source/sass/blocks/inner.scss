@@ -1,11 +1,16 @@
 .inner__header {
   position: relative;
-  z-index: -100;
   padding-top: 42px;
   color: $basic-white;
   background-color: $basic-blue;
   border-bottom-right-radius: $mobile-radius;
   border-bottom-left-radius: $mobile-radius;
+
+  &--form {
+    @media (min-width: $desktop-width) {
+      z-index: -100;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 134px;
