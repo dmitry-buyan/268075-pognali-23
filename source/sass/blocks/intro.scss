@@ -87,6 +87,10 @@
   }
 }
 
+.intro__user-info {
+  display: flex;
+}
+
 .intro__contact {
   @media (min-width: $tablet-width) {
     display: none;

@@ -44,12 +44,19 @@
   margin-left: 16px;
   color: $basic-white;
   border-radius: 50%;
+  background-image: url("../img/level-80-tablet.svg");
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     grid-area: level;
     width: 94px;
     height: 94px;
     margin: 0;
+    background-size: 94px 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 42px;
   }
 }
 

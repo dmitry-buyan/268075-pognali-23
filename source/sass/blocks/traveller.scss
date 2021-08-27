@@ -373,7 +373,7 @@
 
   @media (min-width: $tablet-width) {
     grid-column: -1 / -2;
-    grid-row: 3 / 4;
+    grid-row: 1 / 4;
     align-items: center;
     margin-right: 25px;
     padding: 0;
@@ -393,6 +393,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  row-gap: 16px;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -401,6 +402,16 @@
 
 .traveller__transport-list {
   @include reset-list;
+  display: flex;
+  column-gap: 1px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .traveller__level-wrapper {
@@ -413,11 +424,63 @@
   }
 }
 
+.traveller__level {
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+
+  &--99 {
+    background-image: url("../img/level-99.svg");
+  }
+
+  &--25 {
+    background-image: url("../img/level-25.svg");
+  }
+
+  &--50 {
+    background-image: url("../img/level-50.svg");
+  }
+
+  &--80 {
+    background-image: url("../img/level-80.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    row-gap: 2px;
+    width: 62px;
+    height: 62px;
+    background-size: 62px;
+  }
+}
+
 .traveller__level-value {
   font-weight: $font-bold;
   font-size: 24px;
   line-height: 24px;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 31px;
+      height: 1px;
+      background-color: $basic-black;
+      opacity: 0.1;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .traveller__level-text {
@@ -453,15 +516,41 @@
 }
 
 .traveller__likes-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   padding: 0;
+  color: $basic-blue-dark;
   border: none;
+  background-color: $special-grey-snuff;
   border-radius: 50%;
+
+  &--active {
+    color: #f02323;
+    background-color: #f9eaea;
+
+    .traveller__like-icon {
+      opacity: 1;
+      fill-rule: initial;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 50px;
     height: 50px;
+  }
+}
+
+.traveller__like-icon {
+  flex-grow: 1;
+  opacity: 0.3;
+  fill-rule: evenodd;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 17px;
   }
 }
 

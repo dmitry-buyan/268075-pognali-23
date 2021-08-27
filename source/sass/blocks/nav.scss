@@ -9,6 +9,15 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 2px;
+      margin-right: 45px;
+      background-color: $basic-white;
+    }
   }
 }
 

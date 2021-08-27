@@ -37,6 +37,25 @@
   position: relative;
 }
 
+.filter__header {
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 74px;
+    padding-left: 20px;
+  }
+}
+
+.filter__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .filter__wrapper {
   width: 220px;
   margin: 0 auto;
@@ -51,12 +70,16 @@
   @media (min-width: $desktop-width) {
     width: 1320px;
     margin-bottom: 50px;
+    padding: 0 35px;
   }
 }
 
 .filter__inner {
   position: relative;
+  width: 220px;
   margin-bottom: 21px;
+  margin-right: auto;
+  margin-left: auto;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -66,11 +89,15 @@
   @media (min-width: $desktop-width) {
     display: flex;
     column-gap: 30px;
-    margin-bottom: 74px;
+    width: auto;
+    margin: 0;
   }
 }
 
 .filter__title {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
   margin: 0;
   margin-bottom: 38px;
   font-size: 16px;
@@ -78,12 +105,27 @@
   text-transform: uppercase;
   color: $basic-blue-dark;
 
+  &::before {
+    content: "";
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/icons/icon-filter.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      width: 23px;
+      height: 15px;
+      background-size: 23px 15px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
+    display: flex;
+    column-gap: 22px;
     margin: 0;
     font-size: 20px;
     line-height: 20px;
@@ -92,7 +134,10 @@
 
 .filter__button {
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 18px;
     width: 615px;
     margin-top: 78px;
     margin-right: auto;
@@ -103,6 +148,14 @@
   @media (min-width: $desktop-width) {
     width: 100%;
     margin: 0;
+  }
+}
+
+.filter__close-icon {
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 24px;
+    margin-top: -5px;
   }
 }
 

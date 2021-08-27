@@ -79,3 +79,9 @@
     width: 100%;
   }
 }
+
+.sorting__transport {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 34px;
+  }
+}
