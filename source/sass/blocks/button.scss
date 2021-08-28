@@ -242,7 +242,7 @@
   }
 
   &--remove {
-    background: $basic-light url("../img/icon_close.svg") no-repeat center;
+    background: $basic-light url("../img/icons/icon-close.svg") no-repeat center;
     background-size: 9px 9px;
 
     @media (min-width: $tablet-width) {
@@ -252,7 +252,7 @@
   }
 
   &--modal-close {
-    background: transparent url("../../img/icon-modal-close.svg") no-repeat center;
+    background: transparent url("../img/icon-modal-close.svg") no-repeat center;
   }
 }
 
