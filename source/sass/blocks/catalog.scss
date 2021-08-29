@@ -15,13 +15,30 @@
 }
 
 .catalog__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  width: fit-content;
+  margin: 0 auto;
   margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
+    column-gap: 25px;
     margin-bottom: 51px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 71px;
+  }
+}
+
+.catalog__show-icon {
+  margin-top: -5px;
+  transform: rotate(45deg);
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
   }
 }

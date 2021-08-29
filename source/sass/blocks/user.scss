@@ -115,7 +115,7 @@
   }
 
   &--belgium {
-    background-image: url("../img/flag-belgim-mobile@1x.png");
+    background-image: url("../img/flag-belgium-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/flag-belgium-mobile@2x.png");
@@ -133,6 +133,8 @@
 
 .user__transport {
   @include reset-list;
+  display: flex;
+  justify-content: center;
 }
 
 .user__preferences {
@@ -166,6 +168,16 @@
   color: $basic-white;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--88 {
+    background-image: url("../img/level-80.svg");
+  }
+
+  &--99 {
+    background-image: url("../img/level-99.svg");
+  }
 
   @media (min-width: $tablet-width) {
     top: 20px;

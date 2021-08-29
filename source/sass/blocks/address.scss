@@ -30,9 +30,34 @@
 }
 
 .address__text {
+  display: flex;
+  align-items: center;
   margin: 0;
   margin-bottom: 33px;
   padding-right: 66px;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+    background-image: url("../img/map_mark.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      margin-right: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+      margin-right: 31px;
+    }
+  }
+
 
   @media (min-width: $tablet-width) {
     margin-bottom: 44px;

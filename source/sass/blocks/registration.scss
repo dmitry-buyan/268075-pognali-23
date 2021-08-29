@@ -15,6 +15,12 @@
   }
 }
 
+.registration__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 35px;
+  }
+}
+
 .registration__subtitle {
   margin-bottom: 29px;
 
@@ -33,6 +39,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {

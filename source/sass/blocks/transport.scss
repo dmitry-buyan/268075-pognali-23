@@ -32,4 +32,96 @@
   padding: 15px;
   border: 1px solid $basic-grey-border;
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px;
+  }
+
+  &--catalog {
+    justify-content: flex-start;
+    column-gap: 2px;
+    padding: 0;
+    border: none;
+  }
+}
+
+.transport__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  .transport__icon {
+    opacity: 0.15;
+  }
+
+  & > input:checked + .transport__icon {
+    opacity: 1;
+  }
+
+  &--current {
+    .transport__icon {
+      opacity: 1;
+    }
+  }
+
+  &--form {
+    width: 32px;
+    height: 32px;
+    background-color: $basic-white;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 43px;
+      height: 43px;
+
+      .transport__icon {
+        width: 23px;
+        height: 22px;
+      }
+    }
+  }
+
+  &--catalog {
+    width: 32px;
+    height: 32px;
+    background-color: $basic-light;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 30px;
+      background: none;
+
+      .transport__icon {
+        width: 23px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.transport__icon {
+  @media (min-width: $tablet-width) {
+    &--plane {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--bus {
+      width: 18px;
+      height: 20px;
+    }
+
+    &--bicycle {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--run {
+      width: 22px;
+      height: 24px;
+    }
+  }
 }
