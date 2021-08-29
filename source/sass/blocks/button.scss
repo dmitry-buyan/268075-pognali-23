@@ -13,6 +13,16 @@
   background-color: $basic-yellow;
   border: none;
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-yellow-dark;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -48,6 +58,10 @@
       @media (min-width: $tablet-width) {
         right: 30px;
       }
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
 
     @media (min-width: $tablet-width) {
@@ -195,6 +209,25 @@
 
     @media (min-width: $tablet-width) {
       border-radius: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-white;
+      background-color: $basic-blue-dark;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-image: url("../img/icons/icon-triangle-white.svg");
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
   }
 

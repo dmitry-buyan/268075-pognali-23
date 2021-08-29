@@ -27,4 +27,13 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -1,13 +1,39 @@
 .signup-form__container {
   display: grid;
   grid-template-columns: 1fr min-content;
+  grid-template-rows: 62px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: 80px;
+  }
 }
 
 .signup-form__label {
+  position: relative;
+  font-size: 24px;
+  line-height: 24px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 100%;
+  }
+}
+
+.signup-form__title {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $special-grey;
+  opacity: 0.3;
+  transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    left: 36px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -22,8 +48,32 @@
 
   @media (min-width: $tablet-width) {
     width: inherit;
+    padding: 27px 35px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+
+  &:hover {
+    background-color: $basic-light;
+  }
+
+  &:hover ~ .signup-form__title {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    font-weight: $font-bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: $basic-white;
+    background-color: transparent;
+    border: 4px solid $basic-white;
+    border-right: none;
+    outline: none;
+  }
+
+  &:focus ~ .signup-form__title {
+    display: none;
   }
 }
 

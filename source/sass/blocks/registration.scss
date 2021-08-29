@@ -86,4 +86,16 @@
 
 .registration__link {
   color: $basic-yellow;
+  text-decoration: none;
+  border-bottom: 1px solid $basic-yellow;
+
+  &:hover,
+  &:focus {
+    color: $special-orange;
+    border-bottom-color: inherit;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

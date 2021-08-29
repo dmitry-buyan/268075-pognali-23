@@ -82,6 +82,7 @@
 .routes__inner {
   @media (min-width: $tablet-width) {
     position: relative;
+    margin-bottom: 46px;
     padding: 38px 36px 0;
 
     &::before {
