@@ -136,7 +136,7 @@
   }
 }
 
-.user-edit__avatar-add {
+.user-edit__button {
   grid-column: 1 / -1;
   margin-bottom: 7px;
   padding: 11px 13px 11px;
@@ -164,6 +164,16 @@
     border-radius: 0;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    color: rgba(22, 58, 33, 0.3);
+    background-color: $special-blue-light;
   }
 }
 

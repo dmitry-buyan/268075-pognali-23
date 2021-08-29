@@ -28,6 +28,8 @@
 
 .tags__textarea {
   padding: 26px 28px 26px 24px;
+  font-size: 16px;
+  line-height: 18px;
   border: 1px solid $basic-grey-border;
   border-radius: 10px;
   background-color: transparent;
@@ -38,5 +40,19 @@
     padding: 36px 40px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:focus {
+    border-color: $basic-blue;
+    color: $special-grey;
+    outline: none;
+
+    &::placeholder {
+      color: $special-grey;
+    }
   }
 }

@@ -81,6 +81,32 @@
         height: 22px;
       }
     }
+
+    &:hover {
+      filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+      cursor: pointer;
+    }
+
+    &:hover input:checked ~ .transport__icon {
+      opacity: 0.7;
+    }
+
+    &:hover input:not(:checked) ~ .transport__icon {
+      color: #b2b2b2;
+      opacity: 1;
+    }
+
+    &:active {
+      background-color: $special-grey-snuff;
+    }
+
+    &:active input:checked ~ .transport__icon {
+      opacity: 0.3;
+    }
+
+    &:active input:not(:checked) ~ .transport__icon {
+      opacity: 0.1;
+    }
   }
 
   &--catalog {
@@ -103,6 +129,8 @@
 }
 
 .transport__icon {
+  color: $basic-blue-light;
+
   @media (min-width: $tablet-width) {
     &--plane {
       width: 23px;
