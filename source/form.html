@@ -208,7 +208,7 @@
                   <label class="step__label" for="people-input">Ищу попутчиков:</label>
                   <span class="step__index">чел.</span>
                   <div class="step__input-wrapper">
-                    <input class="step__input" id="people-input" type="number" name="amount" placeholder="2">
+                    <input class="step__input" id="people-input" type="number" min="0" name="amount" placeholder="2">
                     <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
                       <span class="visually-hidden">Уменьшить</span>
                     </button>
@@ -221,7 +221,7 @@
                   <label class="step__label" for="days-input">Длительность:</label>
                   <span class="step__index">дн.</span>
                   <div class="step__input-wrapper">
-                    <input class="step__input" id="days-input" type="number" name="amount" placeholder="3">
+                    <input class="step__input" id="days-input" min="0" type="number" name="amount" placeholder="3">
                     <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
                       <span class="visually-hidden">Уменьшить</span>
                     </button>
@@ -231,8 +231,10 @@
                   </div>
                 </div>
                 <div class="step__option">
-                  <input class="visually-hidden step__field" id="step__field" type="checkbox" name="kids" checked>
-                  <label class="step__label step__label--option" for="step__field">Можно с детьми</label>
+                  <label class="step__label step__label--option">
+                    <input class="visually-hidden step__field" type="checkbox" name="kids" checked>
+                    <span class="step__option-text">Можно с детьми</span>
+                  </label>
                 </div>
               </div>
               <div class="step__calendar calendar">
@@ -583,7 +585,9 @@
                 <div class="modal">
                   <header class="modal__header">
                     <h4 class="modal__title">Выберите страну</h4>
-                    <button class="modal__button-close button button--modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                    <button class="modal__button-close button button--modal-close" type="button">
+                      <span class="visually-hidden">Закрыть</span>
+                    </button>
                   </header>
                   <div class="modal__inner">
                     <table class="modal__table">

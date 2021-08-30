@@ -123,6 +123,7 @@
     line-height: 15px;
     letter-spacing: normal;
     text-transform: initial;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -137,6 +138,15 @@
       }
     }
 
+    &:hover::before {
+      border-color: #959bb2;
+    }
+
+    &:active::before {
+      border: none;
+      background-color: $special-grey-snuff;
+    }
+
     @media (min-width: $tablet-width) {
       column-gap: 22px;
       font-weight: $font-medium;
@@ -149,8 +159,8 @@
 }
 
 .step__field:checked {
-  & + .step__label--option {
-    &::after {
+  & ~ .step__option-text {
+    &::before {
       content: "";
       position: absolute;
       top: 8px;
@@ -167,6 +177,12 @@
         height: 11px;
         background-size: 11px 11px;
       }
+    }
+  }
+
+  &:active ~ .step__option-text {
+    &::before {
+      opacity: 0.3;
     }
   }
 }
@@ -213,6 +229,13 @@
   color: $basic-blue-light;
   border: 1px solid $basic-grey-border;
   border-radius: 10px;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   @media (min-width: $tablet-width) {
     height: 70px;
@@ -228,9 +251,31 @@
   &::placeholder {
     color: $basic-blue-light;
   }
+
+  &:hover {
+    border-color: #959bb2;
+
+    & ~ .step__button::before,
+    & ~ .step__button::after {
+      background-color: #959bb2;
+    }
+  }
+
+  &:focus {
+    border-color: $basic-blue;
+    outline: none;
+
+    & ~ .step__button::before,
+    & ~ .step__button::after {
+      background-color: $basic-blue;
+    }
+  }
 }
 
 .step__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   width: 42px;
@@ -239,20 +284,55 @@
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     background-size: 20px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background-color: #cccccc;
+  }
+
   &--min {
     left: 0;
-    background-image: url("../img/minus.svg");
   }
 
   &--max {
     right: 0;
-    background-image: url("../img/plus.svg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      background-color: #cccccc;
+      transform: rotate(90deg);
+    }
   }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: #999999;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: #e5e5e5;
+    }
+  }
+}
+
+.step__icon {
+  stroke: #000000;
 }
 
 .step__option {
@@ -457,6 +537,15 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus {
+    border-color: $basic-blue;
+    outline: none;
   }
 }
 
