@@ -159,6 +159,7 @@
 
   input:checked + .modal__index {
     background-color: $basic-light;
+    border: none;
 
     @media (min-width: $tablet-width) {
       color: $basic-white;
@@ -181,6 +182,10 @@
   @media (min-width: $desktop-width) {
     border: 1px solid $basic-grey-border;
     border-radius: 4px;
+  }
+
+  &:hover {
+    border: 1px solid #959bb2;
   }
 }
 
@@ -205,10 +210,24 @@
   }
 }
 
+.modal__input:focus ~ .modal__country-name {
+  color: $basic-blue-light;
+}
+
+.modal__input:active ~ .modal__country-name {
+  opacity: 0.3;
+}
+
 .modal__country-name {
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover {
+    color: $basic-blue-light;
   }
 }
 

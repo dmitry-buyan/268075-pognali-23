@@ -46,11 +46,49 @@
 }
 
 .transport__item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
+
+  &::before {
+    display: none;
+    content: attr(data-transport);
+    position: absolute;
+    top: -37px;
+    padding: 10px 12px;
+    font-size: 16px;
+    text-align: center;
+    color: $basic-white;
+    background-color: #101d41;
+    border-radius: 4px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      top: -48px;
+    }
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #101d41;
+    transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      display: block;
+    }
+  }
 
   .transport__icon {
     opacity: 0.15;
@@ -71,6 +109,16 @@
     height: 32px;
     background-color: $basic-white;
     border-radius: 50%;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      display: none;
+    }
 
     @media (min-width: $tablet-width) {
       width: 43px;
@@ -114,6 +162,22 @@
     height: 32px;
     background-color: $basic-light;
     border-radius: 50%;
+
+    &::before {
+      top: -50px;
+
+      @media (min-width: $tablet-width) {
+        top: -58px;
+      }
+    }
+
+    &::after {
+      top: -13px;
+
+      @media (min-width: $tablet-width) {
+        top: -10px;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       width: 30px;

@@ -6,12 +6,6 @@
   border-bottom-right-radius: $mobile-radius;
   border-bottom-left-radius: $mobile-radius;
 
-  &--form {
-    @media (min-width: $desktop-width) {
-      z-index: -100;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     padding-top: 134px;
     border-bottom-right-radius: $tablet-radius;
@@ -90,6 +84,15 @@
     background-repeat: no-repeat;
     background-position: right 0;
     background-size: 32px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

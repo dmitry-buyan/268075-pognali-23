@@ -115,8 +115,11 @@
               </div>
           </div>
           </header>
-          <button class="filter__toggle button button--toggle">
-            <span class="button__show-more">Показать все</span>
+          <button class="filter__toggle filter__toggle--show button button--toggle">
+            <span class="filter__toggle-text filter__toggle-text--show">Показать все</span>
+          </button>
+          <button class="filter__toggle filter__toggle--close button button--toggle">
+            <span class="filter__toggle-text filter__toggle-text--collapse">Свернуть</span>
           </button>
           <div class="filter__wrapper">
             <div class="filter__anchors">
@@ -502,17 +505,17 @@
                   <button class="category__title" type="button">Хобби</button>
                   <div class="category__inner">
                     <label class="category__item">
-                      <input class="visually-hidden" type="checkbox" name="gym" checked>
+                      <input class="category__input visually-hidden" type="checkbox" name="gym" checked>
                       <span class="category__checkmark">Спортзал</span>
                     </label>
 
                     <label class="category__item">
-                      <input class="visually-hidden" type="checkbox" name="hookah">
+                      <input class="category__input visually-hidden" type="checkbox" name="hookah">
                       <span class="category__checkmark">Кальян</span>
                     </label>
 
                     <label class="category__item">
-                      <input class="visually-hidden" type="checkbox" name="sofa">
+                      <input class="category__input visually-hidden" type="checkbox" name="sofa">
                       <span class="category__checkmark">Диван</span>
                     </label>
                   </div>
@@ -656,22 +659,22 @@
                 <div class="traveller__transport-wrapper">
                   <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
                   <ul class="traveller__transport-list transport">
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Авиаперелет">
                       <svg class="transport__icon transport__icon--plane" width="14" height="16" viewbox="0 0 14 16" role="img" aria-label="На самолете" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_plane"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Автотранспорт">
                       <svg class="transport__icon transport__icon--bus" width="13" height="16" viewbox="0 0 13 16" role="img" aria-label="На автобусе" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bus"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Велосипед">
                       <svg class="transport__icon transport__icon--bicycle" width="15" height="16" viewbox="0 0 15 16" role="img" aria-label="На велосипеде" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bicycle"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Пешком">
                       <svg class="transport__icon transport__icon--run" width="13" height="17" viewbox="0 0 13 17" role="img" aria-label="Пешком" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_run"></use>
                       </svg>
@@ -688,9 +691,6 @@
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button traveller__likes-button--active" aria-label="Количество лайков">
-                  <svg class="traveller__like-icon" width="13" height="11" viewbox="0 0 13 11">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
-                  </svg>
                 </button>
                 <span class="traveller__likes-amount">1,5 М</span>
               </div>
@@ -729,22 +729,22 @@
                 <div class="traveller__transport-wrapper">
                   <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
                   <ul class="traveller__transport-list transport">
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Авиаперелет">
                       <svg class="transport__icon transport__icon--plane" width="14" height="16" viewbox="0 0 14 16" role="img" aria-label="На самолете" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_plane"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Автотранспорт">
                       <svg class="transport__icon transport__icon--bus" width="13" height="16" viewbox="0 0 13 16" role="img" aria-label="На автобусе" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bus"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Велосипед">
                       <svg class="transport__icon transport__icon--bicycle" width="15" height="16" viewbox="0 0 15 16" role="img" aria-label="На велосипеде" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bicycle"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Пешком">
                       <svg class="transport__icon transport__icon--run" width="13" height="17" viewbox="0 0 13 17" role="img" aria-label="Пешком" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_run"></use>
                       </svg>
@@ -761,9 +761,6 @@
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button" aria-label="Количество лайков">
-                  <svg class="traveller__like-icon" width="13" height="11" viewbox="0 0 13 11">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
-                  </svg>
                 </button>
                 <span class="traveller__likes-amount">1500</span>
               </div>
@@ -803,22 +800,22 @@
                 <div class="traveller__transport-wrapper">
                   <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
                   <ul class="traveller__transport-list transport">
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Авиаперелет">
                       <svg class="transport__icon transport__icon--plane" width="14" height="16" viewbox="0 0 14 16" role="img" aria-label="На самолете" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_plane"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Автотранспорт">
                       <svg class="transport__icon transport__icon--bus" width="13" height="16" viewbox="0 0 13 16" role="img" aria-label="На автобусе" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bus"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Велосипед">
                       <svg class="transport__icon transport__icon--bicycle" width="15" height="16" viewbox="0 0 15 16" role="img" aria-label="На велосипеде" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bicycle"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Пешком">
                       <svg class="transport__icon transport__icon--run" width="13" height="17" viewbox="0 0 13 17" role="img" aria-label="Пешком" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_run"></use>
                       </svg>
@@ -835,9 +832,6 @@
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button" aria-label="Количество лайков">
-                  <svg class="traveller__like-icon" width="13" height="11" viewbox="0 0 13 11">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
-                  </svg>
                 </button>
                 <span class="traveller__likes-amount">170</span>
               </div>
@@ -875,22 +869,22 @@
                 <div class="traveller__transport-wrapper">
                   <h4 class="traveller__subtitle traveller__subtitle--transport">Транспорт:</h4>
                   <ul class="traveller__transport-list transport">
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Авиаперелет">
                       <svg class="transport__icon transport__icon--plane" width="14" height="16" viewbox="0 0 14 16" role="img" aria-label="На самолете" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_plane"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog transport__item--current">
+                    <li class="transport__item transport__item--catalog transport__item--current" data-transport="Автотранспорт">
                       <svg class="transport__icon transport__icon--bus" width="13" height="16" viewbox="0 0 13 16" role="img" aria-label="На автобусе" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bus"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Велосипед">
                       <svg class="transport__icon transport__icon--bicycle" width="15" height="16" viewbox="0 0 15 16" role="img" aria-label="На велосипеде" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_bicycle"></use>
                       </svg>
                     </li>
-                    <li class="transport__item transport__item--catalog">
+                    <li class="transport__item transport__item--catalog" data-transport="Пешком">
                       <svg class="transport__icon transport__icon--run" width="13" height="17" viewbox="0 0 13 17" role="img" aria-label="Пешком" focusable="false">
                         <use xlink:href="img/sprite.svg#icon_run"></use>
                       </svg>
@@ -907,9 +901,6 @@
               </div>
               <div class="traveller__likes-wrapper">
                 <button class="traveller__likes-button" aria-label="Количество лайков">
-                  <svg class="traveller__like-icon" width="13" height="11" viewbox="0 0 13 11">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
-                  </svg>
                 </button>
                 <span class="traveller__likes-amount">23</span>
               </div>

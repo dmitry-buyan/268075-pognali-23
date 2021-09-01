@@ -75,6 +75,11 @@
   &:focus ~ .signup-form__title {
     display: none;
   }
+
+  &--invalid {
+    color: $error-color;
+    background-color: $basic-white;
+  }
 }
 
 .signup-form__button {

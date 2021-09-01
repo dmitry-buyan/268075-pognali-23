@@ -152,27 +152,35 @@
     }
   }
 
-  &:hover {
-    &::before {
-      content: attr(data-country);
-      position: absolute;
-      bottom: -50px;
-      min-width: 100px;
-      padding: 10px 12px;
-      text-align: center;
-      color: $basic-white;
-      background-color: #101d41;
-      border-radius: 4px;
-    }
+  &::before {
+    display: none;
+    content: attr(data-country);
+    position: absolute;
+    top: 33px;
+    min-width: 100px;
+    padding: 10px 12px;
+    font-size: 16px;
+    text-align: center;
+    color: $basic-white;
+    background-color: #101d41;
+    border-radius: 4px;
+  }
 
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    width: 10px;
+    height: 10px;
+    background-color: #101d41;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    &::before,
     &::after {
-      content: "";
-      position: absolute;
-      bottom: -13px;
-      width: 10px;
-      height: 10px;
-      background-color: #101d41;
-      transform: rotate(45deg);
+      display: block;
     }
   }
 }
@@ -181,31 +189,6 @@
   @include reset-list;
   display: flex;
   justify-content: center;
-
-  .transport__item:hover {
-    position: relative;
-
-    &::before {
-      content: attr(data-transport);
-      position: absolute;
-      top: -37px;
-      padding: 10px 12px;
-      text-align: center;
-      color: $basic-white;
-      background-color: #101d41;
-      border-radius: 4px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 10px;
-      height: 10px;
-      background-color: #101d41;
-      transform: rotate(45deg);
-    }
-  }
 }
 
 .user__preferences {
