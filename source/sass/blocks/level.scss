@@ -81,6 +81,13 @@
   text-align: center;
   color: $basic-blue-light;
   border: 1px solid $basic-grey-border;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   &--min {
     border-top-left-radius: 4px;
@@ -100,6 +107,15 @@
     font-size: 20px;
     line-height: 20px;
     padding: 11px 15px;
+  }
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:focus {
+    border-color: $basic-blue-light;
+    outline: none;
   }
 }
 
@@ -151,8 +167,18 @@
   border-radius: 50%;
   background-color: $basic-blue-light;
   transform: translateY(-50%);
+  cursor: pointer;
 
   &--max {
     right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-50%) scale(1.5);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
   }
 }

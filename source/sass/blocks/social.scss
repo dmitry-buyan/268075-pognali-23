@@ -18,8 +18,27 @@
   background-color: $basic-yellow;
   border-radius: 50%;
 
+  &:hover,
+  &:focus {
+    background-color: $basic-yellow-dark;
+  }
+
+  &:active .social__icon {
+    opacity: 0.3;
+  }
+
   &--menu {
     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -28,23 +47,21 @@
   }
 }
 
-.social__facebook-icon {
+.social__icon {
   @media (min-width: $tablet-width) {
-    width: 14px;
-    height: 28px;
-  }
-}
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
 
-.social__vkontakte-icon {
-  @media (min-width: $tablet-width) {
-    width: 28px;
-    height: 18px;
-  }
-}
+    &--vkontakte {
+      width: 28px;
+      height: 18px;
+    }
 
-.social__instagram-icon {
-  @media (min-width: $tablet-width) {
-    width: 22px;
-    height: 22px;
+    &--instagram {
+      width: 22px;
+      height: 22px;
+    }
   }
 }

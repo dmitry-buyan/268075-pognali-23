@@ -5,7 +5,6 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const htmlmin = require("gulp-htmlmin");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const terser = require("gulp-terser");
@@ -14,6 +13,15 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
+
 // Styles
 
 const css = () => {
@@ -21,6 +29,7 @@ const css = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -33,20 +42,11 @@ const css = () => {
 
 exports.css = css;
 
-// HTML
-
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
-}
-
-exports.html = html;
-
 // JavaScript
 
 const scripts = () => {
   return gulp.src("source/js/**/*.js")
+    .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename("index.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -149,8 +149,8 @@ const build = gulp.series(
   copy,
   optimizeImages,
   gulp.parallel(
-    css,
     html,
+    css,
     scripts,
     sprite,
     createWebp
@@ -163,8 +163,8 @@ exports.default = gulp.series(
   clean,
   copy,
   gulp.parallel(
-    css,
     html,
+    css,
     scripts,
     sprite,
     createWebp

@@ -22,12 +22,15 @@
 }
 
 .nav__link {
+  display: inline-flex;
+  position: relative;
   font-weight: $font-medium;
   font-size: 30px;
   line-height: 35px;
   color: $basic-blue-dark;
   text-transform: uppercase;
   text-decoration: none;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -39,5 +42,27 @@
     color: $basic-white;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover .nav__link-text,
+  &:focus .nav__link-text {
+    transform: translateY(-100%);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav__link-text {
+  display: inline-flex;
+  position: relative;
+  transition: transform 0.3s;
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    color: $basic-yellow;
   }
 }

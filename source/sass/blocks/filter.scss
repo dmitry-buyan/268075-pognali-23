@@ -56,6 +56,10 @@
   top: 0;
 }
 
+.filter__toggle-text {
+  display: none;
+}
+
 .filter__wrapper {
   width: 220px;
   margin: 0 auto;
@@ -149,6 +153,18 @@
     width: 100%;
     margin: 0;
   }
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    .filter__close-icon,
+    .filter__button-test {
+      opacity: 0.3;
+    }
+  }
 }
 
 .filter__close-icon {
@@ -184,13 +200,27 @@
   text-decoration: none;
   opacity: 0.3;
 
-  &--current {
-    opacity: 1;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &--current {
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
   }
 }
 
@@ -280,6 +310,16 @@
       opacity: 1;
     }
   }
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+    opacity: 1;
+  }
+
+  &:active {
+    color: $basic-blue-light;
+  }
 }
 
 .filter__alphabet {
@@ -330,5 +370,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic-blue-light;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

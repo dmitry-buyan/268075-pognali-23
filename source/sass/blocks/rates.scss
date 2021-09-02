@@ -250,6 +250,7 @@
   line-height: 16px;
   color: $special-blue;
   text-decoration: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: inline-flex;
@@ -278,6 +279,30 @@
       padding-bottom: 45px;
       font-size: 24px;
       line-height: 26px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $basic-light;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .rates__button-icon,
+    .rates__link {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .rates__button-icon,
+    .rates__link {
+      opacity: 0.3;
     }
   }
 }

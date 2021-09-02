@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Главная страница</title>
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -25,13 +29,13 @@
             <nav class="header__nav nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">О сервисе</a>
+                  <a class="nav__link" href="#"><span class="nav__link-text" data-hover="О сервисе">О сервисе</span></a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="form.html">Направления</a>
+                  <a class="nav__link" href="form.html"><span class="nav__link-text" data-hover="Направления">Направления</span></a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="catalog.html">Попутчики</a>
+                  <a class="nav__link" href="catalog.html"><span class="nav__link-text" data-hover="Попутчики">Попутчики</span></a>
                 </li>
               </ul>
             </nav>
@@ -170,7 +174,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
-                <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Остров в виде двух гор в Тайланде" width="270" height="110">
+                <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Остров в виде двух гор в Тайланде" loading="lazy" width="270" height="110">
               </picture>
               <div class="country__inner country__inner--thailand">
                 <h3 class="country__name">Таиланд</h3>
@@ -183,7 +187,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
-                <img class="country__img" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Фасад здания в одном из французских городов" width="270" height="110">
+                <img class="country__img" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Фасад здания в одном из французских городов" loading="lazy" width="270" height="110">
               </picture>
               <div class="country__inner country__inner--france">
                 <h3 class="country__name">Франция</h3>
@@ -196,7 +200,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
-                <img class="country__img" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Баржа, плывущая по городской реке в Чехии" width="270" height="110">
+                <img class="country__img" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Баржа, плывущая по городской реке в Чехии" loading="lazy" width="270" height="110">
               </picture>
               <div class="country__inner country__inner--czech">
                 <h3 class="country__name">Чехия</h3>
@@ -218,21 +222,23 @@
           </header>
           <div class="travelmates__inner">
             <div class="travelmates__user user">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
-                <img class="user__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова плывет на спине: вид сверху" width="270" height="270">
-              </picture>
+              <div class="user__top">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <img class="user__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова плывет на спине: вид сверху" loading="lazy" width="270" height="270">
+                </picture>
+              </div>
               <div class="user__inner">
                 <a class="user__link" href="#">
                   <h3 class="user__name">Таня Фирсова</h3>
                 </a>
                 <h4 class="visually-hidden">Хочет посетить:</h4>
                 <ul class="user__countries">
-                  <li class="user__country user__country--srilanka"><span class="visually-hidden">Шри-Ланка</span></li>
-                  <li class="user__country user__country--thailand"><span class="visually-hidden">Тайланд</span></li>
-                  <li class="user__country user__country--seychelles"><span class="visually-hidden">Сейшелы</span></li>
+                  <li class="user__country user__country--srilanka" data-country="Шри-Ланка"><span class="visually-hidden">Шри-Ланка</span></li>
+                  <li class="user__country user__country--thailand" data-country="Тайланд"><span class="visually-hidden">Тайланд</span></li>
+                  <li class="user__country user__country--seychelles" data-country="Сейшелы"><span class="visually-hidden">Сейшелы</span></li>
                 </ul>
                 <div class="user__preferences">
                   <h4 class="visually-hidden">Предпочтения</h4>
@@ -245,22 +251,22 @@
                 </div>
                 <h4 class="visually-hidden">Транспорт</h4>
                 <ul class="user__transport transport">
-                  <li class="transport__item transport__item--current">
+                  <li class="transport__item transport__item--current" data-transport="Автотранспорт">
                     <svg class="transport__icon transport__icon--plane" width="21" height="21" viewbox="0 0 21 21" role="img" aria-label="На самолете" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_plane"></use>
                     </svg>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item" data-transport="Авиаперелет">
                     <svg class="transport__icon transport__icon--bus" width="17" height="19" viewbox="0 0 17 19" role="img" aria-label="На автобусе" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_bus"></use>
                     </svg>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item" data-transport="Велосипед">
                     <svg class="transport__icon transport__icon--bicycle" width="24" height="24" viewbox="0 0 24 24" role="img" aria-label="На велосипеде" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_bicycle"></use>
                     </svg>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item" data-transport="Пешком">
                     <svg class="transport__icon transport__icon--run" width="21" height="23" viewbox="0 0 21 23" role="img" aria-label="Пешком" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_run"></use>
                     </svg>
@@ -273,20 +279,22 @@
               </div>
             </div>
             <div class="travelmates__user user">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-                <img class="user__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин в солнечных очках и черной шапке" width="270" height="270">
-              </picture>
+              <div class="user__top">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <img class="user__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин в солнечных очках и черной шапке" loading="lazy" width="270" height="270">
+                </picture>
+              </div>
               <div class="user__inner">
                 <a class="user__link" href="#">
                   <h3 class="user__name user__name--online">Петя Демин</h3>
                 </a>
                 <h4 class="visually-hidden">Хочет посетить:</h4>
                 <ul class="user__countries">
-                  <li class="user__country user__country--belgium"><span class="visually-hidden">Бельгия</span></li>
-                  <li class="user__country user__country--czech"><span class="visually-hidden">Чехия</span></li>
+                  <li class="user__country user__country--belgium" data-country="Бельгия"><span class="visually-hidden">Бельгия</span></li>
+                  <li class="user__country user__country--czech" data-country="Чехия"><span class="visually-hidden">Чехия</span></li>
                 </ul>
                 <div class="user__preferences">
                   <h4 class="visually-hidden">Предпочтения</h4>
@@ -298,22 +306,22 @@
                 </div>
                 <h4 class="visually-hidden">Транспорт</h4>
                 <ul class="user__transport transport">
-                  <li class="transport__item transport__item--current">
+                  <li class="transport__item transport__item--current" data-transport="Автотранспорт">
                     <svg class="transport__icon transport__icon--plane" width="21" height="21" viewbox="0 0 21 21" role="img" aria-label="На самолете" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_plane"></use>
                     </svg>
                   </li>
-                  <li class="transport__item transport__item--current">
+                  <li class="transport__item transport__item--current" data-transport="Авиаперелет">
                     <svg class="transport__icon transport__icon--bus" width="17" height="19" viewbox="0 0 17 19" role="img" aria-label="На автобусе" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_bus"></use>
                     </svg>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item" data-transport="Велосипед">
                     <svg class="transport__icon transport__icon--bicycle" width="24" height="24" viewbox="0 0 24 24" role="img" aria-label="На велосипеде" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_bicycle"></use>
                     </svg>
                   </li>
-                  <li class="transport__item transport__item--current">
+                  <li class="transport__item transport__item--current" data-transport="Пешком">
                     <svg class="transport__icon transport__icon--run" width="21" height="23" viewbox="0 0 21 23" role="img" aria-label="Пешком" focusable="false">
                       <use xlink:href="img/sprite.svg#icon_run"></use>
                     </svg>
@@ -357,7 +365,7 @@
                     <use xlink:href="img/sprite.svg#icon_businessman"></use>
                   </svg>
                 </span>
-                Показать тарифы для бизнеса
+                <span class="rates__link">Показать тарифы для бизнеса</span>
               </a>
             </div>
           </div>
@@ -394,7 +402,8 @@
           <form class="registration__form signup-form" action="https://echo.htmlacademy.ru" method="GET">
             <div class="signup-form__container">
               <label class="signup-form__label">
-                <input class="signup-form__input" type="email" name="email" placeholder="E-mail">
+                <input class="signup-form__input" type="email" name="email" required>
+                <span class="signup-form__title">E-mail</span>
               </label>
               <button class="signup-form__button button button--more" type="submit"><span class="signup-form__button-text">Регистрация</span></button>
             </div>
@@ -409,7 +418,7 @@
                       <use xlink:href="img/sprite.svg#icon-phone"></use>
                     </svg>
                   </span>
-                  8&nbsp;800&nbsp;555-86-28
+                  <span class="contact__phone">8&nbsp;800&nbsp;555-86-28</span>
                 </a>
               </li>
               <li class="contact__item">
@@ -419,7 +428,7 @@
                       <use xlink:href="img/sprite.svg#icon-mail-main"></use>
                     </svg>
                   </span>
-                  mail@htmlacademy.ru
+                  <span class="contact__email">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
@@ -453,21 +462,21 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__facebook-icon" width="11" height="21" viewbox="0 0 11 21" role="img" aria-label="Фейсбук" focusable="false">
+                <svg class="social__icon social__icon--facebook" width="11" height="21" viewbox="0 0 11 21" role="img" aria-label="Фейсбук" focusable="false">
                   <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__vkontakte-icon" width="23" height="12" viewbox="0 0 23 12" role="img" aria-label="ВКонтакте" focusable="false">
+                <svg class="social__icon social__icon--vkontakte" width="23" height="12" viewbox="0 0 23 12" role="img" aria-label="ВКонтакте" focusable="false">
                   <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__instagram-icon" width="18" height="18" viewbox="0 0 18 18" role="img" aria-label="Инстаграм" focusable="false">
+                <svg class="social__icon social__icon--instagram" width="18" height="18" viewbox="0 0 18 18" role="img" aria-label="Инстаграм" focusable="false">
                   <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
               </a>

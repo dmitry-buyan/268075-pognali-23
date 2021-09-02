@@ -65,11 +65,21 @@
   @media (min-width: $desktop-width) {
     line-height: 22px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .category__inner {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   row-gap: 12px;
 
   @media (min-width: $tablet-width) {
@@ -91,6 +101,7 @@
   font-size: 15px;
   line-height: 20px;
   color: $basic-black;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -108,6 +119,28 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    .category__checkmark {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &:active {
+    .category__checkmark {
+      opacity: 0.3;
+    }
   }
 }
 

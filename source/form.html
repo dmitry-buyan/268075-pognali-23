@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Направления</title>
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -23,13 +27,13 @@
             <nav class="header__nav nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="index.html">О сервисе</a>
+                  <a class="nav__link" href="index.html"><span class="nav__link-text" data-hover="О сервисе">О сервисе</span></a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Направления</a>
+                  <a class="nav__link" href="#"><span class="nav__link-text" data-hover="Направления">Направления</span></a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="catalog.html">Попутчики</a>
+                  <a class="nav__link" href="catalog.html"><span class="nav__link-text" data-hover="Попутчики">Попутчики</span></a>
                 </li>
               </ul>
             </nav>
@@ -111,10 +115,10 @@
               <source type="image/webp" srcset="img/demin-form-mobile@1x.webp 1x, img/demin-form-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/demin-form-desktop@1x.jpg 1x, img/demin-form-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/demin-form-tablet@1x.jpg 1x, img/demin-form-tablet@2x.jpg 2x">
-              <img class="user-edit__avatar" src="img/demin-form-mobile@1x.jpg" srcset="img/demin-form-mobile@2x.jpg 2x" alt="Аватар попутчика Пети Демина" width="100" height="100">
+              <img class="user-edit__avatar" src="img/demin-form-mobile@1x.jpg" srcset="img/demin-form-mobile@2x.jpg 2x" alt="Аватар попутчика Пети Демина" loading="lazy" width="100" height="100">
             </picture>
           </div>
-          <a class="user-edit__avatar-add" href="#"><span class="user-edit__text">Сменить </span> фото</a>
+          <a class="user-edit__button" href="#"><span class="user-edit__text">Сменить </span> фото</a>
           <div class="user-edit__tags tags">
             <h3 class="tags__title">Тэги</h3>
             <textarea class="tags__textarea" name="tags" cols="30" rows="2" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
@@ -123,7 +127,7 @@
             <h3 class="transport__title">Транспорт</h3>
             <div class="transport__wrapper">
               <label class="transport__item transport__item--form">
-                <input class="visually-hidden" type="checkbox" name="plane" checked>
+                <input class="visually-hidden transport__input" type="checkbox" name="plane" checked>
                 <svg class="transport__icon transport__icon--plane" width="17" height="16" viewbox="0 0 17 16" role="img" aria-label="На самолете" focusable="false">
                   <use xlink:href="img/sprite.svg#icon_plane"></use>
                 </svg>
@@ -204,7 +208,7 @@
                   <label class="step__label" for="people-input">Ищу попутчиков:</label>
                   <span class="step__index">чел.</span>
                   <div class="step__input-wrapper">
-                    <input class="step__input" id="people-input" type="number" name="amount" placeholder="2">
+                    <input class="step__input" id="people-input" type="number" min="0" name="amount" placeholder="2">
                     <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество попутчиков">
                       <span class="visually-hidden">Уменьшить</span>
                     </button>
@@ -217,7 +221,7 @@
                   <label class="step__label" for="days-input">Длительность:</label>
                   <span class="step__index">дн.</span>
                   <div class="step__input-wrapper">
-                    <input class="step__input" id="days-input" type="number" name="amount" placeholder="3">
+                    <input class="step__input" id="days-input" min="0" type="number" name="amount" placeholder="3">
                     <button class="step__button step__button--min" type="button" aria-label="Уменьшить количество дней">
                       <span class="visually-hidden">Уменьшить</span>
                     </button>
@@ -227,8 +231,10 @@
                   </div>
                 </div>
                 <div class="step__option">
-                  <input class="visually-hidden step__field" id="step__field" type="checkbox" name="kids" checked>
-                  <label class="step__label step__label--option" for="step__field">Можно с детьми</label>
+                  <label class="step__label step__label--option">
+                    <input class="visually-hidden step__field" type="checkbox" name="kids" checked>
+                    <span class="step__option-text">Можно с детьми</span>
+                  </label>
                 </div>
               </div>
               <div class="step__calendar calendar">
@@ -579,7 +585,9 @@
                 <div class="modal">
                   <header class="modal__header">
                     <h4 class="modal__title">Выберите страну</h4>
-                    <button class="modal__button-close button button--modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                    <button class="modal__button-close button button--modal-close" type="button">
+                      <span class="visually-hidden">Закрыть</span>
+                    </button>
                   </header>
                   <div class="modal__inner">
                     <table class="modal__table">
@@ -778,58 +786,69 @@
                     </table>
                     <ul class="modal__list">
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Australia">Австралия
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Australia">
+                          <span class="modal__country-name">Австралия</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Austria">Австрия
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Austria">
+                          <span class="modal__country-name">Австрия</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Azerbaijan">Азербайджан
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Azerbaijan">
+                          <span class="modal__country-name">Азербайджан</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Albania">Албания
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Albania">
+                          <span class="modal__country-name">Албания</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Aljir">Алжир
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Aljir">
+                          <span class="modal__country-name">Алжир</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Angola">Ангола
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Angola">
+                          <span class="modal__country-name">Ангола</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Andorra">Андорра
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Andorra">
+                          <span class="modal__country-name">Андорра</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Antigua and Barbuda">Антигуа и Барбуда
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Antigua and Barbuda">
+                          <span class="modal__country-name">Антигуа и Барбуда</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Argentina">Аргентина
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Argentina">
+                          <span class="modal__country-name">Аргентина</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Armenia">Армения
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Armenia">
+                          <span class="modal__country-name">Армения</span>
                         </label>
                       </li>
                       <li>
-                        <label class="modal__country-name">
-                          <input class="visually-hidden" type="checkbox" name="Afganistan">Афганистан
+                        <label>
+                          <input class="modal__input visually-hidden" type="checkbox" name="Afganistan">
+                          <span class="modal__country-name">Афганистан</span>
                         </label>
                       </li>
                     </ul>
@@ -859,7 +878,7 @@
 
               <div class="step__wrapper step__wrapper--first">
                 <label><span class="step__subtitle step__subtitle--bosnia-and-herzegovina">Босния и Герцеговина</span>
-                  <textarea class="step__textarea" name="country-description-1" cols="30" rows="10" placeholder="План действий"></textarea>
+                  <textarea class="step__textarea" name="country-description-1" cols="30" rows="10" placeholder="План действий" required></textarea>
                 </label>
               </div>
 

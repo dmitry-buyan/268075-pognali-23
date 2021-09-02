@@ -13,6 +13,16 @@
   background-color: $basic-yellow;
   border: none;
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-yellow-dark;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -50,6 +60,10 @@
       }
     }
 
+    &:active::after {
+      opacity: 0.3;
+    }
+
     @media (min-width: $tablet-width) {
       padding: 30px 30px 28px 33px;
       border-radius: 20px;
@@ -66,7 +80,7 @@
     text-transform: uppercase;
     text-align: left;
     color: $basic-blue-light;
-    background-color: $basic-light;
+    background-color: transparent;
     border-radius: 10px;
 
     &::before {
@@ -78,13 +92,31 @@
       height: 14px;
       background: url("../img/plus.svg") no-repeat center;
       transform: translateY(-50%);
+      opacity: 0.2;
     }
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 20px;
       letter-spacing: 0.09em;
+    }
+
+    &:hover,
+    &:focus {
       background-color: $special-blue-light;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: $basic-blue-light;
+    }
+
+    &:active::before {
+      opacity: 0.1;
     }
   }
 
@@ -112,6 +144,10 @@
         background: url("../img/button_triangle_icon.svg") no-repeat;
         transform: translateY(-50%);
       }
+
+      &:active::after {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -119,6 +155,7 @@
     line-height: 30px;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+    color: $basic-blue-light;
     background: transparent;
 
     @media (min-width: $tablet-width) {
@@ -138,6 +175,16 @@
         background: url("../img/button_triangle_icon.svg") no-repeat;
         transform: translateY(-50%) rotate(180deg);
       }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 
@@ -178,6 +225,16 @@
       font-size: 20px;
       line-height: 20px;
     }
+
+    &:hover,
+    &:focus {
+      background-color: $basic-white;
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+    }
+
+    &:active {
+      background-color: #f3c72b;
+    }
   }
 
   &--expand {
@@ -186,6 +243,24 @@
     text-transform: uppercase;
     text-align: center;
     background: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    &:hover .catalog__show-icon,
+    &:focus .catalog__show-icon {
+      opacity: 0.6;
+    }
+
+    &:active {
+      color: $basic-blue-light;
+    }
+
+    &:active .catalog__show-icon {
+      opacity: 0.3;
+    }
   }
 
   &--address {
@@ -195,6 +270,25 @@
 
     @media (min-width: $tablet-width) {
       border-radius: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-white;
+      background-color: $basic-blue-dark;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-image: url("../img/icons/icon-triangle-white.svg");
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
   }
 
@@ -206,6 +300,16 @@
 
     @media (min-width: $desktop-width) {
       display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 
@@ -239,23 +343,61 @@
   &--select {
     border-radius: 0;
     background: $basic-white url("../img/arrow-select.svg") no-repeat center;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   &--remove {
-    background: $basic-light url("../img/icon_close.svg") no-repeat center;
+    background: $basic-light url("../img/icons/icon-close.svg") no-repeat center;
     background-size: 9px 9px;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      background-color: $basic-light;
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.05;
+    }
 
     @media (min-width: $tablet-width) {
       background-color: transparent;
       background-size: 17px 17px;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
     }
   }
 
   &--modal-close {
-    background: transparent url("../../img/icon-modal-close.svg") no-repeat center;
-  }
-}
+    background: transparent url("../img/icons/icon-close-white.svg") no-repeat center;
+    background-size: 9px 9px;
+    opacity: 0.3;
 
-.button__show-more {
-  display: none;
+    @media (min-width: $tablet-width) {
+      background-size: 21px 21px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }
