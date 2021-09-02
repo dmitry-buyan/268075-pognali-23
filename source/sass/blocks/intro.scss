@@ -41,13 +41,13 @@
 
 .intro__top {
   margin-bottom: -20px;
-  padding-top: 42px;
+  padding-top: 34px;
   background-image:
     url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position:
-    center bottom 20px,
+    right 48px bottom 20px,
     center bottom -70px;
   background-size: 192px, cover;
 
@@ -72,7 +72,7 @@
 }
 
 .intro__title {
-  margin-bottom: 245px;
+  margin-bottom: 243px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -146,7 +146,9 @@
 
 .intro__reviews {
   padding-top: 48px;
+  padding-right: 60px;
   padding-bottom: 109px;
+  padding-left: 25px;
 
   @media (min-width: $tablet-width) {
     padding-top: 76px;
@@ -161,7 +163,7 @@
 }
 
 .intro__guideline {
-  margin-top: -82px;
+  margin-top: -80px;
 
   @media (min-width: $tablet-width) {
     margin-top: -140px;

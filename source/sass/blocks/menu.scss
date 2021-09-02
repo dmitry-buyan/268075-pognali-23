@@ -1,5 +1,5 @@
 .menu {
-  padding-top: 27px;
+  padding-top: 20px;
   padding-bottom: 41px;
   background-color: $basic-white;
 
@@ -73,8 +73,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 3px;
+    left: 24px;
     width: 20px;
     height: 20px;
     background-image: url("../img/icons/icon-close.svg");

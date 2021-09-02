@@ -18,7 +18,7 @@
 
 .header__logo {
   display: inline-flex;
-  margin-bottom: 76px;
+  margin-bottom: 83px;
   color: $basic-blue-dark;
 
   @media (min-width: $tablet-width) {
@@ -46,6 +46,7 @@
 
 .header__button {
   margin-bottom: 51px;
+  padding: 15px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -66,7 +67,7 @@
 }
 
 .header__contact {
-  margin-bottom: 41px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 129px;

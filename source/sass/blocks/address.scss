@@ -1,5 +1,5 @@
 .address {
-  padding: 63px 0 35px;
+  padding: 61px 0 35px;
   font-weight: $font-bold;
   text-transform: uppercase;
   color: $basic-blue-light;
@@ -71,7 +71,7 @@
 }
 
 .address__button {
-  padding: 22px;
+  padding: 19px;
 
   @media (min-width: $tablet-width) {
     padding: 26px 36px 24px;

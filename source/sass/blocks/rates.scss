@@ -1,6 +1,6 @@
 .rates {
-  padding-top: 106px;
-  padding-bottom: 38px;
+  padding-top: 83px;
+  padding-bottom: 33px;
   background: $basic-light;
 
   @media (min-width: $tablet-width) {
@@ -16,6 +16,7 @@
 
 .rates__subtitle {
   margin-bottom: 43px;
+  padding-right: 100px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 73px;
@@ -49,7 +50,7 @@
       content: "";
       position: absolute;
       z-index: 100;
-      top: 0;
+      top: -16px;
       right: 0;
       width: 100px;
       height: 100px;
@@ -179,7 +180,7 @@
 
   &--business {
     width: 219px;
-    margin-bottom: 34px;
+    margin-bottom: 33px;
     line-height: 22px;
 
     @media (min-width: $tablet-width) {
@@ -193,7 +194,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: 6px;
+  row-gap: 1px;
   padding: 15px 0;
   border-top: 1px solid #e1e3e9;
 
@@ -262,7 +263,7 @@
 
   &--close {
     width: 100%;
-    padding: 21px;
+    padding: 21px 21px 14px;
     line-height: 24px;
     text-transform: uppercase;
     background: $basic-grey;

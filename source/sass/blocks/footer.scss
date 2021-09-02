@@ -1,6 +1,6 @@
 .footer {
   @include block(1000, top);
-  padding: 37px 0 19px;
+  padding: 46px 0 19px;
   background: $basic-white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -29,7 +29,7 @@
 }
 
 .footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   color: $basic-blue-dark;
 
   @media (min-width: $tablet-width) {
@@ -38,7 +38,7 @@
 }
 
 .footer__social {
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
