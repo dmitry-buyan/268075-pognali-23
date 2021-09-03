@@ -22,8 +22,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 13px;
-  padding: 0 25px 20px 25px;
+  row-gap: 20px;
+  padding: 0 25px 32px 25px;
+
+  @media (min-width: $desktop-width) {
+    row-gap: 17px;
+    padding-bottom: 29px;
+  }
 }
 
 .user__img {
@@ -48,6 +53,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
+    margin-left: 43px;
+    margin-bottom: 6px;
   }
 }
 
@@ -195,6 +206,10 @@
 .user__preferences {
   text-align: center;
   line-height: 21px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .user__hashtag {

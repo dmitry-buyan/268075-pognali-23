@@ -4,6 +4,12 @@
   color: $basic-white;
 }
 
+.reviews__feedback {
+  @media (min-width: $tablet-width) {
+    line-height: 27px;
+  }
+}
+
 .reviews__list {
   @media (min-width: $tablet-width) {
     width: 340px;

@@ -134,6 +134,7 @@
   }
 
   &--bottom {
+    column-gap: 23px;
     color: $basic-yellow;
 
     @media (min-width: $desktop-width) {

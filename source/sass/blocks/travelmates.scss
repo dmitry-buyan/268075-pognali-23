@@ -19,8 +19,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 231px;
-    padding-bottom: 134px;
+    padding-top: 134px;
+    padding-bottom: 74px;
   }
 }
 
@@ -44,7 +44,7 @@
     border-bottom-right-radius: 20px;
 
     @media (min-width: $tablet-width) {
-      top: 0;
+      top: -4px;
       width: 212px;
       height: 212px;
       border-radius: 20px;
@@ -57,12 +57,12 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding-top: 70px;
+    padding-top: 75px;
     background-image:
       url("../img/rogovaya-back-tablet@1x.png"),
       url("../img/smolov-back-desktop@1x.png");
     background-position:
-      right 0 top 9px,
+      right 34px top 14px,
       left 0 top 355px;
     background-size: 285px, 143px;
 
@@ -77,10 +77,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
-    padding-top: 60px;
+    padding-top: 56px;
+    padding-bottom: 60px;
     padding-left: 70px;
     background-position:
-      left 132px bottom,
+      left 130px bottom 6px,
       top 60px left 489px;
   }
 }
@@ -127,7 +128,9 @@
     line-height: 22px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 59px;
+      margin-bottom: 63px;
+      font-size: 21px;
+      line-height: 24px;
     }
 
     @media (min-width: $desktop-width) {
@@ -150,6 +153,7 @@
     gap: 60px;
     margin: 0;
     padding: 0;
+    padding-top: 4px;
   }
 }
 
@@ -178,7 +182,7 @@
 .travelmates__button {
   @media (min-width: $tablet-width) {
     display: block;
-    width: 618px;
+    width: 620px;
     margin: 0 auto;
   }
 

@@ -59,7 +59,7 @@
       transform: translateY(-50%);
 
       @media (min-width: $tablet-width) {
-        right: 30px;
+        right: 35px;
       }
     }
 
@@ -68,7 +68,9 @@
     }
 
     @media (min-width: $tablet-width) {
-      padding: 30px 30px 28px 33px;
+      font-size: 24px;
+      line-height: 24px;
+      padding: 30px 30px 26px 33px;
       border-radius: 20px;
     }
   }

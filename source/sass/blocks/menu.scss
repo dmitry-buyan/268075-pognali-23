@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 46px;
+    padding-top: 49px;
     padding-bottom: 0;
     background: $basic-blue;
   }
@@ -26,7 +26,12 @@
 
 .menu--closed .header__logo {
   margin: 0;
+  margin-top: 5px;
   color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -5px;
+  }
 }
 
 .menu--closed .logo__img path {
@@ -102,6 +107,8 @@
   height: 11px;
 
   &::before {
+    top: 21px;
+    left: 13px;
     width: 25px;
     height: 11px;
     background-image: url("../img/icon_menu_mobile.svg");
@@ -122,6 +129,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-left: 40px;
   }
 }
 
