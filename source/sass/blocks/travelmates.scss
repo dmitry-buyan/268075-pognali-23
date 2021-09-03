@@ -1,6 +1,6 @@
 .travelmates {
   padding-top: 65px;
-  padding-bottom: 31px;
+  padding-bottom: 32px;
   color: $basic-white;
   background-color: $basic-blue-dark;
   background-image: url("../img/rogovaya-back-desktop@1x.png");
@@ -44,7 +44,7 @@
     border-bottom-right-radius: 20px;
 
     @media (min-width: $tablet-width) {
-      top: -4px;
+      top: 5px;
       width: 212px;
       height: 212px;
       border-radius: 20px;
@@ -63,7 +63,7 @@
       url("../img/smolov-back-desktop@1x.png");
     background-position:
       right 34px top 14px,
-      left 0 top 355px;
+      left 0 top 360px;
     background-size: 285px, 143px;
 
     @media (min-resolution: $retina-dppx) {

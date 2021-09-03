@@ -47,11 +47,10 @@
 
   &--1 {
     top: 10px;
-    right: 10px;
+    right: 18px;
     width: 47px;
     display: flex;
-    justify-content: space-between;
-    column-gap: 16px;
+    column-gap: 21px;
 
     @media (min-width: $tablet-width) {
       width: 76px;

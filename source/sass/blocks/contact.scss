@@ -8,6 +8,11 @@
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
+
+      .contact__phone,
+      .contact__email {
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -25,6 +30,10 @@
   text-decoration: none;
 
   &--menu {
+    @media (min-width: $tablet-width) {
+      column-gap: 23px;
+    }
+
     @media (min-width: $desktop-width) {
       display: inline-flex;
       justify-content: center;
@@ -134,8 +143,12 @@
   }
 
   &--bottom {
-    column-gap: 23px;
+    column-gap: 16px;
     color: $basic-yellow;
+
+    @media (min-width: $tablet-width) {
+      column-gap: 23px;
+    }
 
     @media (min-width: $desktop-width) {
       column-gap: 31px;

@@ -1,6 +1,6 @@
 .calendar__header {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   padding: 11px 0;
   border-top: 1px solid $basic-grey-border;
   border-bottom: 1px solid $basic-grey-border;
@@ -75,6 +75,7 @@
 
 
   &--days {
+    padding-bottom: 6px;
     border-left: none;
 
     @media (min-width: $desktop-width) {

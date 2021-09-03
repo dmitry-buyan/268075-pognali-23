@@ -2,8 +2,8 @@
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 8px;
+  padding-top: 7px;
+  padding-bottom: 3px;
   font-weight: $font-bold;
   font-size: 17px;
   line-height: 20px;
@@ -157,6 +157,7 @@
   }
 
   &--back {
+    padding: 0;
     line-height: 30px;
     letter-spacing: 0.01em;
     text-transform: uppercase;

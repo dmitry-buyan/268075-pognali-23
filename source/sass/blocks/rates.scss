@@ -203,8 +203,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: 1px;
-  padding: 15px 0;
+  row-gap: 6px;
+  padding: 13px 0;
   border-top: 1px solid #e1e3e9;
 
   @media (min-width: $tablet-width) {
