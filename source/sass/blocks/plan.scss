@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 57px;
-    padding-bottom: 76px;
+    padding-bottom: 105px;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,6 +29,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 7px;
   }
 }
 
@@ -61,7 +65,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
-    padding: 40px 42px 38px 43px;
+    padding: 38px 42px 36px 43px;
   }
 }
 
@@ -76,7 +80,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-bottom: 34px;
-    padding: 0 40px;
+    padding: 0 32px 0 40px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -90,6 +94,10 @@
 }
 
 .plan__number {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-right: 36px;
   }
@@ -103,18 +111,19 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     padding: 20px 40px 0;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 0.1em;
     border-top: 1px solid rgba(203, 206, 217, 0.3);
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 629px;
+    grid-template-columns: 1fr 2fr auto;
+    width: 587px;
     margin-left: auto;
     padding: 0;
     border: none;
@@ -137,6 +146,10 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 17px;
+  }
 }
 
 .plan__button-edit {
@@ -149,6 +162,7 @@
   opacity: 0.3;
 
   @media (min-width: $tablet-width) {
+    margin-left: auto;
     font-size: 20px;
     line-height: 20px;
   }

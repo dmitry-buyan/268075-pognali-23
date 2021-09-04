@@ -7,14 +7,14 @@
   border-bottom-left-radius: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 134px;
+    padding-top: 102px;
     border-bottom-right-radius: $tablet-radius;
     border-bottom-left-radius: $tablet-radius;
     background-color: $basic-blue-dark-alternative;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 124px;
+    padding-top: 120px;
     background-color: $basic-blue-dark;
   }
 }
