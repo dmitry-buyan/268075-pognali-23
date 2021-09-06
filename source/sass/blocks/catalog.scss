@@ -5,6 +5,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
+    row-gap: 40px;
     margin-bottom: 46px;
   }
 
@@ -24,11 +25,13 @@
   margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    column-gap: 25px;
-    margin-bottom: 51px;
+    column-gap: 26px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: 347px;
     margin-bottom: 71px;
   }
 }
@@ -38,7 +41,7 @@
   transform: rotate(45deg);
 
   @media (min-width: $tablet-width) {
-    width: 26px;
-    height: 26px;
+    width: 23px;
+    height: 23px;
   }
 }

@@ -42,6 +42,14 @@
     column-gap: 2px;
     padding: 0;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      margin-left: -4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
   }
 }
 

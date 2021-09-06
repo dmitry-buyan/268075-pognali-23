@@ -229,12 +229,14 @@
   }
 
   &--catalog {
+    padding-top: 14px;
+    padding-bottom: 10px;
     line-height: 17px;
     text-transform: uppercase;
     background: $basic-white;
 
     @media (min-width: $tablet-width) {
-      padding: 12px 10px 8px;
+      padding: 17px 10px 13px;
       font-size: 20px;
       line-height: 20px;
     }
@@ -274,6 +276,10 @@
     &:active .catalog__show-icon {
       opacity: 0.3;
     }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
   }
 
   &--address {
@@ -306,30 +312,12 @@
   }
 
   &--toggle {
-    width: 25px;
-    height: 15px;
-    padding: 0;
-    background: url("../img/filter-expand.svg") no-repeat center;
-
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &--close {
+    padding-top: 12px;
+    padding-bottom: 7px;
     font-size: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    color: $basic-blue-dark;
     background: #d6daed;
 
     @media (min-width: $tablet-width) {
@@ -343,6 +331,8 @@
   }
 
   &--invite {
+    padding-top: 14px;
+    padding-bottom: 9px;
     line-height: 17px;
     text-align: center;
     text-transform: uppercase;
