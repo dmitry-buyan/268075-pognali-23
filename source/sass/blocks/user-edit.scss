@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 35px;
-  row-gap: 18px;
-  padding-top: 20px;
+  row-gap: 11px;
+  padding-top: 24px;
   padding-bottom: 34px;
 
   @media (min-width: $tablet-width) {
@@ -13,9 +13,9 @@
       "button button button button"
       "tags tags tags tags";
     column-gap: 60px;
-    row-gap: 51px;
-    padding-top: 62px;
-    padding-bottom: 52px;
+    row-gap: 39px;
+    padding-top: 66px;
+    padding-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,7 +28,7 @@
     row-gap: 0;
     margin-top: -190px;
     padding-top: 0;
-    padding-bottom: 54px;
+    padding-bottom: 38px;
     padding-left: 65px;
   }
 }
@@ -53,11 +53,13 @@
     width: 94px;
     height: 94px;
     margin: 0;
+    padding-top: 6px;
     background-size: 94px 94px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 42px;
+    margin-top: 43px;
+    margin-left: 55px;
   }
 }
 
@@ -139,7 +141,7 @@
 
 .user-edit__button {
   grid-column: 1 / -1;
-  margin-bottom: 7px;
+  margin-bottom: 14px;
   padding: 11px 13px 11px;
   font-weight: $font-medium;
   font-size: 20px;
@@ -160,8 +162,10 @@
   @media (min-width: $desktop-width) {
     width: 190px;
     margin-right: 95px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
     margin-left: auto;
+    padding-top: 17px;
+    padding-bottom: 12px;
     border-radius: 0;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -188,11 +192,13 @@
   display: flex;
   flex-direction: column;
   grid-column: 1 / -1;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     grid-area: tags;
     flex-direction: column-reverse;
-    height: 95px;
+    height: 105px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -209,6 +215,10 @@
     grid-area: transport;
     flex-direction: column-reverse;
     width: 308px;
+
+    .transport__title {
+      letter-spacing: 0.1em;
+    }
   }
 
   @media (min-width: $desktop-width) {

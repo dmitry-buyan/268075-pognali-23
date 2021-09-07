@@ -29,11 +29,11 @@
 .modal__header {
   position: relative;
   box-sizing: border-box;
-  padding: 14px 17px;
+  padding: 12px 17px;
   color: $basic-white;
   background: $basic-blue-light;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 
   @media (min-width: $tablet-width) {
     width: 369px;
@@ -104,7 +104,7 @@
 
   @media (min-width: $desktop-width) {
     width: 361px;
-    row-gap: 15px;
+    row-gap: 14px;
     border: none;
   }
 }
@@ -205,8 +205,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 54px;
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 37px;
+    line-height: 17px;
   }
 }
 
@@ -219,6 +222,7 @@
 }
 
 .modal__country-name {
+  line-height: 25px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -243,4 +247,8 @@
   padding: 0;
   border-radius: 0;
   transform: translateY(-50%);
+
+  @media (min-width: $desktop-width) {
+    right: 26px;
+  }
 }

@@ -113,13 +113,19 @@
                 <a class="filter__continent" href="#america/">Америка</a>
                 <a class="filter__continent" href="#islands/">Острова</a>
               </div>
-          </div>
+            </div>
           </header>
-          <button class="filter__toggle filter__toggle--show button button--toggle">
-            <span class="filter__toggle-text filter__toggle-text--show">Показать все</span>
+          <button class="filter__button filter__button--top filter__button--expand button button--toggle">
+            <span class="filter__button-text filter__button-text--expand">Показать все</span>
+            <svg class="filter__close-icon" width="12" height="12" viewbox="0 0 12 12" fill="none">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
           </button>
-          <button class="filter__toggle filter__toggle--close button button--toggle">
-            <span class="filter__toggle-text filter__toggle-text--collapse">Свернуть</span>
+          <button class="filter__button filter__button--top filter__button--collapse button button--toggle">
+            <span class="filter__button-text filter__button-text--collapse">Свернуть</span>
+            <svg class="filter__close-icon" width="12" height="12" viewbox="0 0 12 12" fill="none">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
           </button>
           <div class="filter__wrapper">
             <div class="filter__anchors">
@@ -156,15 +162,17 @@
               <li class="filter__letter filter__letter--current" id="letter-1">
                 <h3 class="filter__subtitle">А</h3>
                 <ul class="filter__sublist">
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Афганистан</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Албания</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Алгерия</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Андорра</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Аргентина</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Армения</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Австралия</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Австрия</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Азербайджан</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Албания</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Алжир</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Ангола</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Андорра</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Антигуа и Барбуда</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Аргентина</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Армения</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Афганистан</a></li>
                 </ul>
               </li>
 
@@ -278,14 +286,6 @@
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Кирибаты</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Китай</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Колумбия</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Коморы</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Конго</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">КНДР</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Республика Корея</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Коста-Рика</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Кот-д`Ивуар</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Куба</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Кувейт</a></li>
                 </ul>
               </li>
 
@@ -316,13 +316,6 @@
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Мальдивы</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Мальта</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Марокко</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Маршалловы Острова</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Мексика</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Мозамбик</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Молдавия</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Монако</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Монголия</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Мьянма</a></li>
                 </ul>
               </li>
 
@@ -366,9 +359,9 @@
               <li class="filter__letter" id="letter-15">
                 <h3 class="filter__subtitle">Р</h3>
                 <ul class="filter__sublist">
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Республика Конго</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Россия</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Руанда</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Румыния</a></li>
+                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Россия</a></li>
                 </ul>
               </li>
 
@@ -390,10 +383,6 @@
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Словакия</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">Словения</a></li>
                   <li class="filter__subitem"><a class="filter__country" href="#/europe/">США</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Сомали</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Судан</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Суринам</a></li>
-                  <li class="filter__subitem"><a class="filter__country" href="#/europe/">Сьерра-Леоне</a></li>
                 </ul>
               </li>
 
@@ -487,7 +476,7 @@
               </li>
             </ul>
           </div>
-          <button class="filter__button button button--close">
+          <button class="filter__button button button--toggle">
             <svg class="filter__close-icon" width="12" height="12" viewbox="0 0 12 12" fill="none">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
@@ -520,7 +509,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="category">
+                <div class="category category--music">
                   <button class="category__title" type="button">Музыка</button>
                   <div class="category__inner">
                     <label class="category__item">
@@ -559,8 +548,8 @@
                   </div>
                 </div>
               </div>
-              <div class="sorting__transport transport category">
-                <button class="category__title" type="button">Транспорт</button>
+              <div class="sorting__transport transport category category--transport">
+                <button class="category__title category__title--transport" type="button">Транспорт</button>
                 <div class="transport__wrapper transport__wrapper--catalog">
                   <label class="transport__item transport__item--form">
                     <input class="visually-hidden" type="checkbox" name="plane" checked>
@@ -591,7 +580,7 @@
                   </label>
                     </div>
               </div>
-              <div class="level category">
+              <div class="level category category--level">
                 <button class="category__title" type="button">Левел</button>
                 <div class="level__wrapper">
                   <div class="level__field">

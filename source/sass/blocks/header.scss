@@ -18,7 +18,8 @@
 
 .header__logo {
   display: inline-flex;
-  margin-bottom: 76px;
+  margin-top: 5px;
+  margin-bottom: 83px;
   color: $basic-blue-dark;
 
   @media (min-width: $tablet-width) {
@@ -34,7 +35,7 @@
   margin-bottom: 51px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 144px;
+    margin-bottom: 128px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,6 +47,7 @@
 
 .header__button {
   margin-bottom: 51px;
+  padding: 15px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -66,10 +68,10 @@
 }
 
 .header__contact {
-  margin-bottom: 41px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 129px;
+    margin-bottom: 112px;
   }
 
   @media (min-width: $desktop-width) {

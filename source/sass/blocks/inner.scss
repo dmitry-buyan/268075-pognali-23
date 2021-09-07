@@ -1,20 +1,20 @@
 .inner__header {
   position: relative;
-  padding-top: 42px;
+  padding-top: 33px;
   color: $basic-white;
   background-color: $basic-blue;
-  border-bottom-right-radius: $mobile-radius;
-  border-bottom-left-radius: $mobile-radius;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 134px;
+    padding-top: 102px;
     border-bottom-right-radius: $tablet-radius;
     border-bottom-left-radius: $tablet-radius;
     background-color: $basic-blue-dark-alternative;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 124px;
+    padding-top: 120px;
     background-color: $basic-blue-dark;
   }
 }
@@ -43,7 +43,7 @@
 
 .inner__title {
   position: relative;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
 
   &::after {
     position: absolute;

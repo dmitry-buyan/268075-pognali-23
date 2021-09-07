@@ -42,6 +42,14 @@
     column-gap: 2px;
     padding: 0;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      margin-left: -4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
   }
 }
 
@@ -50,14 +58,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  width: 21px;
+  height: 22px;
 
   &::before {
     display: none;
     content: attr(data-transport);
     position: absolute;
-    top: -37px;
+    top: -47px;
     padding: 10px 12px;
     font-size: 16px;
     text-align: center;
@@ -67,7 +75,7 @@
 
     @media (min-width: $tablet-width) {
       font-size: 16px;
-      top: -48px;
+      top: -58px;
     }
   }
 
@@ -75,7 +83,7 @@
     display: none;
     content: "";
     position: absolute;
-    top: 0;
+    top: -10px;
     width: 10px;
     height: 10px;
     background-color: #101d41;

@@ -2,8 +2,8 @@
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 8px;
+  padding-top: 7px;
+  padding-bottom: 3px;
   font-weight: $font-bold;
   font-size: 17px;
   line-height: 20px;
@@ -41,7 +41,10 @@
 
   &--more {
     position: relative;
-    padding: 21px;
+    padding: 22px;
+    padding-bottom: 21px;
+    font-size: 18px;
+    line-height: 18px;
     text-align: left;
     border-radius: 10px;
 
@@ -56,7 +59,7 @@
       transform: translateY(-50%);
 
       @media (min-width: $tablet-width) {
-        right: 30px;
+        right: 35px;
       }
     }
 
@@ -65,7 +68,9 @@
     }
 
     @media (min-width: $tablet-width) {
-      padding: 30px 30px 28px 33px;
+      font-size: 24px;
+      line-height: 24px;
+      padding: 30px 30px 26px 33px;
       border-radius: 20px;
     }
   }
@@ -93,6 +98,13 @@
       background: url("../img/plus.svg") no-repeat center;
       transform: translateY(-50%);
       opacity: 0.2;
+
+      @media (min-width: $tablet-width) {
+        right: 23px;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+      }
     }
 
     @media (min-width: $tablet-width) {
@@ -127,7 +139,7 @@
     @media (min-width: $tablet-width) {
       position: relative;
       width: auto;
-      min-width: 284px;
+      min-width: 286px;
       padding: 29px 51px 27px 34px;
       line-height: 24px;
       border-radius: 20px;
@@ -137,7 +149,7 @@
       &::after {
         position: absolute;
         top: 50%;
-        right: 22px;
+        right: 37px;
         content: "";
         width: 11px;
         height: 14px;
@@ -152,6 +164,7 @@
   }
 
   &--back {
+    padding: 0;
     line-height: 30px;
     letter-spacing: 0.01em;
     text-transform: uppercase;
@@ -168,10 +181,10 @@
       &::after {
         position: absolute;
         top: 50%;
-        left: -22px;
+        left: -35px;
         content: "";
-        width: 11px;
-        height: 14px;
+        width: 14px;
+        height: 16px;
         background: url("../img/button_triangle_icon.svg") no-repeat;
         transform: translateY(-50%) rotate(180deg);
       }
@@ -216,12 +229,14 @@
   }
 
   &--catalog {
+    padding-top: 14px;
+    padding-bottom: 10px;
     line-height: 17px;
     text-transform: uppercase;
     background: $basic-white;
 
     @media (min-width: $tablet-width) {
-      padding: 12px 10px 8px;
+      padding: 17px 10px 13px;
       font-size: 20px;
       line-height: 20px;
     }
@@ -261,6 +276,10 @@
     &:active .catalog__show-icon {
       opacity: 0.3;
     }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
   }
 
   &--address {
@@ -293,30 +312,12 @@
   }
 
   &--toggle {
-    width: 25px;
-    height: 15px;
-    padding: 0;
-    background: url("../img/filter-expand.svg") no-repeat center;
-
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &--close {
+    padding-top: 12px;
+    padding-bottom: 7px;
     font-size: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    color: $basic-blue-dark;
     background: #d6daed;
 
     @media (min-width: $tablet-width) {
@@ -330,6 +331,8 @@
   }
 
   &--invite {
+    padding-top: 14px;
+    padding-bottom: 9px;
     line-height: 17px;
     text-align: center;
     text-transform: uppercase;
@@ -384,10 +387,16 @@
   &--modal-close {
     background: transparent url("../img/icons/icon-close-white.svg") no-repeat center;
     background-size: 9px 9px;
+    background-position: top 7px left 13px;
     opacity: 0.3;
 
     @media (min-width: $tablet-width) {
       background-size: 21px 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 22px 24px;
+      background-position: center;
     }
 
     &:hover,

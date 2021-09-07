@@ -23,7 +23,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 50% 50%;
-    row-gap: 115px;
+    row-gap: 101px;
     width: 1320px;
     margin: 0 auto;
     padding-top: 110px;
@@ -41,13 +41,13 @@
 
 .intro__top {
   margin-bottom: -20px;
-  padding-top: 42px;
+  padding-top: 34px;
   background-image:
     url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position:
-    center bottom 20px,
+    right 48px bottom 20px,
     center bottom -70px;
   background-size: 192px, cover;
 
@@ -72,7 +72,7 @@
 }
 
 .intro__title {
-  margin-bottom: 245px;
+  margin-bottom: 243px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -119,6 +119,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 12px;
     margin-right: 23px;
     margin-left: auto;
     background: none;
@@ -146,11 +147,14 @@
 
 .intro__reviews {
   padding-top: 48px;
+  padding-right: 60px;
   padding-bottom: 109px;
+  padding-left: 25px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 76px;
+    padding-top: 112px;
     padding-bottom: 351px;
+    padding-left: 33px;
     background-color: transparent;
   }
 
@@ -161,7 +165,7 @@
 }
 
 .intro__guideline {
-  margin-top: -82px;
+  margin-top: -80px;
 
   @media (min-width: $tablet-width) {
     margin-top: -140px;
@@ -189,6 +193,7 @@
     background-color: #141b3b;
 
     @media (min-width: $tablet-width) {
+      top: 96px;
       left: 50%;
       width: 688px;
       height: 212px;
@@ -199,6 +204,10 @@
     @media (min-width: $desktop-width) {
       display: none;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
   }
 
   @media (min-width: $desktop-width) {
