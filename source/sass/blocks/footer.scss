@@ -29,18 +29,27 @@
 }
 
 .footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   color: $basic-blue-dark;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-top: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
   }
 }
 
 .footer__social {
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 43px;
   }
 }

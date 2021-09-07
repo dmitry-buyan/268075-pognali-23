@@ -22,6 +22,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 93px;
     padding-bottom: 79px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
@@ -39,7 +40,7 @@
 
 .filter__header {
   @media (min-width: $tablet-width) {
-    padding-left: 35px;
+    padding-left: 32px;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,16 +51,6 @@
   }
 }
 
-.filter__toggle {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.filter__toggle-text {
-  display: none;
-}
-
 .filter__wrapper {
   width: 220px;
   margin: 0 auto;
@@ -68,12 +59,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
+    margin-left: 20px;
     width: 615px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1320px;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
+    margin-left: 0;
     padding: 0 35px;
   }
 }
@@ -103,7 +97,7 @@
   align-items: center;
   column-gap: 12px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 33px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -143,7 +137,7 @@
     align-items: center;
     column-gap: 18px;
     width: 615px;
-    margin-top: 78px;
+    margin-top: 64px;
     margin-right: auto;
     margin-left: auto;
     padding: 40px;
@@ -152,6 +146,24 @@
   @media (min-width: $desktop-width) {
     width: 100%;
     margin: 0;
+  }
+
+  &--top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: transparent;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--expand {
+    display: none;
   }
 
   &:hover,
@@ -167,7 +179,17 @@
   }
 }
 
+.filter__button-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
 .filter__close-icon {
+  margin-right: 6px;
+
   @media (min-width: $tablet-width) {
     width: 22px;
     height: 24px;
@@ -230,6 +252,15 @@
   @include reset-list;
 }
 
+.filter__sublist {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    margin-top: -4px;
+  }
+}
+
 .filter__anchors {
   margin-bottom: 14px;
 
@@ -249,8 +280,8 @@
   border-left: 1px solid $basic-grey-border;
 
   @media (min-width: $tablet-width) {
-    width: 346px;
-    row-gap: 20px;
+    width: 380px;
+    row-gap: 23px;
     border: none;
   }
 }
@@ -323,7 +354,7 @@
 }
 
 .filter__alphabet {
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -349,6 +380,10 @@
   }
 }
 
+.filter__subitem {
+  line-height: 1em;
+}
+
 .filter__subtitle {
   display: none;
 
@@ -369,7 +404,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 0;
   }
 
   &:hover,
