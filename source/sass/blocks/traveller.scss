@@ -14,6 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, min-content) auto 243px;
     padding: 0;
     padding-right: 43px;
     overflow: hidden;
@@ -132,6 +133,10 @@
     width: max-content;
     font-size: 30px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: fit-content;
   }
 }
 
@@ -435,6 +440,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 

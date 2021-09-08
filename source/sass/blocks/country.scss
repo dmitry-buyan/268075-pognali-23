@@ -116,10 +116,12 @@
 .country__img {
   display: block;
   margin-bottom: -12px;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     width: 186px;
     height: 140px;
+    min-height: 100%;
   }
 }
 
