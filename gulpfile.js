@@ -1,3 +1,32 @@
+const project_folder = "build";
+const source_folder = "source";
+
+const path = {
+  build: {
+    html: project_folder + "/",
+    css: project_folder + "/css/",
+    js: project_folder + "/js/",
+    img: project_folder + "/img/",
+    fonts: project_folder + "/fonts/"
+  },
+  source: {
+    html: source_folder + "/*.html",
+    css: source_folder + "/sass/style.scss",
+    js: source_folder + "/js/index.js",
+    img: source_folder + "/img/**/*.{jpg,png,svg}",
+    fonts: source_folder + "/fonts/*.{woff2,woff}",
+    ico: source_folder + "/*.ico",
+    webmanifest: source_folder + "/*.webmanifest"
+  },
+  watch: {
+    html: source_folder + "/**/*.html",
+    css: source_folder + "/sass/**/*.scss",
+    js: source_folder + "/js/**/*.js",
+    img: source_folder + "/img/**/*.{jpg,png,svg}"
+  }
+};
+
+
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
@@ -16,8 +45,8 @@ const del = require("del");
 // HTML
 
 const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(gulp.dest("build"));
+  return gulp.src(path.source.html)
+    .pipe(gulp.dest(project_folder));
 }
 
 exports.html = html;
@@ -25,18 +54,22 @@ exports.html = html;
 // Styles
 
 const css = () => {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src(path.source.css)
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest(path.build.css))
     .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.min.css"))
+    .pipe(
+      rename({
+        extname: ".min.css"
+      })
+    )
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest(path.build.css))
     .pipe(sync.stream());
 }
 
@@ -45,11 +78,15 @@ exports.css = css;
 // JavaScript
 
 const scripts = () => {
-  return gulp.src("source/js/**/*.js")
-    .pipe(gulp.dest("build/js"))
+  return gulp.src(path.source.js)
+    .pipe(gulp.dest(path.build.js))
     .pipe(terser())
-    .pipe(rename("index.min.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(
+      rename({
+        extname: ".min.js"
+      })
+      )
+    .pipe(gulp.dest(path.build.js))
     .pipe(sync.stream());
 }
 
@@ -58,9 +95,9 @@ exports.scripts = scripts;
 // Optimize Images
 
 const optimizeImages = () => {
-  return gulp.src("build/img/**/*.{jpg,png,svg}")
+  return gulp.src(project_folder + "/img/**/*.{jpg,png,svg}")
     .pipe(squoosh())
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest(path.build.img))
 }
 
 exports.optimizeImages = optimizeImages;
@@ -68,9 +105,9 @@ exports.optimizeImages = optimizeImages;
 // Webp
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"));
+  return gulp.src(source_folder + "/img/**/*.{jpg,png}")
+    .pipe(webp({ quality: 80 }))
+    .pipe(gulp.dest(path.build.img));
 }
 
 exports.createWebp = createWebp;
@@ -78,10 +115,10 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src(source_folder + "/img/icons/*.svg")
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest(path.build.img));
 }
 
 exports.sprite = sprite;
@@ -90,14 +127,14 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    "source/fonts/*.{woff2,woff}",
-    "source/*.ico",
-    "source/*.webmanifest",
-    "source/img/**/*.{jpg,png,svg}",
+    path.source.fonts,
+    path.source.ico,
+    path.source.webmanifest,
+    path.source.img,
   ], {
-    base: "source"
+    base: source_folder
   })
-  .pipe(gulp.dest("build"))
+  .pipe(gulp.dest(project_folder))
   done();
 }
 
@@ -106,7 +143,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del("build");
+  return del(project_folder);
 }
 
 exports.clean = clean;
@@ -116,7 +153,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: project_folder
     },
     cors: true,
     notify: false,
@@ -137,9 +174,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(css));
-  gulp.watch("source/js/index.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch(path.watch.css, gulp.series(css));
+  gulp.watch(path.watch.js, gulp.series(scripts));
+  gulp.watch(path.watch.html, gulp.series(html, reload));
 }
 
 // Build
